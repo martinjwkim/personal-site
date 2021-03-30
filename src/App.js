@@ -1,24 +1,27 @@
-import logo from './logo.svg';
+import React from 'react';
+import { Grommet } from 'grommet';
 import './App.css';
 
 function App() {
+
+  const theme = {
+    global: {
+      font: {
+        family: 'Roboto',
+        size: '18px',
+        height: '20px',
+      },
+    },
+  };
+
   return (
-    <div className="App">
+    <Grommet theme={theme}>
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Test
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
       </header>
-    </div>
+    </Grommet>
   );
 }
 
