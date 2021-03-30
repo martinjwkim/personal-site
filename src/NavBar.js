@@ -1,19 +1,28 @@
 import React from 'react';
-import AppBar from './AppBar'
-import { Anchor, Box, CheckBox, Heading } from 'grommet';
+import { Box, Heading } from 'grommet';
+import Navs from './Navs'
 
 const NavBar = ({ darkMode, setDarkMode }) => {
+
+  const props = {
+    main: {
+      direction: 'row',
+      align: 'center',
+      justify: 'between',
+      pad: { left: 'large', right: 'medium', vertical: 'medium' },
+      style: { zIndex: '1' },
+    },
+    navs: {
+      darkMode, 
+      setDarkMode,
+    }
+  }
+
   return (
-    <AppBar>
+    <Box {...props.main}>
       <Heading level='3' margin='none'>Martin Kim</Heading>
-      <Box align="center" gap='large' direction='row'>
-        <Anchor label="Home" onClick={() => {}}/>
-        <Anchor label="About" onClick={() => {}}/>
-        <Anchor label="Portfolio" onClick={() => {}}/>
-        <Anchor label="Contact" onClick={() => {}}/>
-        <CheckBox checked={darkMode} toggle={true} onChange={() => setDarkMode(!darkMode)} />
-      </Box>
-    </AppBar>
+      <Navs {...props.navs}/>
+    </Box>
   )
 }
 

@@ -10,12 +10,11 @@ function App() {
 
   const [darkMode, setDarkMode] = useState(false)
   
-
   return (
-    <Grommet background={{image: "url(/generic-background.png)"}} theme={theme} themeMode={darkMode ? 'dark' : 'light'} full>
+    <Grommet theme={theme} themeMode={darkMode ? 'dark' : 'light'} full>
       <ResponsiveContext.Consumer>
         {size => (
-          <Box background={{opacity: "medium"}} fill={true}>
+          <Box fill={true}>
             <NavBar darkMode={darkMode} setDarkMode={setDarkMode} />
             <Main />
             <About />
