@@ -1,13 +1,19 @@
 import React from 'react';
 import AppBar from './AppBar'
-import { Button, CheckBox, Heading } from 'grommet';
-import { Notification } from 'grommet-icons';
+import { Anchor, Box, Button, CheckBox, Heading } from 'grommet';
+import { Notification, Home, ChatOption } from 'grommet-icons';
 
-const NavBar = (props) => {
+const NavBar = ({ darkMode, setDarkMode }) => {
   return (
     <AppBar>
       <Heading level='3' margin='none'>Martin Kim</Heading>
-      <Button icon={<Notification />} onClick={() => { }} />
+      <Box as='nav' flex='false' gap='medium' direction='row' background='brand'>
+        <Button icon={<Notification />} onClick={() => { }} />
+        <Anchor icon={<Home />} hoverIndicator />
+        <Anchor icon={<Notification />} hoverIndicator />
+        <Anchor icon={<ChatOption />} hoverIndicator />
+        <CheckBox checked={darkMode} toggle={true} onChange={() => setDarkMode(!darkMode)} />
+      </Box>
     </AppBar>
   )
 }
