@@ -1,17 +1,13 @@
 import React from 'react';
 import { Box } from 'grommet';
 
-const AppBar = (props) => (
+const AppBar = () => (
   <Box
-    tag='header'
     direction='row'
     align='center'
     justify='between'
-    background='brand'
-    pad={{ left: 'medium', right: 'small', vertical: 'small' }}
-    elevation='medium'
+    pad={{ left: 'large', right: 'medium', vertical: 'medium' }}
     style={{ zIndex: '1' }}
-    {...props}
   />
 )
 

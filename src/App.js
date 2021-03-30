@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { grommet, Grommet, Box, ResponsiveContext } from 'grommet';
-import { deepMerge } from "grommet/utils"
+import { Grommet, Box, ResponsiveContext } from 'grommet';
+import theme from './theme'
+import About from './About'
 import NavBar from './NavBar'
 import Main from './Main'
 import './App.css';
@@ -8,28 +9,16 @@ import './App.css';
 function App() {
 
   const [darkMode, setDarkMode] = useState(false)
-
-  const theme = deepMerge(grommet, {
-    colors:{
-      brand: ""
-    },
-    global: {
-      font: {
-        family: 'Roboto',
-        size: '18px',
-        height: '20px',
-      },
-    },
-  });
+  
 
   return (
-    <Grommet theme={theme} themeMode={darkMode ? 'dark' : 'light'} full>
+    <Grommet background={{image: "url(/generic-background.png)"}} theme={theme} themeMode={darkMode ? 'dark' : 'light'} full>
       <ResponsiveContext.Consumer>
         {size => (
-          <Box fill={true}>
+          <Box background={{opacity: "medium"}} fill={true}>
             <NavBar darkMode={darkMode} setDarkMode={setDarkMode} />
-            {`${darkMode}`}
             <Main />
+            <About />
           </Box>
         )}
       </ResponsiveContext.Consumer>
