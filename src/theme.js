@@ -1,5 +1,5 @@
-import { deepMerge } from "grommet/utils"
 import { grommet } from 'grommet';
+import { deepMerge } from "grommet/utils"
 
 const theme = deepMerge(grommet, {
   global: {
