@@ -2,7 +2,7 @@ import React from 'react';
 import { Box, Heading } from 'grommet';
 import Navs from './Navs'
 
-const NavBar = ({ darkMode, setDarkMode }) => {
+const NavBar = ({ darkMode, setDarkMode, size }) => {
 
   const props = {
     main: {
@@ -11,17 +11,24 @@ const NavBar = ({ darkMode, setDarkMode }) => {
       justify: 'between',
       pad: { left: 'large', right: 'medium', vertical: 'medium' },
       style: { zIndex: '1' },
+      flex: true,
+    },
+    heading: {
+      level: '3',
     },
     navs: {
-      darkMode, 
+      darkMode,
       setDarkMode,
+      size
     }
   }
 
   return (
     <Box {...props.main}>
-      <Heading level='3' margin='none'>Martin Kim</Heading>
-      <Navs {...props.navs}/>
+      {size !== 'xsmall' && (
+        <Heading {...props.heading}>Martin Kim</Heading>
+      )}
+      <Navs {...props.navs} />
     </Box>
   )
 }

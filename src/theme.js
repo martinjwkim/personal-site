@@ -4,10 +4,12 @@ import { deepMerge } from "grommet/utils"
 const theme = deepMerge(grommet, {
   global: {
     font: {
-      family: 'Roboto',
-      size: '18px',
-      height: '20px',
     },
+    breakpoints: {
+      xsmall: {
+        value: 480,
+      },
+    }
   },
   checkBox: {
     border: {
