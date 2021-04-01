@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { Grommet, Stack, ResponsiveContext } from 'grommet';
+import { Grommet, Box, ResponsiveContext } from 'grommet';
 import Body from './Body'
-import NavBar from './NavBar'
+import Header from './Header'
 import theme from './theme'
 
 function App() {
@@ -11,25 +11,23 @@ function App() {
   const props = {
     grommet: {
       theme,
+      full: true,
       themeMode: darkMode ? 'dark' : 'light',
     },
     navBar: {
       darkMode,
-      setDarkMode
+      setDarkMode,
     },
-    stack: {
-      anchor: 'top',
-    }
   }
 
   return (
     <Grommet {...props.grommet}>
       <ResponsiveContext.Consumer>
         {size => (
-          <Stack {...props.stack}>
-            <NavBar {...props.navBar} size={size} />
+          <Box>
+            <Header {...props.navBar} size={size} />
             <Body />
-          </Stack>
+          </Box>
         )}
       </ResponsiveContext.Consumer>
     </Grommet>

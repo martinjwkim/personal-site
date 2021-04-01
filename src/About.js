@@ -5,19 +5,18 @@ const About = () => {
 
   const props = {
     main: {
-      border: { color: 'brand', size: 'medium' },
-      direction: 'row',
-      flex: true,
-      overflow: { horizontal: 'hidden' },
-      height: "100vh"
+      border: { color: 'black', size: 'medium' },
+      direction: 'column',
+      height: '100vh',
+      align: 'center',
+      justify: 'center',
     },
+    
   }
 
   return (
     <Box {...props.main}>
-      <Box border={{ color: 'red', size: 'medium' }} flex align='center' justify='center'>
-        about body
-     </Box>
+      <p>about body</p>
     </Box>
   )
 }

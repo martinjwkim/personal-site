@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box } from 'grommet';
+import { Box, Button } from 'grommet';
 
 const Home = () => {
 
@@ -12,20 +12,19 @@ const Home = () => {
         size: "cover",
         repeat: "no-repeat",
       },
-      border: { color: 'brand', size: 'medium' },
-      direction: 'row',
-      flex: true,
-      overflow: 'auto',
-      height: "100vh"
+      border: { color: 'green', size: 'medium' },
+      direction: 'column',
+      align: 'center',
+      justify: 'center',
+      height: '100vh'
     },
   }
 
 
   return (
     <Box {...props.main}>
-      <Box border={{ color: 'red', size: 'medium' }} flex align='center' justify='center'>
-        app body
-     </Box>
+      <p>home body</p>
+      <Button />
     </Box>
   )
 }

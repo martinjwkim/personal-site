@@ -9,7 +9,7 @@ const Navs = ({ darkMode, setDarkMode, size }) => {
       align: "center",
       gap: 'medium',
       direction: 'row',
-      flex: false,
+      flex: true,
       style: { zIndex: '1' },
     },
     checkBox: {

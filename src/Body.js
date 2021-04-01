@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid } from 'grommet';
+import { Box } from 'grommet';
 import About from './About'
 import Home from './Home'
 
@@ -7,17 +7,16 @@ function Body() {
 
   const props = {
     main: {
-      width: { min: '375px'},
-      fill: true,
-      rows: ["auto", "auto"],
+      direction: 'column',
+      border: { color: 'red', size: 'medium' },
     }
   }
 
   return (
-    <Grid {...props.main}>
+    <Box {...props.main}>
       <Home />
       <About />
-    </Grid>
+    </Box>
   );
 }
 
