@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
-import { Grommet, Box, ResponsiveContext } from 'grommet';
-import About from './About'
+import { Grommet, Stack, ResponsiveContext } from 'grommet';
+import Body from './Body'
 import NavBar from './NavBar'
-import Home from './Home'
 import theme from './theme'
-import './App.css';
 
 function App() {
 
@@ -15,12 +13,12 @@ function App() {
       theme,
       themeMode: darkMode ? 'dark' : 'light',
     },
-    navBar : {
+    navBar: {
       darkMode,
       setDarkMode
     },
-    box: {
-      width: {min: 280}
+    stack: {
+      anchor: 'top',
     }
   }
 
@@ -28,11 +26,10 @@ function App() {
     <Grommet {...props.grommet}>
       <ResponsiveContext.Consumer>
         {size => (
-          <Box {...props.box}>
-            <NavBar {...props.navBar} size={size}/>
-            <Home />
-            <About />
-          </Box>
+          <Stack {...props.stack}>
+            <NavBar {...props.navBar} size={size} />
+            <Body />
+          </Stack>
         )}
       </ResponsiveContext.Consumer>
     </Grommet>

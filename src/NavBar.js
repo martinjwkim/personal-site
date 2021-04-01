@@ -6,12 +6,14 @@ const NavBar = ({ darkMode, setDarkMode, size }) => {
 
   const props = {
     main: {
+      border: { color: 'brand', size: 'medium' },
+      tag : 'header',
       direction: 'row',
       align: 'center',
-      justify: 'between',
-      pad: { left: 'large', right: 'medium', vertical: 'medium' },
-      style: { zIndex: '1' },
-      flex: true,
+      justify: size==='xsmall' ? 'center' : 'between',
+      pad: { left: 'large', right: 'medium', vertical: 'small' },
+      style: { zIndex: '-1' },
+      flex: false,
     },
     heading: {
       level: '3',

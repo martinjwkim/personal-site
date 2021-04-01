@@ -1,15 +1,16 @@
 import React from 'react';
-import { Anchor, Box, CheckBox } from 'grommet';
+import { Button, Box, CheckBox } from 'grommet';
 
 const Navs = ({ darkMode, setDarkMode, size }) => {
 
   const props = {
     main: {
+      border: { color: 'brand', size: 'medium' },
       align: "center",
-      gap: 'large',
+      gap: 'medium',
       direction: 'row',
-      flex: true,
-      justify: size==='xsmall' ? 'evenly' : 'end',
+      flex: false,
+      style: { zIndex: '1' },
     },
     checkBox: {
       checked: darkMode,
@@ -17,11 +18,16 @@ const Navs = ({ darkMode, setDarkMode, size }) => {
       onChange: ()=>setDarkMode(!darkMode),
       size,
     },
+    button: {
+      size: size==='xsmall' ? 'small' : size,
+      plain: true,
+      focusIndicator: false,
+    }
   }
 
   const showNavs = () => (
     ["Home","About","Portfolio","Contact"].map(nav=>(
-      <Anchor size={size} label={nav} key={nav} onClick={() =>{}} />
+      <Button {...props.button} label={nav} key={nav} onClick={() =>{}} />
     ))
   )
 
