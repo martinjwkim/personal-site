@@ -5,11 +5,10 @@ const Navs = ({ darkMode, setDarkMode, size }) => {
 
   const props = {
     main: {
-      border: { color: 'brand', size: 'medium' },
       align: "center",
       gap: 'medium',
       direction: 'row',
-      flex: true,
+      flex: false,
       style: { zIndex: '1' },
     },
     checkBox: {

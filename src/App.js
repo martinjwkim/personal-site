@@ -18,13 +18,15 @@ function App() {
       darkMode,
       setDarkMode,
     },
+    main: {
+    }
   }
 
   return (
     <Grommet {...props.grommet}>
       <ResponsiveContext.Consumer>
         {size => (
-          <Box>
+          <Box {...props.main}>
             <Header {...props.navBar} size={size} />
             <Body />
           </Box>

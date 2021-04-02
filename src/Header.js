@@ -1,12 +1,17 @@
 import React from 'react';
-import { Box, Heading, Layer } from 'grommet';
+import { Box, Layer, Heading } from 'grommet';
 import Navs from './Navs'
 
 const Header = ({ darkMode, setDarkMode, size }) => {
 
   const props = {
     main: {
-      border: { color: 'brand', size: 'medium' },
+      direction: 'row',
+      align: 'center',
+      justify: size === 'xsmall' ? 'center' : 'between',
+      pad: { left: 'xlarge', right: 'large', vertical: 'large' },
+      style: { zIndex: '1' },
+      flex: false,
     },
     heading: {
       level: '3',
@@ -17,22 +22,22 @@ const Header = ({ darkMode, setDarkMode, size }) => {
       size
     },
     layer: {
+      full: 'horizontal',
       modal: false,
       plain: true,
+      position: 'top',
     }
   }
 
   return (
-    <Box {...props.main}>
-      {size !== 'xsmall' && (
-        <Layer {...props.layer} position='top-left'>
+    <Layer {...props.layer}>
+      <Box {...props.main}>
+        {size !== 'xsmall' && (
           <Heading {...props.heading}>Martin Kim</Heading>
-        </Layer>
-      )}
-      <Layer {...props.layer} position='top-right'>
+        )}
         <Navs {...props.navs} />
-      </Layer>
-    </Box>
+      </Box>
+    </Layer>
   )
 }
 

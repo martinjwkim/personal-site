@@ -24,7 +24,7 @@ const Home = () => {
   return (
     <Box {...props.main}>
       <p>home body</p>
-      <Button />
+      <Button label="Button"/>
     </Box>
   )
 }
