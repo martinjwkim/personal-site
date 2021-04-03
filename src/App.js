@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { Grommet, Stack, ResponsiveContext } from 'grommet';
-import Body from './Body'
-import Header from './Header'
+import { Box, Grommet, ResponsiveContext } from 'grommet';
+import About from './About'
+import Home from './Home'
 import theme from './theme'
 
 function App() {
@@ -20,18 +20,25 @@ function App() {
       setDarkMode,
     },
     main: {
-      guidingChild: 'last',
+      
     },
+    home: {
+      darkMode,
+      setDarkMode,
+    },
+    about: {
+      
+    }
   }
 
   return (
     <Grommet {...props.grommet}>
       <ResponsiveContext.Consumer>
         {size => (
-          <Stack {...props.main}>
-            <Header {...props.header} size={size} />
-            <Body size={size}/>
-          </Stack>
+          <Box {...props.main}>
+            <Home {...props.home} size={size} />
+            <About {...props.about} size={size} />
+          </Box>
         )}
       </ResponsiveContext.Consumer>
     </Grommet>

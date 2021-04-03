@@ -1,7 +1,9 @@
 import React from 'react';
-import { Box, Button, Heading } from 'grommet';
+import { Box } from 'grommet';
+import Body from './Body'
+import Header from './Header'
 
-const Home = ({size}) => {
+const Home = ({ darkMode, setDarkMode, size }) => {
 
   const props = {
     main: {
@@ -14,27 +16,20 @@ const Home = ({size}) => {
       },
       border: { color: 'green', size: 'medium' },
       direction: 'column',
-      align: 'center',
-      justify: 'center',
-      height: '100vh'
+      height: '100vh',
     },
-    heading: {
-      alignSelf: 'center',
-      textAlign: 'center',
-      level: 1,
-      size,
-
-    },
-    button: {
-      label: "Download Resume"
+    header: {
+      darkMode,
+      setDarkMode,
+      size
     }
   }
 
 
   return (
     <Box {...props.main}>
-      <Heading {...props.heading}>Martin Kim</Heading>
-      <Button {...props.button} />
+      <Header {...props.header}/>
+      <Body size={size} />
     </Box>
   )
 }
