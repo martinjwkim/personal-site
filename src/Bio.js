@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Heading} from 'grommet';
+import { Box, Heading, Paragraph } from 'grommet';
 
 const Bio = () => {
 
@@ -7,12 +7,18 @@ const Bio = () => {
     main: {
       border: { color: 'red', size: 'medium' },
     },
-    
+    heading: {
+      level: 2,
+    },
+    paragraph: {
+
+    }
   }
 
   return (
     <Box {...props.main}>
-      <Heading>A little about me...</Heading>
+      <Heading {...props.heading}>A little about me...</Heading>
+      <Paragraph {...props.paragraph}>sdfasdfksf sakf askdf af...</Paragraph>
     </Box>
   )
 }
