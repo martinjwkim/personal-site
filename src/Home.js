@@ -16,12 +16,18 @@ const Home = ({ darkMode, setDarkMode, size }) => {
       },
       border: { color: 'green', size: 'medium' },
       direction: 'column',
+      justify: "between",
       height: '100vh',
+      alignContent: 'center'
     },
     header: {
       darkMode,
       setDarkMode,
       size
+    },
+    footer: {
+      border: { color: 'green', size: 'medium' },
+      height: 'xsmall'
     }
   }
 
@@ -30,6 +36,7 @@ const Home = ({ darkMode, setDarkMode, size }) => {
     <Box {...props.main}>
       <Header {...props.header}/>
       <Body size={size} />
+      <Box {...props.footer}></Box>
     </Box>
   )
 }

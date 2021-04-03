@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { Box, Button, Heading } from 'grommet';
+import { Box, Button, Heading, Text } from 'grommet';
 import Typed from 'typed.js';
 
 function Body({ size }) {
@@ -9,7 +9,7 @@ function Body({ size }) {
   useEffect(() => {
     const options = {
       strings: ['coder, engineer, professional'],
-      typeSpeed: 40
+      typeSpeed: 100,
     };
 
     const typed = new Typed(typedRef.current, options);
@@ -24,7 +24,7 @@ function Body({ size }) {
       direction: 'column',
       border: { color: 'red', size: 'medium' },
       animation: "fadeIn",
-      alignSelf: 'center',
+      align: 'center',
     },
     heading: {
       alignSelf: 'center',
@@ -37,7 +37,7 @@ function Body({ size }) {
   return (
     <Box {...props.main}>
       <Heading {...props.heading}>Martin Kim</Heading>
-      <span ref={typedRef} />
+      <Text ref={typedRef}></Text>
       <Button label='button' />
     </Box>
   );

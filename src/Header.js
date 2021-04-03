@@ -8,9 +8,9 @@ const Header = ({ darkMode, setDarkMode, size }) => {
   const props = {
     main: {
       direction: 'row',
-      alignSelf: 'start',
+      fill: 'horizontal',
       justify: size === 'xsmall' ? 'center' : 'end',
-      pad: 'large',
+      height: 'xsmall',
       flex: false,
       animation: {
         type: 'fadeIn',
