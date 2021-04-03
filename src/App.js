@@ -21,7 +21,7 @@ function App() {
     },
     main: {
       guidingChild: 'last',
-    }
+    },
   }
 
   return (
@@ -30,7 +30,7 @@ function App() {
         {size => (
           <Stack {...props.main}>
             <Header {...props.header} size={size} />
-            <Body />
+            <Body size={size}/>
           </Stack>
         )}
       </ResponsiveContext.Consumer>

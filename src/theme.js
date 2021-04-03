@@ -7,7 +7,7 @@ const theme = deepMerge(grommet, {
     },
     breakpoints: {
       xsmall: {
-        value: 480,
+        value: 510,
       },
     }
   },

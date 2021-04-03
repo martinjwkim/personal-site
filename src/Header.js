@@ -13,6 +13,10 @@ const Header = ({ darkMode, setDarkMode, size }) => {
       pad: { left: 'xlarge', right: 'large', vertical: 'large' },
       style: { zIndex: '1' },
       flex: false,
+      animation: {
+        type: 'fadeIn',
+        duration: 2000,
+      },
     },
     heading: {
       level: '3',
@@ -22,12 +26,6 @@ const Header = ({ darkMode, setDarkMode, size }) => {
       setDarkMode,
       size
     },
-    layer: {
-      full: 'horizontal',
-      modal: false,
-      plain: true,
-      position: 'top',
-    }
   }
 
   return (
