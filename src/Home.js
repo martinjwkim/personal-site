@@ -14,7 +14,6 @@ const Home = ({ darkMode, setDarkMode, size }) => {
         size: "cover",
         repeat: "no-repeat",
       },
-      border: { color: 'green', size: 'medium' },
       direction: 'column',
       justify: "between",
       height: '100vh',
@@ -26,8 +25,7 @@ const Home = ({ darkMode, setDarkMode, size }) => {
       size
     },
     footer: {
-      border: { color: 'green', size: 'medium' },
-      height: 'xsmall'
+      height: 'small'
     }
   }
 

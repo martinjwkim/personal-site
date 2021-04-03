@@ -10,13 +10,13 @@ const Header = ({ darkMode, setDarkMode, size }) => {
       direction: 'row',
       fill: 'horizontal',
       justify: size === 'xsmall' ? 'center' : 'end',
-      height: 'xsmall',
+      pad: {right: 'large'},
+      height: 'small',
       flex: false,
       animation: {
         type: 'fadeIn',
         duration: 2000,
       },
-      border: { color: 'green', size: 'medium' },
     },
     heading: {
       level: '3',
