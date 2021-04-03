@@ -1,8 +1,9 @@
 import React from 'react';
-import { Box, Layer, Heading } from 'grommet';
+import { Box, Heading } from 'grommet';
 import Navs from './Navs'
 
 const Header = ({ darkMode, setDarkMode, size }) => {
+
 
   const props = {
     main: {
@@ -30,14 +31,12 @@ const Header = ({ darkMode, setDarkMode, size }) => {
   }
 
   return (
-    <Layer {...props.layer}>
-      <Box {...props.main}>
-        {size !== 'xsmall' && (
-          <Heading {...props.heading}>Martin Kim</Heading>
-        )}
-        <Navs {...props.navs} />
-      </Box>
-    </Layer>
+    <Box {...props.main}>
+      {size !== 'xsmall' && (
+        <Heading {...props.heading}>Martin Kim</Heading>
+      )}
+      <Navs {...props.navs} />
+    </Box>
   )
 }
 
