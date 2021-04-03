@@ -1,23 +1,8 @@
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 import { Box, Button, Heading, Text } from 'grommet';
-import Typed from 'typed.js';
+import TypedComponent from './TypedComponent'
 
 function Body({ size }) {
-
-  const typedRef = useRef(null);
-
-  useEffect(() => {
-    const options = {
-      strings: ['coder, engineer, professional'],
-      typeSpeed: 100,
-    };
-
-    const typed = new Typed(typedRef.current, options);
-
-    return () => {
-      typed.destroy();
-    };
-  }, []);
 
   const props = {
     main: {
@@ -31,13 +16,14 @@ function Body({ size }) {
       textAlign: 'center',
       level: 1,
       size,
+      margin: 'small'
     },
   }
 
   return (
     <Box {...props.main}>
       <Heading {...props.heading}>Martin Kim</Heading>
-      <Text ref={typedRef}></Text>
+      <TypedComponent />
       <Button label='button' />
     </Box>
   );
