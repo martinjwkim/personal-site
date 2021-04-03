@@ -8,7 +8,7 @@ function TypedComponent() {
 
   useEffect(() => {
     const options = {
-      strings: ['coder, engineer, professional',],
+      strings: ['full stack web developer.',],
       typeSpeed: 100,
     };
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Anchor, Box } from 'grommet';
-import { Github, Twitter, Instagram, Facebook} from 'grommet-icons'
+import { Github, Twitter, Linkedin, Instagram, Facebook} from 'grommet-icons'
 
 function Socials() {
 
@@ -12,7 +12,7 @@ function Socials() {
   }
 
   const showIcons = () => (
-    [<Github />, <Twitter />, <Instagram />, <Facebook />].map(icon => <Anchor icon={icon} />)
+    [<Github />, <Twitter />, <Linkedin />, <Facebook />, <Instagram />].map(icon => <Anchor icon={icon} />)
   )
 
   return (

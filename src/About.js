@@ -1,12 +1,14 @@
 import React from 'react';
 import { Box } from 'grommet';
+import Portrait from './Portrait'
+import Bio from './Bio'
+
 
 const About = () => {
 
   const props = {
     main: {
-      border: { color: 'black', size: 'medium' },
-      direction: 'column',
+      direction: 'row',
       height: '100vh',
       align: 'center',
       justify: 'center',
@@ -16,7 +18,8 @@ const About = () => {
 
   return (
     <Box {...props.main}>
-      <p>about body</p>
+      <Portrait />
+      <Bio />
     </Box>
   )
 }
