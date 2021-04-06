@@ -6,6 +6,7 @@ const Bio = () => {
   const props = {
     main: {
       border: { color: 'red', size: 'medium' },
+      width: '30vw'
     },
     heading: {
       level: 2,

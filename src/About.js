@@ -4,24 +4,25 @@ import Portrait from './Portrait'
 import Bio from './Bio'
 
 
-const About = () => {
+const About = ({size}) => {
 
   const props = {
     main: {
-      background: {"dark": "dark-1", "light": "light-4"},
-      direction: 'row',
+      background: { "dark": "dark-1", "light": "light-4" },
+      direction: size==='medium' ? 'row' : 'column',
       height: '100vh',
       align: 'center',
-      justify: 'center',
+      justify: 'evenly',
+      pad: '10vw',
     },
-    
+
   }
 
   return (
     <Box {...props.main}>
       <Portrait />
       <Bio />
-    </Box>
+    </Box >
   )
 }
 
