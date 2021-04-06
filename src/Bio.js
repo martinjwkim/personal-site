@@ -43,11 +43,11 @@ const Bio = ({ size }) => {
     {
       icon: <Location />,
       paragraph: `I am a full-stack web developer proficient with JavaScript and Python originally from Los Angeles.
-        I received my Bachelor of Science for Mechanical Engineering at the University of Southern California.`
+        In 2019, I received my Bachelor of Science for Mechanical Engineering at the University of Southern California.`
     },
     {
       icon: <Code />,
-      paragraph: `I altered course to pursue a career in software engineering by attending a full stack immersive bootcamp,
+      paragraph: `Shortly after, I altered course to pursue a career in software engineering by attending a full stack immersive bootcamp,
         Rithm School, which better aligned with my passion of building projects from problems that are intrinsically hard yet fun to tackle.
         The endless possibilites of the dynamic world behind programming amazes me with every layer I uncover and I haven't looked back since.`
     },

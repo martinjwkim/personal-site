@@ -1,17 +1,17 @@
 import React, { useState } from 'react';
 import { Box, Stack } from 'grommet';
-import CardModal from './CardModal'
+import CardOverlay from './CardOverlay'
 
-const Card = ({ title, image, modal, github, demo }) => {
+const Card = ( data ) => {
 
-  const [showMore, setShowMore] = useState(modal)
+  const [showMore, setShowMore] = useState(false)
 
   const props = {
     main: {
       fill: true,
       align: 'center',
       justify: 'center',
-      background: image,
+      background: data.image,
       onMouseOver: () => setShowMore(true),
       onMouseLeave: () => setShowMore(false)
     },
@@ -19,19 +19,15 @@ const Card = ({ title, image, modal, github, demo }) => {
       fill: true,
       interactiveChild: 'first',
     },
-    modal: {
-      github,
-      demo,
-    }
   }
 
   return (
     <Stack {...props.stack}>
       <Box {...props.main}>
-        {showMore && <CardModal {...props.modal} animation='fadeIn'/>}
+        {showMore && <CardOverlay {...data} animation='fadeIn'/>}
       </Box >
       <Box fill>
-        {!showMore && <CardModal {...props.modal} animation='fadeOut'/>}
+        {!showMore && <CardOverlay {...data} animation='fadeOut'/>}
       </Box>
     </Stack>
   )
