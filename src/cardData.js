@@ -1,27 +1,27 @@
 const cardData = [
   {
     title: 'Clever Counsel',
-    image: '',
+    image: 'url(/generic-background.png)',
   },
   {
     title: 'Numbers API',
-    image: '',
+    image: 'url(/generic-background.png)',
   },
   {
     title: 'Jobly',
-    image: '',
+    image: 'url(/generic-background.png)',
   },
   {
     title: 'Warbler',
-    image: '',
+    image: 'url(/generic-background.png)',
   },
   {
     title: 'Crypto Ticker',
-    image: '',
+    image: 'url(/generic-background.png)',
   },
   {
     title: 'More',
-    image: '',
+    image: 'url(/generic-background.png)',
   }
 ];
 
