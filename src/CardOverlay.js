@@ -4,11 +4,7 @@ import Modal from './Modal'
 
 const CardOverlay = ( {animation, github_url, demo_url, modal_props} ) => {
 
-  const [modalComponent, setModalComponent] = useState();
-
-  const handleClick = (element) => {
-    setModalComponent(element)
-  }
+  const [showModal, setShowModal] = useState(false);
 
   const props = {
     main: {
@@ -37,11 +33,11 @@ const CardOverlay = ( {animation, github_url, demo_url, modal_props} ) => {
     button: {
       label: 'LEARN MORE',
       primary: true,
-      onClick: ()=>handleClick(modal_props),
+      onClick: ()=>setShowModal(true)
     },
     modal: {
-      modalComponent,
-      setModalComponent,
+      setShowModal,
+      modal_props
     }
   }
 
@@ -54,7 +50,7 @@ const CardOverlay = ( {animation, github_url, demo_url, modal_props} ) => {
         {demo_url && <Anchor label='DEMO' href={demo_url}/> }
         {github_url && <Anchor label='GITHUB' href={github_url}/> }
       </Box>
-      {modalComponent && <Modal {...props.modal}/>}
+      {showModal && <Modal {...props.modal}/>}
     </Box >
   )
 }
