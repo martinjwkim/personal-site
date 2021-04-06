@@ -5,13 +5,15 @@ const Blurb = ({ icon, paragraph }) => {
 
   const props = {
     main: {
-      border: { color: 'green', size: 'small' },
-      directon: 'row',
+      direction: 'row',
       align: 'center',
-      justify: 'evenly',
+      gap: 'small'
     },
     paragraph: {
-      fill: true
+      fill: true,
+      size: 'small',
+      margin: 'none',
+      alignSelf: 'start'
     }
   }
 

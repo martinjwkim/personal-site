@@ -5,7 +5,6 @@ const Portrait = () => {
 
   const props = {
     main: {
-      border: { color: 'green', size: 'medium' },
       width: '300px',
       height: '300px',
       round: 'full',
