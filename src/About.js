@@ -8,6 +8,7 @@ const About = () => {
 
   const props = {
     main: {
+      background: {"dark": "dark-1", "light": "light-4"},
       direction: 'row',
       height: '100vh',
       align: 'center',
