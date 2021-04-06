@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Box, Grommet, ResponsiveContext } from 'grommet';
 import About from './About'
 import Home from './Home'
+import Portfolio from './Portfolio'
 import theme from './theme'
 
 function App() {
@@ -19,25 +20,20 @@ function App() {
       darkMode,
       setDarkMode,
     },
-    main: {
-      
-    },
     home: {
       darkMode,
       setDarkMode,
     },
-    about: {
-      
-    }
   }
 
   return (
     <Grommet {...props.grommet}>
       <ResponsiveContext.Consumer>
         {size => (
-          <Box {...props.main}>
+          <Box>
             <Home {...props.home} size={size} />
-            <About {...props.about} size={size} />
+            <About size={size} />
+            <Portfolio size={size} />
           </Box>
         )}
       </ResponsiveContext.Consumer>
