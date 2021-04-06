@@ -9,9 +9,9 @@ const Header = ({ darkMode, setDarkMode, size }) => {
     main: {
       direction: 'row',
       fill: 'horizontal',
-      justify: size === 'xsmall' ? 'center' : 'end',
+      justify: 'end',
       pad: {right: 'large'},
-      height: 'small',
+      height: size==='small' ? 'small' : 'xsmall',
       flex: false,
       animation: {
         type: 'fadeIn',

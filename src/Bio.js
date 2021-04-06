@@ -1,17 +1,15 @@
 import React from 'react';
-import { Box, Heading } from 'grommet';
+import { Box, Button, Heading } from 'grommet';
 import { v4 as uuidv4 } from 'uuid';
 import Blurb from './Blurb'
-import { Location, Code, Notes } from 'grommet-icons'
+import { Code, Download, Location, Notes } from 'grommet-icons'
 
-const Bio = ({size}) => {
+const Bio = ({ size }) => {
 
   const props = {
     main: {
-      border: { color: 'red', size: 'medium' },
-      width: size==='medium' ? '50vw' : '100vw',
+      width: size === 'medium' ? '50vw' : '100vw',
       directon: 'column',
-      // fill: size==='medium' ? false : true
     },
     heading: {
       level: 2,
@@ -19,6 +17,15 @@ const Bio = ({size}) => {
     },
     blurbs: {
       gap: 'medium',
+    },
+    button: {
+      fill: false,
+      primary: true,
+      label: 'Download Resume',
+      reverse: true,
+      icon: <Download size={size==='xsmall' ? 'small' : 'medium'}/>,
+      alignSelf: size==='xsmall' ? 'center' : 'start',
+      size,
     }
   }
 
@@ -51,6 +58,7 @@ const Bio = ({size}) => {
       <Heading {...props.heading}>A little about me...</Heading>
       <Box {...props.blurbs}>
         {showBlurbs()}
+        <Button {...props.button} />
       </Box>
     </Box>
   )

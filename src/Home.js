@@ -25,7 +25,7 @@ const Home = ({ darkMode, setDarkMode, size }) => {
       size
     },
     footer: {
-      height: 'small'
+      height: size==='small' ? 'small' : 'xsmall',
     }
   }
 
