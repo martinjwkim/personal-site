@@ -26,7 +26,7 @@ const Bio = ({ size }) => {
       icon: <Download size='small' />,
       alignSelf: size === 'xsmall' ? 'center' : 'start',
       margin: { left: size === 'xsmall' ? 'none' : "medium" },
-      size,
+      size: size==='xsmall' ? 'small': size,
     },
     styledButton: {
       value: {
