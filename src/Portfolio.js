@@ -1,8 +1,9 @@
 import React from 'react';
 import { Box, Grid, Heading } from 'grommet';
+import Card from './Card'
 
 
-const Portfolio = ({size}) => {
+const Portfolio = ({ size }) => {
 
   const props = {
     main: {
@@ -19,21 +20,44 @@ const Portfolio = ({size}) => {
       gap: 'small',
       justifyContent: 'center',
       margin: 'small',
-      columns: ['medium','medium','medium'],
-      rows: ['small','small']
+      columns: ['medium', 'medium', 'medium'],
+      rows: ['small', 'small']
     }
   }
+
+
+  const cardData = [
+    {
+      title: 'Clever Counsel',
+      image: '',
+    },
+    {
+      title: 'Numbers API',
+      image: '',
+    },
+    {
+      title: 'Jobly',
+      image: '',
+    },
+    {
+      title: 'Warbler',
+      image: '',
+    },
+    {
+      title: 'Crypto Ticker',
+      image: '',
+    },
+    {
+      title: 'More',
+      image: '',
+    }
+  ];
 
   return (
     <Box {...props.main}>
       <Heading {...props.heading}>Selected Works...</Heading>
       <Grid {...props.grid}>
-        <Box background='brand' />
-        <Box background='brand' />
-        <Box background='brand' />
-        <Box background='brand' />
-        <Box background='brand' />
-        <Box background='brand' />
+        {cardData.map(data => (<Card {...data} />))}
       </Grid>
     </Box >
   )

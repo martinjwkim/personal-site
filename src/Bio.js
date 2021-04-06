@@ -39,35 +39,31 @@ const Bio = ({ size }) => {
     }
   }
 
-  const showBlurbs = () => {
-    const blurbs = [
-      {
-        icon: <Location />,
-        paragraph: `I am a full-stack web developer proficient with JavaScript and Python originally from Los Angeles.
+  const blurbs = [
+    {
+      icon: <Location />,
+      paragraph: `I am a full-stack web developer proficient with JavaScript and Python originally from Los Angeles.
         I received my Bachelor of Science for Mechanical Engineering at the University of Southern California.`
-      },
-      {
-        icon: <Code />,
-        paragraph: `I altered course to pursue a career in software engineering by attending a full stack immersive bootcamp,
+    },
+    {
+      icon: <Code />,
+      paragraph: `I altered course to pursue a career in software engineering by attending a full stack immersive bootcamp,
         Rithm School, which better aligned with my passion of building projects from problems that are intrinsically hard yet fun to tackle.
         The endless possibilites of the dynamic world behind programming amazes me with every layer I uncover and I haven't looked back since.`
-      },
-      {
-        icon: <Notes />,
-        paragraph: `With a little under two years of experience, I have most recently worked with a small team at a local law firm
+    },
+    {
+      icon: <Notes />,
+      paragraph: `With a little under two years of experience, I have most recently worked with a small team at a local law firm
         to build out a scalable back-end API service with an elaborate web user interface, but have also contributed to several
         open-source applications as well as projects of my own.`
-      }
-    ];
-
-    return blurbs.map(blurb => <Blurb key={uuidv4()} icon={blurb.icon} paragraph={blurb.paragraph} />)
-  }
+    }
+  ];
 
   return (
     <Box {...props.main}>
       <Heading {...props.heading}>A little about me...</Heading>
       <Box {...props.blurbs}>
-        {showBlurbs()}
+        {blurbs.map(data => <Blurb key={uuidv4()} {...data} />)}
         <ThemeContext.Extend {...props.styledButton}>
           <Button {...props.button} />
         </ThemeContext.Extend>
