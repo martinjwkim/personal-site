@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Button, Heading } from 'grommet';
+import { Box, Button, Heading, ThemeContext } from 'grommet';
 import { v4 as uuidv4 } from 'uuid';
 import Blurb from './Blurb'
 import { Code, Download, Location, Notes } from 'grommet-icons'
@@ -23,9 +23,19 @@ const Bio = ({ size }) => {
       primary: true,
       label: 'Download Resume',
       reverse: true,
-      icon: <Download size={size==='xsmall' ? 'small' : 'medium'}/>,
-      alignSelf: size==='xsmall' ? 'center' : 'start',
+      icon: <Download size='small' />,
+      alignSelf: size === 'xsmall' ? 'center' : 'start',
+      margin: { left: size === 'xsmall' ? 'none' : "medium" },
       size,
+    },
+    styledButton: {
+      value: {
+        text: {
+          medium: {
+            size: '14px'
+          }
+        }
+      }
     }
   }
 
@@ -58,7 +68,9 @@ const Bio = ({ size }) => {
       <Heading {...props.heading}>A little about me...</Heading>
       <Box {...props.blurbs}>
         {showBlurbs()}
-        <Button {...props.button} />
+        <ThemeContext.Extend {...props.styledButton}>
+          <Button {...props.button} />
+        </ThemeContext.Extend>
       </Box>
     </Box>
   )

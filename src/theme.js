@@ -22,7 +22,7 @@ const theme = deepMerge(grommet, {
         "light": "#7D4CDB"
       }
     },
-  }
+  },
 });
 
 export default theme;
