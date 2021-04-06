@@ -1,12 +1,12 @@
 import React from 'react';
 import { Box, Image } from 'grommet';
 
-const Portrait = () => {
+const Portrait = ({size}) => {
 
   const props = {
     main: {
-      width: '300px',
-      height: '300px',
+      width: size==='medium' ? size : '50vw',
+      height: size==='medium' ? size : '50vw',
       round: 'full',
       overflow: 'hidden'
     },

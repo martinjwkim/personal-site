@@ -13,15 +13,16 @@ const About = ({size}) => {
       height: '100vh',
       align: 'center',
       justify: 'evenly',
-      pad: '10vw',
+      pad: size==='medium' ? '10vw' : '1vw',
+      gap: size==='medium' ? 'medium' : 'none'
     },
 
   }
 
   return (
     <Box {...props.main}>
-      <Portrait />
-      <Bio />
+      <Portrait size={size}/>
+      <Bio size={size}/>
     </Box >
   )
 }

@@ -4,13 +4,14 @@ import { v4 as uuidv4 } from 'uuid';
 import Blurb from './Blurb'
 import { Location, Code, Notes } from 'grommet-icons'
 
-const Bio = () => {
+const Bio = ({size}) => {
 
   const props = {
     main: {
       border: { color: 'red', size: 'medium' },
-      width: '50vw',
+      width: size==='medium' ? '50vw' : '100vw',
       directon: 'column',
+      // fill: size==='medium' ? false : true
     },
     heading: {
       level: 2,
