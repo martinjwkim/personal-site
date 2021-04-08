@@ -11,29 +11,32 @@ const Modal = ({ setShowModal, data }) => {
       onEsc: () => setShowModal(false),
       background: {
         color: {
-          dark: 'black',
+          dark: 'dark-1',
           light: 'white'
         }
       },
       full: false,
       margin: 'large'
     },
+    main: {
+      elevation: 'large',
+      align: 'center'
+    },
     line: {
       background: {
         color: {
-          dark: 'white',
+          dark: 'light-1',
           light: 'black'
         }
       },
       fill: 'horizontal',
-      height: '5px',
+      height: '2px',
     },
     image: {
       key: uuidv4(),
       fit: 'cover',
     },
     carousel: {
-      height: '50vh',
       width: '50vw',
       overflow: 'hidden',
     }

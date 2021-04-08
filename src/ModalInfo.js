@@ -18,15 +18,29 @@ const ModalInfo = (data) => {
       level: 5,
     },
     description: {
+      fill: true,
       margin: 'none',
+      size: 'small'
     },
+    line: {
+      background: {
+        color: 'light-6'
+      },
+      fill: 'horizontal',
+      height: '1px',
+      margin: {
+        top: 'xsmall',
+        bottom: 'small'
+      }
+    }
   }
 
   return (
     <Box {...props.main}>
       <Heading {...props.title}>{data.title}</Heading>
       <Heading {...props.subtitle}>{data.subtitle}</Heading>
-      <Paragraph {...props.info}>{data.description}</Paragraph>
+      <Box {...props.line}></Box>
+      <Paragraph {...props.description}>{data.description}</Paragraph>
     </Box>
   )
 }
