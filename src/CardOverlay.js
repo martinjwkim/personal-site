@@ -29,7 +29,7 @@ const CardOverlay = ({setShowModal, data}) => {
   return (
     <Box {...props.main}>
       <Heading {...props.title}>{data.title}</Heading>
-      <Heading {...props.stack}>{data.main_stack}</Heading>
+      <Heading {...props.stack}>{data.stack}</Heading>
       <Button {...props.button} />
     </Box >
   )

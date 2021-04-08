@@ -18,15 +18,24 @@ const Modal = ({ setShowModal, data }) => {
       full: false,
       margin: 'large'
     },
-    main: {
-      gap: 'small',
+    line: {
+      background: {
+        color: {
+          dark: 'white',
+          light: 'black'
+        }
+      },
+      fill: 'horizontal',
+      height: '5px',
     },
     image: {
       key: uuidv4(),
-      fit: 'contain',
+      fit: 'cover',
     },
     carousel: {
-      width: 'large'
+      height: '50vh',
+      width: '50vw',
+      overflow: 'hidden',
     }
   }
 
@@ -38,6 +47,7 @@ const Modal = ({ setShowModal, data }) => {
             {[data.img_1, data.img_2, data.img_3].map(img => <Image src={img} {...props.image} />)}
           </Carousel>
         </Box>
+        <Box {...props.line}></Box>
         <ModalInfo {...data} />
       </Box>
     </Layer >

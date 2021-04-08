@@ -1,27 +1,32 @@
 import React from 'react';
 import { Box, Heading, Paragraph } from 'grommet';
 
-const ModalInfo = ( data ) => {
+const ModalInfo = (data) => {
 
   const props = {
     main: {
-      align: 'center',
-      margin: 'small',
+      fill: 'horizontal',
+      align: 'start',
+      pad: 'medium',
     },
-    heading: {
+    title: {
       margin: 'none',
       level: 2,
     },
-    info: {
+    subtitle: {
+      margin: 'none',
+      level: 5,
+    },
+    description: {
       margin: 'none',
     },
   }
 
   return (
     <Box {...props.main}>
-      <Heading {...props.heading}>{data.title}</Heading>
+      <Heading {...props.title}>{data.title}</Heading>
+      <Heading {...props.subtitle}>{data.subtitle}</Heading>
       <Paragraph {...props.info}>{data.description}</Paragraph>
-      <Paragraph {...props.info}>{data.extended_stack}</Paragraph>
     </Box>
   )
 }
