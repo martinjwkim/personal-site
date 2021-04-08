@@ -24,7 +24,7 @@ const Modal = ({ setShowModal, setShowMore, data }) => {
       margin: 'large'
     },
     main: {
-      elevation: 'large',
+      elevation: 'small',
       align: 'center'
     },
     line: {

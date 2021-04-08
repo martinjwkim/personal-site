@@ -10,6 +10,7 @@ const Portfolio = ({ size }) => {
 
   const props = {
     main: {
+      background: { "dark": "#202020", "light": "white" },
       height: '100vh',
       align: 'center',
       justify: 'center',

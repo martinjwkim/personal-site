@@ -3,6 +3,7 @@ import { Box, Grommet, ResponsiveContext } from 'grommet';
 import About from './About'
 import Home from './Home'
 import Portfolio from './Portfolio'
+import Contact from './Contact'
 import theme from './theme'
 
 function App() {
@@ -34,6 +35,7 @@ function App() {
             <Home {...props.home} size={size} />
             <About size={size} />
             <Portfolio size={size} />
+            <Contact size={size} />
           </Box>
         )}
       </ResponsiveContext.Consumer>
