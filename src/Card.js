@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import { Box, Stack } from 'grommet';
+import { Box, Collapsible } from 'grommet';
 import CardOverlay from './CardOverlay'
 
-const Card = ( data ) => {
+const Card = (data) => {
 
-  const [showMore, setShowMore] = useState(false)
+  const [showMore, setShowMore] = useState(true)
 
   const props = {
     main: {
@@ -15,21 +15,19 @@ const Card = ( data ) => {
       onMouseOver: () => setShowMore(true),
       onMouseLeave: () => setShowMore(false)
     },
-    stack: {
-      fill: true,
-      interactiveChild: 'first',
-    },
+    collapsible: {
+      direction: 'vertical',
+      open: showMore,
+      extend: { border: '5px solid red' }
+    }
   }
 
   return (
-    <Stack {...props.stack}>
-      <Box {...props.main}>
-        {showMore && <CardOverlay {...data} animation='fadeIn'/>}
-      </Box >
-      <Box fill>
-        {!showMore && <CardOverlay {...data} animation='fadeOut'/>}
-      </Box>
-    </Stack>
+    <Box {...props.main}>
+      <Collapsible {...props.collapsible}>
+        <CardOverlay {...data} />
+      </Collapsible>
+    </Box >
   )
 }
 
