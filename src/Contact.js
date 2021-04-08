@@ -10,6 +10,7 @@ function Contact({ size }) {
       height: '100vh',
       align: 'center',
       justify: 'evenly',
+      gap: 'medium'
     },
   }
 
