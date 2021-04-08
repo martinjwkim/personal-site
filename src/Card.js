@@ -4,7 +4,7 @@ import CardOverlay from './CardOverlay'
 
 const Card = ( data ) => {
 
-  const [showMore, setShowMore] = useState(true)
+  const [showMore, setShowMore] = useState(false)
 
   const props = {
     main: {
@@ -18,7 +18,6 @@ const Card = ( data ) => {
     collapsible: {
       direction: 'vertical',
       open: showMore,
-      extend: { border: '5px solid red' }
     }
   }
 

@@ -6,18 +6,34 @@ const Modal = ({ setShowModal, data }) => {
 
   const props = {
     layer: {
-      onClickOutside: () => setShowModal(),
+      onClickOutside: () => setShowModal(false),
+      onEsc: () => setShowModal(false),
       background: {
-        opacity: 'strong',
-        color: 'black'
+        color: {
+          dark: 'black',
+          light: 'white'
+        }
       },
-      full: true,
       margin: 'large',
     },
     main: {
-      align: 'center'
+      gap: 'small'
     },
-    carousel: {
+    title: {
+      margin: 'none',
+    },
+    description: {
+      margin: 'none',
+
+    },
+    stack: {
+      margin: 'none',
+
+    },
+    info: {
+      align: 'center',
+      margin: 'small',
+
     },
     image: {
       key: uuidv4(),
@@ -28,14 +44,14 @@ const Modal = ({ setShowModal, data }) => {
   return (
     <Layer {...props.layer}>
       <Box {...props.main}>
-        <Heading>{data.title}</Heading>
-        <Paragraph>{data.description}</Paragraph>
-        <Box {...props.carousel}>
-          <Carousel fill>
-            {[data.img_1, data.img_2, data.img_3].map(img => <Image src={img} {...props.image} />)}
-          </Carousel>
+        <Carousel fill>
+          {[data.img_1, data.img_2, data.img_3].map(img => <Image src={img} {...props.image} />)}
+        </Carousel>
+        <Box {...props.info}>
+          <Heading {...props.title}>{data.title}</Heading>
+          <Paragraph {...props.description}>{data.description}</Paragraph>
+          <Paragraph {...props.stack}>{data.extended_stack}</Paragraph>
         </Box>
-        <Paragraph>{data.stack}</Paragraph>
       </Box>
     </Layer >
   )
