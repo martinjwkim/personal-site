@@ -7,7 +7,6 @@ const ModalInfo = ( data ) => {
     main: {
       align: 'center',
       margin: 'small',
-
     },
     heading: {
       margin: 'none',
