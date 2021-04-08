@@ -1,5 +1,6 @@
 import React from 'react';
-import { Box, Heading, Paragraph } from 'grommet';
+import { Box, Paragraph } from 'grommet';
+import ModalHead from './ModalHead'
 
 const ModalInfo = (data) => {
 
@@ -8,14 +9,6 @@ const ModalInfo = (data) => {
       fill: 'horizontal',
       align: 'start',
       pad: 'medium',
-    },
-    title: {
-      margin: 'none',
-      level: 2,
-    },
-    subtitle: {
-      margin: 'none',
-      level: 5,
     },
     description: {
       fill: true,
@@ -37,8 +30,7 @@ const ModalInfo = (data) => {
 
   return (
     <Box {...props.main}>
-      <Heading {...props.title}>{data.title}</Heading>
-      <Heading {...props.subtitle}>{data.subtitle}</Heading>
+      <ModalHead {...data}/>
       <Box {...props.line}></Box>
       <Paragraph {...props.description}>{data.description}</Paragraph>
     </Box>
