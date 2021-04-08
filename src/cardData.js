@@ -2,7 +2,8 @@ const cardData = [
   {
     title: 'Clever Counsel',
     description: 'lorem ipsum blah blah',
-    stack: 'React, Node.js, Python/Flask, MySQL, CSS/Bootstrap',
+    main_stack: 'React/Node.js/Python',
+    extended_stack: 'React, Node.js, Python/Flask, MySQL, CSS/Bootstrap',
     github_url: 'https://github.com/',
     demo_url: 'https://google.com/',
     cover: 'url(/generic-background.png)',
@@ -13,7 +14,8 @@ const cardData = [
   {
     title: 'Numbers API',
     description: 'lorem ipsum blah blah',
-    stack: 'React, Node.js, Python/Flask, MySQL, CSS/Bootstrap',
+    main_stack: 'React/Node.js/Python',
+    extended_stack: 'React, Node.js, Python/Flask, MySQL, CSS/Bootstrap',
     github_url: 'https://github.com/',
     demo_url: 'https://google.com/',
     cover: 'url(/generic-background.png)',
@@ -24,7 +26,8 @@ const cardData = [
   {
     title: 'Jobly',
     description: 'lorem ipsum blah blah',
-    stack: 'React, Node.js, Python/Flask, MySQL, CSS/Bootstrap',
+    main_stack: 'React/Node.js/Python',
+    extended_stack: 'React, Node.js, Python/Flask, MySQL, CSS/Bootstrap',
     github_url: 'https://github.com/',
     demo_url: 'https://google.com/',
     cover: 'url(/generic-background.png)',
@@ -35,7 +38,8 @@ const cardData = [
   {
     title: 'Warbler',
     description: 'lorem ipsum blah blah',
-    stack: 'React, Node.js, Python/Flask, MySQL, CSS/Bootstrap',
+    main_stack: 'React/Node.js/Python',
+    extended_stack: 'React, Node.js, Python/Flask, MySQL, CSS/Bootstrap',
     github_url: 'https://github.com/',
     demo_url: 'https://google.com/',
     cover: 'url(/generic-background.png)',
@@ -46,7 +50,8 @@ const cardData = [
   {
     description: 'lorem ipsum blah blah',
     title: 'Crypto Ticker',
-    stack: 'React, Node.js, Python/Flask, MySQL, CSS/Bootstrap',
+    main_stack: 'React/Node.js/Python',
+    extended_stack: 'React, Node.js, Python/Flask, MySQL, CSS/Bootstrap',
     github_url: 'https://github.com/',
     cover: 'url(/generic-background.png)',
     img_1: '/generic-background.png',
@@ -56,7 +61,8 @@ const cardData = [
   {
     description: 'lorem ipsum blah blah',
     title: 'More',
-    stack: 'React, Node.js, Python/Flask, MySQL, CSS/Bootstrap',
+    main_stack: 'React/Node.js/Python',
+    extended_stack: 'React, Node.js, Python/Flask, MySQL, CSS/Bootstrap',
     github_url: 'https://github.com/',
     cover: 'url(/generic-background.png)',
     img_1: 'url(/generic-background.png)',

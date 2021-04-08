@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Box, Collapsible } from 'grommet';
 import CardOverlay from './CardOverlay'
 
-const Card = (data) => {
+const Card = ( data ) => {
 
   const [showMore, setShowMore] = useState(true)
 
