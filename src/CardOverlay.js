@@ -1,10 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Button, Box, Heading } from 'grommet';
-import Modal from './Modal'
 
-const CardOverlay = (data) => {
-
-  const [showModal, setShowModal] = useState(false);
+const CardOverlay = ({setShowModal, data}) => {
 
   const props = {
     main: {
@@ -27,10 +24,6 @@ const CardOverlay = (data) => {
       alignSelf: 'center',
       margin: 'none',
     },
-    modal: {
-      setShowModal,
-      data
-    }
   }
 
   return (
@@ -38,7 +31,6 @@ const CardOverlay = (data) => {
       <Heading {...props.title}>{data.title}</Heading>
       <Heading {...props.stack}>{data.main_stack}</Heading>
       <Button {...props.button} />
-      {showModal && <Modal {...props.modal} />}
     </Box >
   )
 }

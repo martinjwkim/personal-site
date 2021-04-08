@@ -1,10 +1,14 @@
 import React, { useState } from 'react';
 import { Box, Collapsible } from 'grommet';
 import CardOverlay from './CardOverlay'
+import Modal from './Modal'
 
-const Card = ( data ) => {
+
+const Card = (data) => {
 
   const [showMore, setShowMore] = useState(false)
+  const [showModal, setShowModal] = useState(false);
+
 
   const props = {
     main: {
@@ -18,14 +22,19 @@ const Card = ( data ) => {
     collapsible: {
       direction: 'vertical',
       open: showMore,
+    },
+    card: {
+      setShowModal,
+      data
     }
   }
 
   return (
     <Box {...props.main}>
       <Collapsible {...props.collapsible}>
-        <CardOverlay {...data} />
+        <CardOverlay {...props.card} />
       </Collapsible>
+      {showModal && <Modal {...props.card} />}
     </Box >
   )
 }
