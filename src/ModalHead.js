@@ -25,12 +25,15 @@ const ModalHead = (data) => {
     button: {
       alingSelf: 'center',
       size: 'small'
+    },
+    textGroup: {
+      gap: 'xsmall'
     }
   }
 
   return (
     <Box {...props.main}>
-      <Box>
+      <Box {...props.textGroup}>
         <Heading {...props.title}>{data.title}</Heading>
         <Heading {...props.subtitle}>{data.subtitle}</Heading>
       </Box>

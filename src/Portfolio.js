@@ -2,9 +2,11 @@ import React from 'react';
 import { Box, Grid, Heading } from 'grommet';
 import Card from './Card'
 import cardData from './cardData'
-
+import useWindowDimensions from './useWindowDimensions'
 
 const Portfolio = ({ size }) => {
+
+  const { height, width } = useWindowDimensions();
 
   const props = {
     main: {
@@ -14,23 +16,32 @@ const Portfolio = ({ size }) => {
     },
     heading: {
       level: 3,
-      margin: { left: "medium" }
     },
     grid: {
-      gap: 'small',
+      fill: true,
+      gap: 'none',
       justifyContent: 'center',
-      margin: 'small',
-      columns: ['medium', 'medium', 'medium'],
-      rows: ['small', 'small']
+      columns: Array(height <= width ? 3 : 2).fill('flex'),
+      rows: Array(height <= width ? 2 : 3).fill('flex'),
+    },
+    container: {
+      fill: true,
+      width: { min: size, max: '1000px' },
+      height: { min: size, max: '600px' },
+      pad: {
+        bottom: 'large',
+      }
     }
   }
 
   return (
     <Box {...props.main}>
       <Heading {...props.heading}>Things I've been working on...</Heading>
-      <Grid {...props.grid}>
-        {cardData.map(data => (<Card {...data} key={data.title}/>))}
-      </Grid>
+      <Box {...props.container}>
+        <Grid {...props.grid}>
+          {cardData.map(data => (<Card {...data} key={data.title} />))}
+        </Grid>
+      </Box>
     </Box >
   )
 }

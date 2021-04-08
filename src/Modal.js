@@ -3,12 +3,17 @@ import { Carousel, Image, Layer, Box } from 'grommet';
 import ModalInfo from './ModalInfo'
 import { v4 as uuidv4 } from 'uuid';
 
-const Modal = ({ setShowModal, data }) => {
+const Modal = ({ setShowModal, setShowMore, data }) => {
+
+  const handleClick = () => {
+    setShowModal(false);
+    setShowMore(false);
+  }
 
   const props = {
     layer: {
-      onClickOutside: () => setShowModal(false),
-      onEsc: () => setShowModal(false),
+      onClickOutside: () => handleClick(),
+      onEsc: () => handleClick(),
       background: {
         color: {
           dark: 'dark-1',

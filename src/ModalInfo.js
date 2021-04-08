@@ -23,7 +23,7 @@ const ModalInfo = (data) => {
       height: '1px',
       margin: {
         top: 'xsmall',
-        bottom: 'small'
+        bottom: 'small',
       }
     }
   }

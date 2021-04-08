@@ -25,6 +25,7 @@ const Card = (data) => {
     },
     card: {
       setShowModal,
+      setShowMore,
       data
     }
   }
