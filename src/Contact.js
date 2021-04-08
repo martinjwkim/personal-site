@@ -9,9 +9,13 @@ function Contact({ size }) {
     main: {
       background: { "dark": "dark-1", "light": "light-4" },
       height: '100vh',
+      justify: 'between'
+    },
+    contact: {
       align: 'center',
       justify: 'center',
-      gap: 'small'
+      gap: 'small',
+      pad: {top: 'xlarge'}
     },
     heading: {
       level: 2,
@@ -19,15 +23,17 @@ function Contact({ size }) {
     },
     sub: {
       level: 4,
-      margin: {bottom: 'medium', top: 'none'},
+      margin: { bottom: 'medium', top: 'none' },
     }
   }
 
   return (
     <Box {...props.main}>
-      <Heading {...props.heading}>CONTACT</Heading>
-      <Heading {...props.sub}>I'd love to hear from you!</Heading>
-      <ContactForm />
+      <Box {...props.contact}>
+        <Heading {...props.heading}>CONTACT</Heading>
+        <Heading {...props.sub}>I'd love to hear from you!</Heading>
+        <ContactForm />
+      </Box>
       <Footer />
     </Box>
   );
