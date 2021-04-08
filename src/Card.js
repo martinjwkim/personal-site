@@ -11,7 +11,7 @@ const Card = ( data ) => {
       fill: true,
       align: 'center',
       justify: 'center',
-      background: data.image,
+      background: data.cover,
       onMouseOver: () => setShowMore(true),
       onMouseLeave: () => setShowMore(false)
     },

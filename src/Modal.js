@@ -2,7 +2,7 @@ import React from 'react';
 import { Carousel, Heading, Image, Paragraph, Layer, Box } from 'grommet';
 import { v4 as uuidv4 } from 'uuid';
 
-const Modal = ({ setShowModal, modal_props: data }) => {
+const Modal = ({ setShowModal, data }) => {
 
   const props = {
     layer: {
@@ -12,7 +12,7 @@ const Modal = ({ setShowModal, modal_props: data }) => {
         color: 'black'
       },
       full: true,
-      margin: 'medium',
+      margin: 'large',
     },
     main: {
       align: 'center'
@@ -32,7 +32,7 @@ const Modal = ({ setShowModal, modal_props: data }) => {
         <Paragraph>{data.description}</Paragraph>
         <Box {...props.carousel}>
           <Carousel fill>
-            {[data.image_1, data.image_2, data.image_3].map(img => <Image src={img} {...props.image} />)}
+            {[data.img_1, data.img_2, data.img_3].map(img => <Image src={img} {...props.image} />)}
           </Carousel>
         </Box>
         <Paragraph>{data.stack}</Paragraph>

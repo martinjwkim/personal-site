@@ -27,9 +27,9 @@ const Portfolio = ({ size }) => {
 
   return (
     <Box {...props.main}>
-      <Heading {...props.heading}>Selected Works...</Heading>
+      <Heading {...props.heading}>Things I've been working on...</Heading>
       <Grid {...props.grid}>
-        {cardData.map(data => (<Card {...data} key={data.modal_props.title}/>))}
+        {cardData.map(data => (<Card {...data} key={data.title}/>))}
       </Grid>
     </Box >
   )

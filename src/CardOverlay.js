@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { Anchor, Button, Box } from 'grommet';
+import { Button, Box } from 'grommet';
 import Modal from './Modal'
 
-const CardOverlay = ( {animation, github_url, demo_url, modal_props} ) => {
+const CardOverlay = ( {animation, data} ) => {
 
   const [showModal, setShowModal] = useState(false);
 
@@ -37,7 +37,7 @@ const CardOverlay = ( {animation, github_url, demo_url, modal_props} ) => {
     },
     modal: {
       setShowModal,
-      modal_props
+      data
     }
   }
 
@@ -46,9 +46,8 @@ const CardOverlay = ( {animation, github_url, demo_url, modal_props} ) => {
       <Box {...props.more}>
         <Button {...props.button} />
       </Box>
-      <Box {...props.links}>
-        {demo_url && <Anchor label='DEMO' href={demo_url}/> }
-        {github_url && <Anchor label='GITHUB' href={github_url}/> }
+      <Box {...props.more}>
+        <Button {...props.button} />
       </Box>
       {showModal && <Modal {...props.modal}/>}
     </Box >
