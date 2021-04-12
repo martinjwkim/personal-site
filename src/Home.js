@@ -3,7 +3,7 @@ import { Box } from 'grommet';
 import Body from './Body'
 import Header from './Header'
 
-const Home = ({ darkMode, setDarkMode, size }) => {
+const Home = ({ darkMode, setDarkMode, size, }) => {
 
   const props = {
     main: {

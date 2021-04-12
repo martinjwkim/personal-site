@@ -10,6 +10,7 @@ const cardData = [
     img_1: '/generic-background.png',
     img_2: '/generic-background.png',
     img_3: '/generic-background.png',
+    animation_delay: 500
   },
   {
     title: 'Numbers API',
@@ -22,6 +23,7 @@ const cardData = [
     img_1: '/generic-background.png',
     img_2: '/generic-background.png',
     img_3: '/generic-background.png',
+    animation_delay: 300
   },
   {
     title: 'Jobly',
@@ -34,6 +36,7 @@ const cardData = [
     img_1: '/generic-background.png',
     img_2: '/generic-background.png',
     img_3: '/generic-background.png',
+    animation_delay: 700
   },
   {
     title: 'Warbler',
@@ -46,6 +49,7 @@ const cardData = [
     img_1: '/generic-background.png',
     img_2: '/generic-background.png',
     img_3: '/generic-background.png',
+    animation_delay: 300
   },
   {
     title: 'Crypto Ticker',
@@ -57,6 +61,7 @@ const cardData = [
     img_1: '/generic-background.png',
     img_2: '/generic-background.png',
     img_3: '/generic-background.png',
+    animation_delay: 900
   },
   {
     title: 'More',
@@ -68,6 +73,7 @@ const cardData = [
     img_1: 'url(/generic-background.png)',
     img_2: 'url(/generic-background.png)',
     img_3: 'url(/generic-background.png)',
+    animation_delay: 400
   }
 ];
 

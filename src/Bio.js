@@ -1,19 +1,46 @@
 import React from 'react';
 import { Box, Button, Heading, ThemeContext } from 'grommet';
-import { v4 as uuidv4 } from 'uuid';
 import Blurb from './Blurb'
 import { Code, Download, Location, Notes } from 'grommet-icons'
+import { useInView } from 'react-hook-inview'
+
 
 const Bio = ({ size }) => {
+
+  const [href, hInView] = useInView({
+    threshold: 0
+  });
+
+  const [bref, bInView] = useInView({
+    threshold: 0
+  });
 
   const props = {
     main: {
       width: size === 'medium' ? '50vw' : '100vw',
       directon: 'column',
     },
+    hcontainer: {
+      animation: {
+        type: hInView ? 'slideRight' : 'fadeOut',
+        delay: 100,
+        duration: 2000,
+        size: 'medium'
+      },
+      ref: href
+    },
+    bcontainer: {
+      animation: {
+        type: bInView ? 'slideRight' : 'fadeOut',
+        delay: 100,
+        duration: 2000,
+        size: 'medium'
+      },
+      ref: bref
+    },
     heading: {
       level: 2,
-      margin: { left: "medium" }
+      margin: { left: "medium" },
     },
     blurbs: {
       gap: 'medium',
@@ -33,17 +60,20 @@ const Bio = ({ size }) => {
 
   const blurbs = [
     {
+      name: 'one',
       icon: <Location />,
       paragraph: `I am a full-stack web developer proficient with JavaScript and Python originally from Los Angeles.
         In 2019, I received my Bachelor of Science for Mechanical Engineering at the University of Southern California.`
     },
     {
+      name: 'two',
       icon: <Code />,
       paragraph: `Shortly after, I altered course to pursue a career in software engineering by attending a full stack immersive bootcamp,
         Rithm School, which better aligned with my passion of building projects from problems that are intrinsically hard yet fun to tackle.
         The endless possibilites of the dynamic world behind programming amazes me with every layer I uncover and I haven't looked back since.`
     },
     {
+      name: 'three',
       icon: <Notes />,
       paragraph: `With a little under two years of experience, I have most recently worked with a small team at a local law firm
         to build out a scalable back-end API service with an elaborate web user interface, but have also contributed to several
@@ -53,11 +83,15 @@ const Bio = ({ size }) => {
 
   return (
     <Box {...props.main}>
-      <Heading {...props.heading}>A little about me...</Heading>
+      <Box {...props.hcontainer}>
+        <Heading {...props.heading}>A little about me...</Heading>
+      </Box>
       <Box {...props.blurbs}>
-        {blurbs.map(data => <Blurb key={uuidv4()} {...data} />)}
+        {blurbs.map(data => <Blurb key={data.name} {...data} />)}
         <ThemeContext.Extend {...props.styledButton}>
-          <Button {...props.button} />
+          <Box {...props.bcontainer}>
+            <Button {...props.button} />
+          </Box>
         </ThemeContext.Extend>
       </Box>
     </Box>

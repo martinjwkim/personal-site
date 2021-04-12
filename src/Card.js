@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Box, Collapsible } from 'grommet';
 import CardOverlay from './CardOverlay'
 import Modal from './Modal'
+import { useInView } from 'react-hook-inview'
 
 
 const Card = (data) => {
@@ -9,6 +10,9 @@ const Card = (data) => {
   const [showMore, setShowMore] = useState(false)
   const [showModal, setShowModal] = useState(false);
 
+  const [ref, inView] = useInView({
+    threshold: 0
+  });
 
   const props = {
     main: {
@@ -18,6 +22,13 @@ const Card = (data) => {
       background: data.cover,
       onMouseOver: () => setShowMore(true),
       onMouseLeave: () => setShowMore(false),
+      ref,
+      animation: {
+        type: inView ? 'fadeIn' : 'fadeOut',
+        delay: data.animation_delay,
+        duration: 2000,
+        size: 'medium'
+      },
     },
     collapsible: {
       direction: 'vertical',
