@@ -21,21 +21,35 @@ const Bio = ({ size }) => {
       directon: 'column',
     },
     hcontainer: {
-      animation: {
-        type: hInView ? 'slideRight' : 'fadeOut',
-        delay: 100,
-        duration: 2000,
-        size: 'medium'
-      },
+      animation: hInView ? [
+        {
+          type: 'slideRight',
+          delay: 300,
+          duration: 2000,
+          size: 'medium'
+        },
+        {
+          type: 'fadeIn',
+          delay: 300,
+          duration: 2000,
+        },
+      ] : 'fadeOut',
       ref: href
     },
     bcontainer: {
-      animation: {
-        type: bInView ? 'slideRight' : 'fadeOut',
-        delay: 100,
-        duration: 2000,
-        size: 'medium'
-      },
+      animation: bInView ? [
+        {
+          type: 'slideRight',
+          delay: 300,
+          duration: 2000,
+          size: 'medium'
+        },
+        {
+          type: 'fadeIn',
+          delay: 300,
+          duration: 1000,
+        },
+      ] : 'fadeOut',
       ref: bref
     },
     heading: {

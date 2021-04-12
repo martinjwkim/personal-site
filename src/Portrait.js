@@ -18,8 +18,8 @@ const Portrait = ({size}) => {
       ref,
       animation: {
         type: inView ? 'fadeIn' : 'fadeOut',
-        delay: 100,
-        duration: 3000,
+        delay: 300,
+        duration: 4000,
         size: 'medium'
       },
     },

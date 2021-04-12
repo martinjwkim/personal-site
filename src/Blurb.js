@@ -13,12 +13,19 @@ const Blurb = ({ icon, paragraph }) => {
       direction: 'row',
       align: 'center',
       gap: 'small',
-      animation: {
-        type: inView ? 'slideLeft' : 'fadeOut',
-        delay: 100,
-        duration: 2000,
-        size: 'medium'
-      },
+      animation: inView ? [
+        {
+          type: 'slideLeft',
+          delay: 300,
+          duration: 2000,
+          size: 'medium'
+        },
+        {
+          type: 'fadeIn',
+          delay: 300,
+          duration: 2000,
+        },
+      ] : 'fadeOut',
       ref
     },
     paragraph: {
