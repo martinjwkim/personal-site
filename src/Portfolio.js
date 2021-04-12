@@ -2,11 +2,9 @@ import React from 'react';
 import { Box, Grid, Heading } from 'grommet';
 import Card from './Card'
 import cardData from './cardData'
-import useWindowDimensions from './useWindowDimensions'
 
-const Portfolio = ({ size }) => {
+const Portfolio = ({ size, h, w }) => {
 
-  const { height, width } = useWindowDimensions();
 
   const props = {
     main: {
@@ -22,8 +20,8 @@ const Portfolio = ({ size }) => {
       fill: true,
       gap: 'none',
       justifyContent: 'center',
-      columns: Array(height <= width ? 3 : 2).fill('flex'),
-      rows: Array(height <= width ? 2 : 3).fill('flex'),
+      columns: Array(h <= w ? 3 : 2).fill('flex'),
+      rows: Array(h <= w ? 2 : 3).fill('flex'),
     },
     container: {
       fill: true,

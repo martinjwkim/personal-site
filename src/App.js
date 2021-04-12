@@ -5,12 +5,16 @@ import Home from './Home'
 import Portfolio from './Portfolio'
 import Contact from './Contact'
 import theme from './theme'
+import useWindowDimensions from './useWindowDimensions'
+
+
 
 function App() {
-  
+
   const [darkMode, setDarkMode] = useState(false);
   const [scrollPos, setScrollPos] = useState(0);
-  
+  const { w, h } = useWindowDimensions();
+
   const grommetRef = useRef(null);
 
   useEffect(() => {
@@ -40,6 +44,10 @@ function App() {
       setDarkMode,
       scrollPos,
     },
+    portfolio:{
+      h,
+      w,
+    }
   }
 
   return (
@@ -49,7 +57,7 @@ function App() {
           <Box>
             <Home {...props.home} size={size} />
             <About size={size} />
-            <Portfolio size={size} />
+            <Portfolio {...props.portfolio} size={size} />
             <Contact size={size} />
           </Box>
         )}
