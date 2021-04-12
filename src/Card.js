@@ -17,7 +17,7 @@ const Card = (data) => {
       justify: 'center',
       background: data.cover,
       onMouseOver: () => setShowMore(true),
-      onMouseLeave: () => setShowMore(false)
+      onMouseLeave: () => setShowMore(false),
     },
     collapsible: {
       direction: 'vertical',

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Box, Grommet, ResponsiveContext } from 'grommet';
 import About from './About'
 import Home from './Home'
@@ -7,8 +7,21 @@ import Contact from './Contact'
 import theme from './theme'
 
 function App() {
+  
+  const [darkMode, setDarkMode] = useState(false);
+  const [scrollPos, setScrollPos] = useState(0);
+  
+  const grommetRef = useRef(null);
 
-  const [darkMode, setDarkMode] = useState(false)
+  useEffect(() => {
+
+    const handleScroll = (e) => {
+      setScrollPos(grommetRef.current.scrollTop);
+      // console.log(grommetRef.current.getBoundingClientRect().top);
+    }
+
+    grommetRef.current.addEventListener('scroll', handleScroll);
+  }, [])
 
 
   const props = {
@@ -16,6 +29,7 @@ function App() {
       theme,
       full: true,
       themeMode: darkMode ? 'dark' : 'light',
+      ref: grommetRef,
     },
     header: {
       darkMode,
@@ -24,6 +38,7 @@ function App() {
     home: {
       darkMode,
       setDarkMode,
+      scrollPos,
     },
   }
 
