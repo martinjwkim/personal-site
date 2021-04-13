@@ -8,11 +8,13 @@ import { useInView } from 'react-hook-inview'
 const Bio = ({ size }) => {
 
   const [href, hInView] = useInView({
-    threshold: 0
+    threshold: 0,
+    unobserveOnEnter: true,
   });
 
   const [bref, bInView] = useInView({
-    threshold: 0
+    threshold: 0,
+    unobserveOnEnter: true,
   });
 
   const props = {
@@ -30,7 +32,7 @@ const Bio = ({ size }) => {
         },
         {
           type: 'fadeIn',
-          delay: 300,
+          delay: 100,
           duration: 2000,
         },
       ] : 'fadeOut',
@@ -46,7 +48,7 @@ const Bio = ({ size }) => {
         },
         {
           type: 'fadeIn',
-          delay: 300,
+          delay: 0,
           duration: 1000,
         },
       ] : 'fadeOut',

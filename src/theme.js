@@ -6,9 +6,6 @@ const theme = deepMerge(grommet, {
     font: {
     },
     breakpoints: {
-      xsmall: {
-        value: 510,
-      },
     }
   },
   checkBox: {

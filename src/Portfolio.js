@@ -8,12 +8,12 @@ import { useInView } from 'react-hook-inview'
 const Portfolio = ({ size, h, w }) => {
 
   const [ref, inView] = useInView({
-    threshold: 0
+    threshold: 0,
+    unobserveOnEnter: true,
   });
 
   const props = {
     main: {
-      background: { "dark": "#202020", "light": "white" },
       height: '100vh',
       align: 'center',
       justify: 'center',
@@ -33,13 +33,13 @@ const Portfolio = ({ size, h, w }) => {
       animation: inView ? [
         {
           type: 'slideRight',
-          delay: 300,
+          delay: 100,
           duration: 2000,
           size: 'large'
         },
         {
           type: 'fadeIn',
-          delay: 300,
+          delay: 0,
           duration: 2000,
         },
       ] : 'fadeOut'

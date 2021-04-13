@@ -20,6 +20,14 @@ function App() {
       full: true,
       themeMode: darkMode ? 'dark' : 'light',
     },
+    outer: {
+      fill: 'horizontal',
+      background: 'light-1'
+    },
+    inner: {
+      width: {max: '1200px'},
+      alignSelf: 'center'
+    },
     header: {
       darkMode,
       setDarkMode,
@@ -29,7 +37,7 @@ function App() {
       setDarkMode,
       h,
     },
-    portfolio:{
+    portfolio: {
       h,
       w,
     }
@@ -39,11 +47,13 @@ function App() {
     <Grommet {...props.grommet}>
       <ResponsiveContext.Consumer>
         {size => (
-          <Box>
-            <Home {...props.home} size={size} />
-            <About size={size} />
-            <Portfolio {...props.portfolio} size={size} />
-            <Contact size={size} />
+          <Box {...props.outer}>
+            <Box {...props.inner}>
+              <Home {...props.home} size={size} />
+              <About size={size} />
+              <Portfolio {...props.portfolio} size={size} />
+              <Contact size={size} />
+            </Box>
           </Box>
         )}
       </ResponsiveContext.Consumer>

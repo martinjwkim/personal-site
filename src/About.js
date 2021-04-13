@@ -8,7 +8,6 @@ const About = ({size}) => {
 
   const props = {
     main: {
-      background: { "dark": "dark-1", "light": "light-4" },
       direction: size==='medium' ? 'row' : 'column',
       height: '100vh',
       align: 'center',

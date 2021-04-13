@@ -11,7 +11,8 @@ const Card = (data) => {
   const [showModal, setShowModal] = useState(false);
 
   const [ref, inView] = useInView({
-    threshold: 0
+    threshold: 0,
+    unobserveOnEnter: true,
   });
 
   const props = {

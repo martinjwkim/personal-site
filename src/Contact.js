@@ -7,7 +7,6 @@ function Contact({ size }) {
 
   const props = {
     main: {
-      background: { "dark": "dark-1", "light": "light-4" },
       height: '100vh',
       justify: 'between'
     },

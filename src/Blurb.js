@@ -5,7 +5,8 @@ import { useInView } from 'react-hook-inview'
 const Blurb = ({ icon, paragraph }) => {
 
   const [ref, inView] = useInView({
-    threshold: 0
+    threshold: 0,
+    unobserveOnEnter: true,
   });
 
   const props = {
@@ -22,7 +23,7 @@ const Blurb = ({ icon, paragraph }) => {
         },
         {
           type: 'fadeIn',
-          delay: 300,
+          delay: 0,
           duration: 2000,
         },
       ] : 'fadeOut',

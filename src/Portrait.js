@@ -6,7 +6,8 @@ import { useInView } from 'react-hook-inview'
 const Portrait = ({size}) => {
 
   const [ref, inView] = useInView({
-    threshold: 0
+    threshold: 0,
+    unobserveOnEnter: true,
   });
 
   const props = {
@@ -18,7 +19,7 @@ const Portrait = ({size}) => {
       ref,
       animation: {
         type: inView ? 'fadeIn' : 'fadeOut',
-        delay: 300,
+        delay: 100,
         duration: 4000,
         size: 'medium'
       },
