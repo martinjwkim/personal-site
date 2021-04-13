@@ -22,7 +22,7 @@ function App() {
     },
     outer: {
       fill: 'horizontal',
-      background: 'light-1'
+      background: {light: 'light-1', dark: '#181818'}
     },
     inner: {
       width: {max: '1200px'},

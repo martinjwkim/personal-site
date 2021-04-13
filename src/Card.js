@@ -11,7 +11,7 @@ const Card = ({data, size}) => {
 
   
   const [showModal, setShowModal] = useState(false);
-  const { w, h } = useWindowDimensions();
+  const { w } = useWindowDimensions();
   
   const [ref, inView] = useInView({
     threshold: 0.5,

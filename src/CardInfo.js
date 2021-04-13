@@ -8,7 +8,7 @@ const CardInfo = ({ setShowModal, data, size }) => {
       basis: '1/2',
       justify: 'evenly',
       pad: {vertical: 'large'},
-      background: 'white',
+      background: {light: 'white', dark: '#383838'},
     },
     button: {
       label: 'LEARN MORE',
