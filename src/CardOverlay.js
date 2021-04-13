@@ -6,6 +6,9 @@ const CardOverlay = ({setShowModal, data}) => {
   const props = {
     main: {
       gap: 'small',
+      basis: '1/2',
+      justify: 'center',
+      background: 'white',
     },
     button: {
       label: 'LEARN MORE',

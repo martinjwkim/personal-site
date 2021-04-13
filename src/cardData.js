@@ -6,11 +6,11 @@ const cardData = [
     stack: 'React/Node.js/Python',
     github_url: 'https://github.com/',
     demo_url: 'https://google.com/',
-    cover: 'url(/clever-counsel.jpg)',
+    cover: '/clever-counsel.jpg',
     img_1: '/generic-background.png',
     img_2: '/generic-background.png',
     img_3: '/generic-background.png',
-    animation_delay: 500
+    flipped: true,
   },
   {
     title: 'Numbers API',
@@ -19,11 +19,11 @@ const cardData = [
     stack: 'React/Node.js/Python',
     github_url: 'https://github.com/',
     demo_url: 'https://google.com/',
-    cover: 'url(/numbers-api.jpg)',
+    cover: '/numbers-api.jpg',
     img_1: '/generic-background.png',
     img_2: '/generic-background.png',
     img_3: '/generic-background.png',
-    animation_delay: 300
+    flipped: false,
   },
   {
     title: 'Jobly',
@@ -32,11 +32,11 @@ const cardData = [
     stack: 'React/Node.js/Python',
     github_url: 'https://github.com/',
     demo_url: 'https://google.com/',
-    cover: 'url(/jobly.jpeg)',
+    cover: '/jobly.jpeg',
     img_1: '/generic-background.png',
     img_2: '/generic-background.png',
     img_3: '/generic-background.png',
-    animation_delay: 700
+    flipped: true,
   },
   {
     title: 'Warbler',
@@ -45,11 +45,11 @@ const cardData = [
     stack: 'React/Node.js/Python',
     github_url: 'https://github.com/',
     demo_url: 'https://google.com/',
-    cover: 'url(/warbler.jpeg)',
+    cover: '/warbler.jpeg',
     img_1: '/generic-background.png',
     img_2: '/generic-background.png',
     img_3: '/generic-background.png',
-    animation_delay: 300
+    flipped: false,
   },
   {
     title: 'Crypto Ticker',
@@ -57,11 +57,11 @@ const cardData = [
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
     stack: 'React/Node.js/Python',
     github_url: 'https://github.com/',
-    cover: 'url(/crypto-ticker.png)',
+    cover: '/crypto-ticker.png',
     img_1: '/generic-background.png',
     img_2: '/generic-background.png',
     img_3: '/generic-background.png',
-    animation_delay: 900
+    flipped: true,
   },
   {
     title: 'More',
@@ -69,11 +69,11 @@ const cardData = [
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
     stack: 'React/Node.js/Python',
     github_url: 'https://github.com/',
-    cover: 'url(/generic-background.png)',
-    img_1: 'url(/generic-background.png)',
-    img_2: 'url(/generic-background.png)',
-    img_3: 'url(/generic-background.png)',
-    animation_delay: 400
+    cover: '/generic-background.png',
+    img_1: '/generic-background.png',
+    img_2: '/generic-background.png',
+    img_3: '/generic-background.png',
+    flipped: false,
   }
 ];
 

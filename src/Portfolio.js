@@ -1,11 +1,11 @@
 import React from 'react';
-import { Box, Grid, Heading } from 'grommet';
+import { Box, Heading } from 'grommet';
 import Card from './Card'
 import cardData from './cardData'
 import { useInView } from 'react-hook-inview'
 
 
-const Portfolio = ({ size, h, w }) => {
+const Portfolio = ({size}) => {
 
   const [ref, inView] = useInView({
     threshold: 0,
@@ -14,19 +14,14 @@ const Portfolio = ({ size, h, w }) => {
 
   const props = {
     main: {
-      height: '100vh',
+      fill: 'horizontal',
       align: 'center',
       justify: 'center',
+      gap: 'xlarge',
+      pad: {top: '10vh'}
     },
     heading: {
       level: 3,
-    },
-    grid: {
-      fill: true,
-      gap: 'none',
-      justifyContent: 'center',
-      columns: Array(h <= w ? 3 : 2).fill('flex'),
-      rows: Array(h <= w ? 2 : 3).fill('flex'),
     },
     hcontainer: {
       ref,
@@ -44,14 +39,6 @@ const Portfolio = ({ size, h, w }) => {
         },
       ] : 'fadeOut'
     },
-    gcontainer: {
-      fill: true,
-      width: { min: size, max: '1000px' },
-      height: { min: size, max: '600px' },
-      pad: {
-        bottom: 'large',
-      }
-    }
   }
 
   return (
@@ -59,11 +46,7 @@ const Portfolio = ({ size, h, w }) => {
       <Box {...props.hcontainer}>
         <Heading {...props.heading}>Things I've been working on...</Heading>
       </Box>
-      <Box {...props.gcontainer}>
-        <Grid {...props.grid}>
-          {cardData.map(data => (<Card {...data} key={data.title} />))}
-        </Grid>
-      </Box>
+      {cardData.map(data => (<Card data={data} size={size} key={data.title} />))}
     </Box >
   )
 }

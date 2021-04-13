@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
-import { Box, Collapsible } from 'grommet';
+import { Box, Image } from 'grommet';
 import CardOverlay from './CardOverlay'
 import Modal from './Modal'
 import { useInView } from 'react-hook-inview'
 
 
-const Card = (data) => {
+const Card = ({data, size}) => {
 
-  const [showMore, setShowMore] = useState(false)
   const [showModal, setShowModal] = useState(false);
 
   const [ref, inView] = useInView({
@@ -17,12 +16,6 @@ const Card = (data) => {
 
   const props = {
     main: {
-      fill: true,
-      align: 'center',
-      justify: 'center',
-      background: data.cover,
-      onMouseOver: () => setShowMore(true),
-      onMouseLeave: () => setShowMore(false),
       ref,
       animation: {
         type: inView ? 'fadeIn' : 'fadeOut',
@@ -30,23 +23,33 @@ const Card = (data) => {
         duration: 2000,
         size: 'medium'
       },
+      direction: 'row',
+      width: '75vw',
+      height: 'calc(75vw/2)',
+      round: true,
+      overflow: 'hidden',
     },
-    collapsible: {
-      direction: 'vertical',
-      open: showMore,
+    image_container: {
+      basis: '1/2'
+    },
+    image: {
+      fill: true,
+      fit: 'cover',
+      src: data.cover,
     },
     card: {
       setShowModal,
-      setShowMore,
       data
     }
   }
 
   return (
     <Box {...props.main}>
-      <Collapsible {...props.collapsible}>
-        <CardOverlay {...props.card} />
-      </Collapsible>
+      {!data.flipped && <CardOverlay {...props.card} />}
+      <Box {...props.image_container}>
+        <Image {...props.image} />
+      </Box>
+      {data.flipped && <CardOverlay {...props.card} />}
       {showModal && <Modal {...props.card} />}
     </Box >
   )
