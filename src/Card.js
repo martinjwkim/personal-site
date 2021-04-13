@@ -1,16 +1,20 @@
 import React, { useState } from 'react';
 import { Box, Image } from 'grommet';
-import CardOverlay from './CardOverlay'
+import CardInfo from './CardInfo'
 import Modal from './Modal'
 import { useInView } from 'react-hook-inview'
+import useWindowDimensions from './useWindowDimensions'
+
 
 
 const Card = ({data, size}) => {
 
+  
   const [showModal, setShowModal] = useState(false);
-
+  const { w, h } = useWindowDimensions();
+  
   const [ref, inView] = useInView({
-    threshold: 0,
+    threshold: 0.5,
     unobserveOnEnter: true,
   });
 
@@ -19,18 +23,18 @@ const Card = ({data, size}) => {
       ref,
       animation: {
         type: inView ? 'fadeIn' : 'fadeOut',
-        delay: data.animation_delay,
+        delay: 0,
         duration: 2000,
         size: 'medium'
       },
       direction: 'row',
-      width: '75vw',
-      height: 'calc(75vw/2)',
+      width: w > 900 ? '900px' : 'full',
+      height: w > 900 ? '450px' :  'full',
       round: true,
       overflow: 'hidden',
     },
     image_container: {
-      basis: '1/2'
+      basis: '1/2',
     },
     image: {
       fill: true,
@@ -39,17 +43,18 @@ const Card = ({data, size}) => {
     },
     card: {
       setShowModal,
-      data
+      data,
+      size,
     }
   }
 
   return (
     <Box {...props.main}>
-      {!data.flipped && <CardOverlay {...props.card} />}
+      {!data.flipped && <CardInfo {...props.card} />}
       <Box {...props.image_container}>
         <Image {...props.image} />
       </Box>
-      {data.flipped && <CardOverlay {...props.card} />}
+      {data.flipped && <CardInfo {...props.card} />}
       {showModal && <Modal {...props.card} />}
     </Box >
   )

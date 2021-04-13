@@ -1,41 +1,46 @@
 import React from 'react';
 import { Button, Box, Heading } from 'grommet';
 
-const CardOverlay = ({setShowModal, data}) => {
+const CardInfo = ({ setShowModal, data, size }) => {
 
   const props = {
     main: {
-      gap: 'small',
       basis: '1/2',
-      justify: 'center',
+      justify: 'evenly',
+      pad: {vertical: 'large'},
       background: 'white',
     },
     button: {
       label: 'LEARN MORE',
-      size: 'small',
+      size,
       primary: true,
       alignSelf: 'center',
+      margin: 'small',
       onClick: () => setShowModal(true)
     },
     title: {
-      level: 2,
+      level: 1,
       alignSelf: 'center',
-      margin: 'none',
+      margin: 'small',
     },
     stack: {
       level: 5,
       alignSelf: 'center',
-      margin: 'none',
+      margin: 'small',
     },
   }
 
   return (
     <Box {...props.main}>
-      <Heading {...props.title}>{data.title}</Heading>
-      <Heading {...props.stack}>{data.stack}</Heading>
-      <Button {...props.button} />
+      <Box>
+        <Heading {...props.title}>{data.title}</Heading>
+        <Heading {...props.stack}>{data.stack}</Heading>
+      </Box>
+      <Box>
+        <Button {...props.button} />
+      </Box>
     </Box >
   )
 }
 
-export default CardOverlay;
+export default CardInfo;
