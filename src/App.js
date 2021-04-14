@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { Box, Grommet, ResponsiveContext } from 'grommet';
-import About from './About'
-import Home from './Home'
-import Portfolio from './Portfolio'
-import Contact from './Contact'
+import About from './About/About'
+import Home from './Home/Home'
+import Portfolio from './Portfolio/Portfolio'
+import Contact from './Contact/Contact'
 import theme from './theme'
 import useWindowDimensions from './useWindowDimensions'
 
@@ -34,6 +34,7 @@ function App() {
           dark: '#181818',
         },
       },
+      border: true,
       gap: 'xlarge',
       pad: {vertical: 'xlarge'}
     },
