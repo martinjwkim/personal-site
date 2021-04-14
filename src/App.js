@@ -19,12 +19,18 @@ function App() {
       theme,
       full: true,
       themeMode: darkMode ? 'dark' : 'light',
+      background: {
+        color: {
+          light: 'light-1',
+          dark: '#181818',
+        },
+        opacity: 'medium'
+      }
     },
     outer: {
-      background: {light: 'light-1', dark: '#181818'}
     },
     inner: {
-      width: {max: '1200px'},
+      width: { max: '1200px' },
       alignSelf: 'center'
     },
     header: {
@@ -39,6 +45,16 @@ function App() {
     portfolio: {
       h,
       w,
+    },
+    div: {
+      style: {
+        position: 'absolute',
+        background: 'url(/generic-background.png)',
+        top: 0,
+        height: '100vh',
+        width: '100vw',
+        zIndex: -1,
+      }
     }
   }
 
@@ -53,6 +69,7 @@ function App() {
               <Portfolio {...props.portfolio} size={size} />
               <Contact size={size} />
             </Box>
+            <div {...props.div}></div>
           </Box>
         )}
       </ResponsiveContext.Consumer>
@@ -61,3 +78,14 @@ function App() {
 }
 
 export default App;
+
+// squigly hint for light/dark mode
+// on hover animations for cards (zoom in or responsive to mouse)
+// change global font and color
+// modal restructure
+// about restructure
+// contact restructure
+// button redesign
+// proper links, pictures, card information
+// responsive navbar on scroll
+// background photo

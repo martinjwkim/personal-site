@@ -7,13 +7,6 @@ const Home = ({ darkMode, setDarkMode, size, }) => {
 
   const props = {
     main: {
-      background: {
-        image: "url(/generic-background.png)",
-        opacity: "medium",
-        position: 'top',
-        size: "cover",
-        repeat: "no-repeat",
-      },
       direction: 'column',
       justify: "between",
       height: '100vh',
