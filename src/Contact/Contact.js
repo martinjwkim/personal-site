@@ -3,7 +3,7 @@ import { Box, Heading } from 'grommet';
 import ContactForm from './ContactForm'
 import Footer from './Footer'
 
-function Contact({ size }) {
+function Contact() {
 
   const props = {
     main: {
@@ -12,7 +12,6 @@ function Contact({ size }) {
       fill: 'horizontal',
       width: {max: '1200px'},
       alignSelf: 'center',
-      border: true,
     },
     contact: {
       align: 'center',

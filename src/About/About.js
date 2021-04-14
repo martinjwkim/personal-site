@@ -12,7 +12,6 @@ const About = ({size}) => {
       align: 'center',
       justify: 'evenly',
       fill: true,
-      border: true,
       pad: 'medium',
       height: {min: 'large'},
       width: {max: '1200px'},

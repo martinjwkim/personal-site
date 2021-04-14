@@ -50,7 +50,7 @@ function ContactForm() {
             <Box direction='row' justify='between' background='status-ok'>
               <Box width='15px'></Box>
               <Paragraph margin='xsmall' size='small' alignSelf='center'>Your message was successfully sent. Thank you!</Paragraph>
-              <Box border justify='center' align='end' onClick={()=>setShowAlert(false)}>
+              <Box justify='center' align='end' onClick={()=>setShowAlert(false)}>
                 <Close size='small'/>
               </Box>
             </Box>

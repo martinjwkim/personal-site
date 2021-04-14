@@ -20,7 +20,6 @@ const Portfolio = ({size}) => {
       width: {max: '1200px'},
       alignSelf: 'center',
       gap: 'xlarge',
-      border: true,
       pad: {vertical: 'xlarge'}
     },
     heading: {

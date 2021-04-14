@@ -1,14 +1,15 @@
 import React from 'react';
-import { Box, Button, Heading } from 'grommet';
+import { Box, Heading } from 'grommet';
+import ModalButtons from './ModalButtons'
 
-const ModalHead = (data) => {
+const ModalHead = ({data, setShowModal, size}) => {
 
   const props = {
     main: {
-      direction:'row',
-      align:'center',
-      justify:'between',
-      fill:'horizontal',
+      direction: 'row',
+      align: 'center',
+      justify: 'between',
+      fill: 'horizontal',
     },
     title: {
       margin: 'none',
@@ -18,16 +19,12 @@ const ModalHead = (data) => {
       margin: 'none',
       level: 5,
     },
-    buttonGroup: {
-      direction:'row',
-      gap:'small'
-    },
-    button: {
-      alingSelf: 'center',
-      size: 'small'
-    },
     textGroup: {
       gap: 'xsmall'
+    },
+    buttons : {
+      data,
+      setShowModal
     }
   }
 
@@ -37,12 +34,9 @@ const ModalHead = (data) => {
         <Heading {...props.title}>{data.title}</Heading>
         <Heading {...props.subtitle}>{data.subtitle}</Heading>
       </Box>
-      <Box {...props.buttonGroup}>
-        <Button label='VIEW SITE' {...props.button}/>
-        <Button label='GITHUB' {...props.button}/>
-      </Box>
+      {size !== 'small' && <ModalButtons {...props.buttons}/>}
     </Box>
-  )
-}
-
+      )
+    }
+    
 export default ModalHead;

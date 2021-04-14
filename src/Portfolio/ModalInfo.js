@@ -1,12 +1,12 @@
 import React from 'react';
 import { Box, Paragraph } from 'grommet';
 import ModalHead from './ModalHead'
+import ModalButtons from './ModalButtons'
 
-const ModalInfo = (data) => {
+const ModalInfo = ({data, setShowModal, size}) => {
 
   const props = {
     main: {
-      fill: 'horizontal',
       align: 'start',
       pad: 'medium',
     },
@@ -25,14 +25,25 @@ const ModalInfo = (data) => {
         top: 'xsmall',
         bottom: 'small',
       }
+    },
+    head : {
+      data,
+      setShowModal,
+      size
+    },
+    buttons : {
+      data,
+      setShowModal,
+      size
     }
   }
 
   return (
-    <Box {...props.main}>
-      <ModalHead {...data}/>
+    <Box {...props.main} >
+      <ModalHead {...props.head}/> 
       <Box {...props.line}></Box>
       <Paragraph {...props.description}>{data.description}</Paragraph>
+      {size==='small' && <ModalButtons {...props.buttons} />}
     </Box>
   )
 }

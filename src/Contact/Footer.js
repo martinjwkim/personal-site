@@ -19,7 +19,7 @@ const Footer = () => {
           <Paragraph size='small'>created by Martin Kim</Paragraph>
         </Box>
       </Box>
-      <Box border background={{color: 'red'}} align='center'>
+      <Box background={{color: 'red'}} align='center'>
         <Ascending size='large' color='white' onClick={()=>console.log('clicked')}/>
       </Box>
     </Stack>

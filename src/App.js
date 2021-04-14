@@ -34,7 +34,6 @@ function App() {
           dark: '#181818',
         },
       },
-      border: true,
       gap: 'xlarge',
       pad: {top: 'xlarge'}
     },
@@ -86,5 +85,6 @@ export default App;
 // change global font and color
 // modal restructure
 // button redesign
+// color card info background
 // proper links, pictures, card information
 // responsive navbar on scroll

@@ -3,7 +3,7 @@ import { Carousel, Image, Layer, Box } from 'grommet';
 import ModalInfo from './ModalInfo'
 import { v4 as uuidv4 } from 'uuid';
 
-const Modal = ({ setShowModal, data }) => {
+const Modal = ({ setShowModal, data, size }) => {
 
   const props = {
     layer: {
@@ -16,11 +16,11 @@ const Modal = ({ setShowModal, data }) => {
         }
       },
       full: false,
-      margin: 'large'
+      responsive: false,
     },
     main: {
       elevation: 'small',
-      align: 'center'
+      width: size === 'small' ? 'medium' : 'large',
     },
     line: {
       background: {
@@ -35,23 +35,28 @@ const Modal = ({ setShowModal, data }) => {
     image: {
       key: uuidv4(),
       fit: 'cover',
+      fill: true,
     },
     carousel: {
-      width: '50vw',
-      overflow: 'hidden',
+      overflow: 'visible',
+    },
+    info: {
+      data,
+      setShowModal,
+      size
     }
   }
 
   return (
     <Layer {...props.layer}>
-      <Box {...props.main}>
-        <Box {...props.carousel}>
+      <Box {...props.main} >
+        <Box {...props.carousel} >
           <Carousel fill>
             {[data.img_1, data.img_2, data.img_3].map(img => <Image src={img} {...props.image} />)}
           </Carousel>
         </Box>
         <Box {...props.line}></Box>
-        <ModalInfo {...data} />
+        <ModalInfo {...props.info} />
       </Box>
     </Layer >
   )
