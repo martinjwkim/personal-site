@@ -3,7 +3,7 @@ import { Box, Image } from 'grommet';
 import { useInView } from 'react-hook-inview'
 
 
-const Portrait = ({size}) => {
+const Portrait = ({ size }) => {
 
   const [ref, inView] = useInView({
     threshold: 0,
@@ -14,9 +14,9 @@ const Portrait = ({size}) => {
     main: {
       round: 'full',
       overflow: 'hidden',
-      height: {max: 'medium'},
-      width: {max: 'medium'},
-      fill: true,
+      height: size === 'small' ? '50vw' : { max: 'medium' },
+      width: size === 'small' ? '50vw' : { max: 'medium' },
+      fill: size==='small'? false : true,
       ref,
       animation: {
         type: inView ? 'fadeIn' : 'fadeOut',

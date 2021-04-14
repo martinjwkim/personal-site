@@ -5,7 +5,8 @@ const CardInfo = ({ setShowModal, data, size }) => {
 
   const props = {
     main: {
-      basis: '1/2',
+      width: {max: 'medium', min: 'medium'},
+      height: {max: 'medium', min: 'medium'},
       justify: 'evenly',
       pad: {vertical: 'large'},
       background: {light: 'white', dark: '#383838'},
@@ -15,7 +16,6 @@ const CardInfo = ({ setShowModal, data, size }) => {
       size,
       primary: true,
       alignSelf: 'center',
-      margin: 'small',
       onClick: () => setShowModal(true)
     },
     title: {

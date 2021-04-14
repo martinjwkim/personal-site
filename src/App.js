@@ -33,7 +33,9 @@ function App() {
           light: 'light-1',
           dark: '#181818',
         },
-      }
+      },
+      gap: 'xlarge',
+      pad: {vertical: 'xlarge'}
     },
     home: {
       darkMode,

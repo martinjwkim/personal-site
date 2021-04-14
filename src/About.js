@@ -12,6 +12,7 @@ const About = ({size}) => {
       align: 'center',
       justify: 'evenly',
       fill: true,
+      border: true,
       pad: size==='medium' ? 'xlarge' : 'medium',
       height: {min: 'large'},
       width: {max: '1200px'},

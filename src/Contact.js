@@ -12,6 +12,7 @@ function Contact({ size }) {
       fill: 'horizontal',
       width: {max: '1200px'},
       alignSelf: 'center',
+      border: true,
     },
     contact: {
       align: 'center',
