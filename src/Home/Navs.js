@@ -12,7 +12,7 @@ const Navs = ({ size }) => {
       style: { zIndex: '1' },
     },
     button: {
-      size: size==='xsmall' ? 'small' : size,
+      size,
       plain: true,
       focusIndicator: false,
     }

@@ -36,7 +36,7 @@ function App() {
       },
       border: true,
       gap: 'xlarge',
-      pad: {vertical: 'xlarge'}
+      pad: {top: 'xlarge'}
     },
     home: {
       darkMode,
@@ -85,9 +85,6 @@ export default App;
 // on hover animations for cards (zoom in or responsive to mouse)
 // change global font and color
 // modal restructure
-// about restructure
-// contact restructure
 // button redesign
 // proper links, pictures, card information
 // responsive navbar on scroll
-// background photo

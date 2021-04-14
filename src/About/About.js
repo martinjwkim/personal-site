@@ -8,16 +8,16 @@ const About = ({size}) => {
 
   const props = {
     main: {
-      direction: size==='medium' ? 'row' : 'column',
+      direction: size==='small' ? 'column' : 'row',
       align: 'center',
       justify: 'evenly',
       fill: true,
       border: true,
-      pad: size==='medium' ? 'xlarge' : 'medium',
+      pad: 'medium',
       height: {min: 'large'},
       width: {max: '1200px'},
       alignSelf: 'center',
-      gap: size==='medium' ? 'medium' : 'none'
+      gap: 'medium'
     },
 
   }

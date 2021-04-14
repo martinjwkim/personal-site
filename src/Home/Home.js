@@ -9,10 +9,10 @@ const Home = ({ darkMode, setDarkMode, size, }) => {
     main: {
       direction: 'column',
       justify: "between",
-      height: '100vh',
+      height: {min: 'large'},
       alignContent: 'center',
       width: { max: '1200px' },
-      fill: 'horizontal',
+      fill: true,
       alignSelf: 'center',
     },
     header: {
