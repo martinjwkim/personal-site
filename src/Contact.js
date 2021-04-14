@@ -8,7 +8,10 @@ function Contact({ size }) {
   const props = {
     main: {
       height: '100vh',
-      justify: 'between'
+      justify: 'between',
+      fill: 'horizontal',
+      width: {max: '1200px'},
+      alignSelf: 'center',
     },
     contact: {
       align: 'center',

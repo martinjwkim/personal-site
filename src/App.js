@@ -24,18 +24,16 @@ function App() {
           light: 'light-1',
           dark: '#181818',
         },
-        opacity: 'medium'
+        opacity: 'medium',
       }
     },
-    outer: {
-    },
-    inner: {
-      width: { max: '1200px' },
-      alignSelf: 'center'
-    },
-    header: {
-      darkMode,
-      setDarkMode,
+    main: {
+      background: {
+        color: {
+          light: 'light-1',
+          dark: '#181818',
+        },
+      }
     },
     home: {
       darkMode,
@@ -50,6 +48,7 @@ function App() {
       style: {
         position: 'absolute',
         background: 'url(/generic-background.png)',
+        backgroundSize: '100% 100%',
         top: 0,
         height: '100vh',
         width: '100vw',
@@ -62,9 +61,9 @@ function App() {
     <Grommet {...props.grommet}>
       <ResponsiveContext.Consumer>
         {size => (
-          <Box {...props.outer}>
-            <Box {...props.inner}>
-              <Home {...props.home} size={size} />
+          <Box>
+            <Home {...props.home} size={size}/>
+            <Box {...props.main}>
               <About size={size} />
               <Portfolio {...props.portfolio} size={size} />
               <Contact size={size} />

@@ -12,10 +12,11 @@ const Portrait = ({size}) => {
 
   const props = {
     main: {
-      width: size==='medium' ? size : '50vw',
-      height: size==='medium' ? size : '50vw',
       round: 'full',
       overflow: 'hidden',
+      height: {max: 'medium'},
+      width: {max: 'medium'},
+      fill: true,
       ref,
       animation: {
         type: inView ? 'fadeIn' : 'fadeOut',

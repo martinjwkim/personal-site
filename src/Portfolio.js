@@ -17,6 +17,8 @@ const Portfolio = ({size}) => {
       fill: 'horizontal',
       align: 'center',
       justify: 'center',
+      width: {max: '1200px'},
+      alignSelf: 'center',
       gap: 'xlarge',
       pad: {top: '10vh'}
     },

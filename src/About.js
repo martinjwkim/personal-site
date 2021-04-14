@@ -9,10 +9,13 @@ const About = ({size}) => {
   const props = {
     main: {
       direction: size==='medium' ? 'row' : 'column',
-      height: '100vh',
       align: 'center',
       justify: 'evenly',
-      fill: 'horizontal',
+      fill: true,
+      pad: size==='medium' ? 'xlarge' : 'medium',
+      height: {min: 'large'},
+      width: {max: '1200px'},
+      alignSelf: 'center',
       gap: size==='medium' ? 'medium' : 'none'
     },
 
