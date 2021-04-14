@@ -21,7 +21,6 @@ function App() {
       themeMode: darkMode ? 'dark' : 'light',
     },
     outer: {
-      fill: 'horizontal',
       background: {light: 'light-1', dark: '#181818'}
     },
     inner: {

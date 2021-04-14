@@ -12,7 +12,7 @@ const About = ({size}) => {
       height: '100vh',
       align: 'center',
       justify: 'evenly',
-      pad: size==='medium' ? '10vw' : '1vw',
+      fill: 'horizontal',
       gap: size==='medium' ? 'medium' : 'none'
     },
 
