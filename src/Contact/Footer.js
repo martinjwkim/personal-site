@@ -3,24 +3,28 @@ import { Box, Paragraph, Stack } from 'grommet';
 import { Ascending } from 'grommet-icons'
 
 
-const Footer = () => {
+const Footer = ({ scrollToTop }) => {
 
   const props = {
     main: {
-      height: '120px',
+      height: 'small'
     },
   }
 
   return (
     <Stack anchor='top' interactiveChild='last'>
       <Box {...props.main}>
-        <Box basis='1/4'></Box>
-        <Box basis='3/4' background={{color: 'brand'}} justify='end' align='center'>
+        <Box basis='1/3'></Box>
+        <Box basis='2/3' background={{ color: 'brand' }} justify='end' align='center'>
           <Paragraph size='small'>created by Martin Kim</Paragraph>
         </Box>
       </Box>
-      <Box background={{color: 'red'}} align='center'>
-        <Ascending size='large' color='white' onClick={()=>console.log('clicked')}/>
+      <Box {...props.main}>
+        <Box basis='2/3' justify='center'>
+          <Box background={{ color: 'red' }}>
+            <Ascending size='large' color='white' onClick={() => scrollToTop()} />
+          </Box>
+        </Box>
       </Box>
     </Stack>
   )

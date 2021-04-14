@@ -1,22 +1,27 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { Box, Grommet, ResponsiveContext } from 'grommet';
 import About from './About/About'
 import Home from './Home/Home'
 import Portfolio from './Portfolio/Portfolio'
 import Contact from './Contact/Contact'
 import theme from './theme'
-import useWindowDimensions from './useWindowDimensions'
-
-
 
 function App() {
 
   const [darkMode, setDarkMode] = useState(false);
-  const { w, h } = useWindowDimensions();
+  const grommetRef = useRef();
+
+  const scrollToTop = () => {
+    grommetRef.current.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  }
 
   const props = {
     grommet: {
       theme,
+      ref: grommetRef,
       full: true,
       themeMode: darkMode ? 'dark' : 'light',
       background: {
@@ -40,11 +45,9 @@ function App() {
     home: {
       darkMode,
       setDarkMode,
-      h,
     },
-    portfolio: {
-      h,
-      w,
+    contact: {
+      scrollToTop,
     },
     div: {
       style: {
@@ -67,8 +70,8 @@ function App() {
             <Home {...props.home} size={size}/>
             <Box {...props.main}>
               <About size={size} />
-              <Portfolio {...props.portfolio} size={size} />
-              <Contact size={size} />
+              <Portfolio size={size} />
+              <Contact {...props.contact} size={size} />
             </Box>
             <div {...props.div}></div>
           </Box>
@@ -83,7 +86,6 @@ export default App;
 // squigly hint for light/dark mode
 // on hover animations for cards (zoom in or responsive to mouse)
 // change global font and color
-// modal restructure
 // button redesign
 // color card info background
 // proper links, pictures, card information

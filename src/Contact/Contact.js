@@ -3,21 +3,21 @@ import { Box, Heading } from 'grommet';
 import ContactForm from './ContactForm'
 import Footer from './Footer'
 
-function Contact() {
+function Contact({ scrollToTop }) {
 
   const props = {
     main: {
-      height: '100vh',
+      height: { min: 'large' },
       justify: 'between',
       fill: 'horizontal',
-      width: {max: '1200px'},
+      width: { max: '1200px' },
       alignSelf: 'center',
     },
     contact: {
       align: 'center',
       justify: 'center',
       gap: 'small',
-      pad: {top: 'xlarge'}
+      pad: { top: 'xlarge' }
     },
     heading: {
       level: 2,
@@ -26,6 +26,9 @@ function Contact() {
     sub: {
       level: 4,
       margin: { bottom: 'medium', top: 'none' },
+    },
+    footer: {
+      scrollToTop,
     }
   }
 
@@ -36,7 +39,7 @@ function Contact() {
         <Heading {...props.sub}>I'd love to hear from you!</Heading>
         <ContactForm />
       </Box>
-      <Footer />
+      <Footer {...props.footer}/>
     </Box>
   );
 }
