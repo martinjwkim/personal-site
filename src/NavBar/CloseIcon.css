@@ -1,0 +1,49 @@
+.close-top, .close-bot, .close-mid {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transition: all .5s;
+ }
+
+ .close-top, .close-bot {
+  height: 0px;
+  width: 25px;
+}
+
+.close-top {
+  border-top: 3px solid white;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.close-bot {
+  border-bottom: 3px solid white;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.close-mid {
+  width: 10px;
+}
+
+.icon:hover .close-top, .icon:hover .close-bot {
+  left: calc(50% + 2px);
+  height: 10px;
+  width: 13px;
+}
+
+.icon:hover .close-top {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.icon:hover .close-bot {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+
+.icon:hover .close-mid {
+  background: white;
+  height: 3px;
+  left: calc(50% - 2px);
+  width: 20px;
+  transform: translate(-50%, -50%);
+
+}

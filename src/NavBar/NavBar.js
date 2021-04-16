@@ -5,6 +5,7 @@ import CloseIcon from './CloseIcon'
 import OpenToCloseIcon from './OpenToCloseIcon'
 import './OpenIcon.css'
 import './OpenToCloseIcon.css'
+import './CloseIcon.css'
 
 function NavBar() {
 
@@ -34,10 +35,12 @@ function NavBar() {
     <Layer {...props.layer}>
       <Box {...props.box}>
         <OpenIcon />
-        <CloseIcon />
       </Box>
       <Box {...props.box}>
         <OpenToCloseIcon />
+      </Box>
+      <Box {...props.box}>
+        <CloseIcon />
       </Box>
     </Layer>
   );

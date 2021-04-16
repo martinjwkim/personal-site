@@ -52,7 +52,7 @@
   100%{
     left: 50%;
     height: 0px;
-    width: 22px;
+    width: 25px;
     transform: translate(-50%, -50%) rotate(-45deg);
   }
 }
@@ -73,7 +73,7 @@
   100%{
     left: 50%;
     height: 0px;
-    width: 22px;
+    width: 25px;
     transform: translate(-50%, -50%) rotate(45deg);
   }
 }
