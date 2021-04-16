@@ -1,53 +1,60 @@
 .a {
-  height: 200px;
-  width: 200px;
-  position: relative;
-  display: inline-block;
-  background: lightgreen;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.5s;
 }
   
 .a::before, .a::after {
   content: "";
   position: absolute;
   top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   transition: all 0.5s;
 }
 
 .a:before {
-  height: 40px;
-  width: 60px;
-  border-bottom: 10px solid white;
+  height: 16px;
+  width: 20px;
+  left: calc(50% + 2px);
+  transform: translate(-50%, -50%);
+  border-bottom: 3px solid white;
 }
 .a:after {
-  height: 10px;
-  width: 60px;
+  height: 3px;
+  width: 20px;
+  left: calc(50% - 2px);
+  transform: translate(-50%, -50%);
   background: white;
 }
 
-.a:hover::before {
+.icon:hover .a::before {
   transform: translate(-50%, -50%) rotate(135deg);
-  width: 50px;
+  left: calc(50% - 2px);
+  height: 10px;
+  width: 13px;
 }
 
-.a:hover:after {
-  left: calc(50% + 5px);
+.icon:hover .a:after {
+  left: calc(50% + 2px);
+  width: 20px;
   transform: translate(-50%, -50%) rotate(180deg);
 }
 
-div.b {
+.b {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 50%;  
+  left: calc(50% + 2px);
   transform: translate(-50%, -50%);
   transition: all 0.5s;
-  height: 40px;
-  width: 60px;
-  border-top: 10px solid white;
+  height: 16px;
+  width: 20px;
+  border-top: 3px solid white;
 }
 
-.a:hover .b {
+.icon:hover .b {
   transform: translate(-50%, -50%) rotate(225deg);
-  width: 50px;
+  left: calc(50% - 2px);
+  height: 10px;
+  width: 13px;
 }

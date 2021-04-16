@@ -1,5 +1,6 @@
 import React from 'react';
-import { Layer, Box } from 'grommet';
+import { Box, Layer, Stack } from 'grommet';
+import './NavBar.css'
 
 function NavBar() {
 
@@ -10,18 +11,28 @@ function NavBar() {
       position: 'top-right',
       animate: false,
       animation: false,
+      margin: 'medium',
+      plain: true,
     },
     box: {
-      width: 'xsmall',
-      height: 'xsmall',
-      background: 'red',
-    }
+      margin: 'none',
+      width: '52px',
+      height: '52px',
+      background: '#2b00d4',
+      justify: 'center',
+      align: 'center',
+      className: 'icon'
+    },
   }
 
   return (
     <Layer {...props.layer}>
-       <Box {...props.box}>
-       </Box>
+      <Box {...props.box}>
+        <Stack>
+          <div className='a'></div>
+          <div className='b'></div>
+        </Stack>
+      </Box>
     </Layer>
   );
 }

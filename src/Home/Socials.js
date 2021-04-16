@@ -1,14 +1,14 @@
 import React from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import { Anchor, Box } from 'grommet';
-import { Github, Twitter, Linkedin, Instagram, Facebook} from 'grommet-icons'
+import { Github, Twitter, Linkedin, Instagram, Facebook } from 'grommet-icons'
 
 function Socials() {
 
   const props = {
     main: {
       direction: 'row',
-      pad: {top: 'medium'}
+      pad: { top: 'medium' }
     },
   }
 
