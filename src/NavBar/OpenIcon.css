@@ -1,4 +1,4 @@
- .topbot::before, .topbot::after, .middle {
+ .open-top, .open-bot, .open-mid {
   position: absolute;
   top: 50%;
   transition: all 0.5s;
@@ -6,41 +6,40 @@
   width: 20px;
  }
  
- .topbot::before, .topbot::after {
-  content: "";
+ .open-top, .open-bot {
   height: 16px;
   left: calc(50% + 2px);
 }
 
-.topbot::before {
+.open-top {
   border-bottom: 3px solid white;
 }
 
-.topbot::after {
+.open-bot {
   border-top: 3px solid white;
 }
 
-.icon:hover .topbot::before, .icon:hover .topbot::after {
-  left: calc(50% - 2px);
-  height: 10px;
-  width: 13px;
-}
-
-.middle {
+.open-mid {
   height: 3px;
   left: calc(50% - 2px);
   background: white;
 }
 
-.icon:hover .topbot::before {
+.icon:hover .open-top, .icon:hover .open-bot {
+  left: calc(50% - 2px);
+  height: 10px;
+  width: 13px;
+}
+
+.icon:hover .open-top {
   transform: translate(-50%, -50%) rotate(135deg);
 }
 
-.icon:hover .topbot::after {
+.icon:hover .open-bot {
   transform: translate(-50%, -50%) rotate(225deg);
 }
 
-.icon:hover .middle {
+.icon:hover .open-mid {
   left: calc(50% + 2px);
   width: 20px;
   transform: translate(-50%, -50%) rotate(180deg);

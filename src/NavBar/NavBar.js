@@ -1,7 +1,10 @@
 import React from 'react';
 import { Box, Layer } from 'grommet';
-import TransformingIcon from './TransformingIcon'
-import './NavBar.css'
+import OpenIcon from './OpenIcon'
+import CloseIcon from './CloseIcon'
+import OpenToCloseIcon from './OpenToCloseIcon'
+import './OpenIcon.css'
+import './OpenToCloseIcon.css'
 
 function NavBar() {
 
@@ -23,14 +26,18 @@ function NavBar() {
       justify: 'center',
       align: 'center',
       className: 'icon',
-      onClick: ()=>{},
+      onClick: () => { },
     },
   }
 
   return (
     <Layer {...props.layer}>
       <Box {...props.box}>
-        <TransformingIcon />
+        <OpenIcon />
+        <CloseIcon />
+      </Box>
+      <Box {...props.box}>
+        <OpenToCloseIcon />
       </Box>
     </Layer>
   );
