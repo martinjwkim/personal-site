@@ -29,8 +29,8 @@ function NavBar() {
     <Layer {...props.layer}>
       <Box {...props.box}>
         <Stack>
-          <div className='a'></div>
-          <div className='b'></div>
+          <div className='topbot'></div>
+          <div className='middle'></div>
         </Stack>
       </Box>
     </Layer>

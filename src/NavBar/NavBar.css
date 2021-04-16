@@ -1,60 +1,47 @@
-.a {
+ .topbot::before, .topbot::after, .middle {
   position: absolute;
   top: 50%;
-  left: 50%;
+  transition: all 0.5s;
   transform: translate(-50%, -50%);
-  transition: all 0.5s;
-}
-  
-.a::before, .a::after {
+  width: 20px;
+ }
+ 
+ .topbot::before, .topbot::after {
   content: "";
-  position: absolute;
-  top: 50%;
-  transition: all 0.5s;
+  height: 16px;
+  left: calc(50% + 2px);
 }
 
-.a:before {
-  height: 16px;
-  width: 20px;
-  left: calc(50% + 2px);
-  transform: translate(-50%, -50%);
+.topbot::before {
   border-bottom: 3px solid white;
 }
-.a:after {
-  height: 3px;
-  width: 20px;
-  left: calc(50% - 2px);
-  transform: translate(-50%, -50%);
-  background: white;
-}
 
-.icon:hover .a::before {
-  transform: translate(-50%, -50%) rotate(135deg);
-  left: calc(50% - 2px);
-  height: 10px;
-  width: 13px;
-}
-
-.icon:hover .a:after {
-  left: calc(50% + 2px);
-  width: 20px;
-  transform: translate(-50%, -50%) rotate(180deg);
-}
-
-.b {
-  position: absolute;
-  top: 50%;  
-  left: calc(50% + 2px);
-  transform: translate(-50%, -50%);
-  transition: all 0.5s;
-  height: 16px;
-  width: 20px;
+.topbot::after {
   border-top: 3px solid white;
 }
 
-.icon:hover .b {
-  transform: translate(-50%, -50%) rotate(225deg);
+.icon:hover .topbot::before, .icon:hover .topbot::after {
   left: calc(50% - 2px);
   height: 10px;
   width: 13px;
+}
+
+.middle {
+  height: 3px;
+  left: calc(50% - 2px);
+  background: white;
+}
+
+.icon:hover .topbot::before {
+  transform: translate(-50%, -50%) rotate(135deg);
+}
+
+.icon:hover .topbot::after {
+  transform: translate(-50%, -50%) rotate(225deg);
+}
+
+.icon:hover .middle {
+  left: calc(50% + 2px);
+  width: 20px;
+  transform: translate(-50%, -50%) rotate(180deg);
 }
