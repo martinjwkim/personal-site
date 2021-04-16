@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react';
-import { Box, Grommet, Layer, ResponsiveContext } from 'grommet';
+import { Box, Grommet, ResponsiveContext } from 'grommet';
 import About from './About/About'
 import Home from './Home/Home'
 import Portfolio from './Portfolio/Portfolio'
@@ -51,17 +51,6 @@ function App() {
     contact: {
       scrollToTop,
     },
-    div: {
-      style: {
-        position: 'absolute',
-        background: 'url(/generic-background.png)',
-        backgroundSize: '100% 100%',
-        top: 0,
-        height: '100vh',
-        width: '100vw',
-        zIndex: -1,
-      }
-    }
   }
 
   return (

@@ -25,7 +25,6 @@ const Home = ({ darkMode, setDarkMode, size, }) => {
     }
   }
 
-
   return (
     <Box {...props.main}>
       <Header {...props.header}/>

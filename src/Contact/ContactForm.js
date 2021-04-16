@@ -11,7 +11,6 @@ function ContactForm() {
   const handleSubmit = ({ value }) => {
     setValue(INITIAL_STATE);
     setShowAlert(true);
-    console.log('submitted');
   };
 
   const handleChange = (data) => {

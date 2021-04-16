@@ -14,8 +14,8 @@ const Portrait = ({ size }) => {
     main: {
       round: 'full',
       overflow: 'hidden',
-      height: size === 'small' ? '50vw' : { max: 'medium' },
-      width: size === 'small' ? '50vw' : { max: 'medium' },
+      height: size === 'small' ? 'small' : { max: 'medium' },
+      width: size === 'small' ? 'small' : { max: 'medium' },
       fill: size==='small'? false : true,
       ref,
       animation: {

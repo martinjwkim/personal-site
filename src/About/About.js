@@ -10,7 +10,7 @@ const About = ({size}) => {
     main: {
       direction: size==='small' ? 'column' : 'row',
       align: 'center',
-      justify: 'evenly',
+      justify: size==='small' ? 'center' : 'evenly',
       fill: true,
       pad: 'medium',
       height: {min: 'large'},

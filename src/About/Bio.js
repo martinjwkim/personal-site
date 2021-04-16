@@ -19,8 +19,7 @@ const Bio = ({ size }) => {
 
   const props = {
     main: {
-      width: size === 'medium' ? '50vw' : '100vw',
-      directon: 'column',
+      width: 'large'
     },
     hcontainer: {
       animation: hInView ? [
