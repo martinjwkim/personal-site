@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box } from 'grommet';
+import { Box, Button } from 'grommet';
 import Navs from './Navs'
 import { Moon, Sun } from 'grommet-icons'
 
@@ -18,21 +18,18 @@ const Header = ({ darkMode, setDarkMode, size }) => {
       },
     },
     icon: {
-      onClick: ()=>setDarkMode(mode=>!mode),
-    },
-    navs: {
-      darkMode,
-      setDarkMode,
-      size
+      onClick: () => setDarkMode(mode => !mode),
+      alignSelf: 'center',
+      icon: darkMode ? <Sun /> : <Moon />,
+      plain: true,
+      focusIndicator: false,
     },
   }
 
   return (
     <Box {...props.main}>
-      <Box direction='row' gap='small' align='center'>
-        {darkMode ? <Sun {...props.icon}/> : <Moon {...props.icon}/>}
-      </Box>
-      <Navs {...props.navs} />
+      <Button {...props.icon}/>
+      <Navs />
     </Box>
   )
 }

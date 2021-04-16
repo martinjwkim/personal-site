@@ -2,7 +2,7 @@ import React from 'react';
 import { Button, Box } from 'grommet';
 
 
-const Navs = ({ size }) => {
+const Navs = () => {
 
   const props = {
     main: {
@@ -12,7 +12,6 @@ const Navs = ({ size }) => {
       style: { zIndex: '1' },
     },
     button: {
-      size,
       plain: true,
       focusIndicator: false,
     }

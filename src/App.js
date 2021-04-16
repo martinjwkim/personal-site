@@ -1,9 +1,11 @@
 import React, { useState, useRef } from 'react';
-import { Box, Grommet, ResponsiveContext } from 'grommet';
+import { Box, Grommet, Layer, ResponsiveContext } from 'grommet';
 import About from './About/About'
 import Home from './Home/Home'
 import Portfolio from './Portfolio/Portfolio'
 import Contact from './Contact/Contact'
+import NavBar from './NavBar/NavBar'
+import Background from './Background'
 import theme from './theme'
 
 function App() {
@@ -67,13 +69,14 @@ function App() {
       <ResponsiveContext.Consumer>
         {size => (
           <Box>
+            <Background />
             <Home {...props.home} size={size}/>
             <Box {...props.main}>
               <About size={size} />
               <Portfolio size={size} />
               <Contact {...props.contact} size={size} />
             </Box>
-            <div {...props.div}></div>
+            <NavBar />
           </Box>
         )}
       </ResponsiveContext.Consumer>
