@@ -2,10 +2,12 @@ import React from 'react';
 import { Box, Layer } from 'grommet';
 import OpenIcon from './OpenIcon'
 import CloseIcon from './CloseIcon'
-import OpenToCloseIcon from './OpenToCloseIcon'
+import OpenToClose from './OpenToClose'
+import CloseToOpen from './CloseToOpen';
 import './OpenIcon.css'
-import './OpenToCloseIcon.css'
+import './OpenToClose.css'
 import './CloseIcon.css'
+import './CloseToOpen.css'
 
 function NavBar() {
 
@@ -37,10 +39,13 @@ function NavBar() {
         <OpenIcon />
       </Box>
       <Box {...props.box}>
-        <OpenToCloseIcon />
+        <OpenToClose />
       </Box>
       <Box {...props.box}>
         <CloseIcon />
+      </Box>
+      <Box {...props.box}>
+        <CloseToOpen />
       </Box>
     </Layer>
   );

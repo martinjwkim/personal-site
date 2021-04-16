@@ -1,7 +1,7 @@
 import React from 'react';
 import { Stack } from 'grommet';
 
-function OpenToCloseIcon() {
+function OpenToClose() {
 
   return (
     <Stack>
@@ -12,4 +12,4 @@ function OpenToCloseIcon() {
   );
 }
 
-export default OpenToCloseIcon;
+export default OpenToClose;
