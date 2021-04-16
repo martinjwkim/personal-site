@@ -1,12 +1,28 @@
 import React from 'react';
-import { Box } from 'grommet';
+import { Layer, Box } from 'grommet';
 
 function NavBar() {
 
-  return (
-    <div className='NavBar'>
+  const props = {
+    layer: {
+      modal: false,
+      responsive: false,
+      position: 'top-right',
+      animate: false,
+      animation: false,
+    },
+    box: {
+      width: 'xsmall',
+      height: 'xsmall',
+      background: 'red',
+    }
+  }
 
-    </div>
+  return (
+    <Layer {...props.layer}>
+       <Box {...props.box}>
+       </Box>
+    </Layer>
   );
 }
 
