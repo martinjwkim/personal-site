@@ -1,0 +1,66 @@
+.cto-top, .cto-bot, .cto-mid {
+  position: absolute;
+  top: 50%;
+  animation-delay: 2s;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+ }
+
+ .cto-top, .cto-bot {
+  left: calc(50% + 2px);
+  height: 10px;
+  width: 13px;
+}
+
+.cto-top {
+  border-top: 3px solid white;
+  transform: translate(-50%, -50%) rotate(45deg);
+  animation-name: cto-top;
+}
+
+.cto-bot {
+  border-bottom: 3px solid white;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  animation-name: cto-bot;
+}
+
+.cto-mid {
+  background: white;
+  left: calc(50% - 2px);
+  height: 3px;
+  width: 20px;
+  transform: translate(-50%, -50%);
+  animation-name: cto-mid;
+}
+
+@keyframes cto-top {
+  0% {
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+  100%{
+    height: 16px;
+    width: 20px;
+    transform: translate(-50%, -50%) rotate(180deg);
+  }
+}
+
+@keyframes cto-bot {
+  0% {
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+  100%{
+    height: 16px;
+    width: 20px;
+    transform: translate(-50%, -50%) rotate(180deg);
+  }
+}
+
+@keyframes cto-mid {
+  0% {
+    transform: translate(-50%, -50%);
+  }
+  100%{
+    transform: translate(-50%, -50%) rotate(180deg);
+  }
+}
