@@ -24,6 +24,14 @@ function NavBar() {
       onClickOutside: () => handleClose(),
       onEsc: () => handleClose(),
     },
+    main: {
+      direction: 'row',
+      animation: {
+        type: 'fadeIn',
+        delay: 300,
+        duration: 1000,
+      }
+    },
     icon: {
       iconType,
       setIconType,
@@ -33,11 +41,12 @@ function NavBar() {
     content: {
       openNav
     }
+
   }
 
   return (
     <Layer {...props.layer}>
-      <Box direction='row'>
+      <Box {...props.main}>
         <NavBarIcon {...props.icon} />
         <NavContent {...props.content} />
       </Box>

@@ -10,6 +10,11 @@ const Navs = () => {
       gap: 'medium',
       direction: 'row',
       style: { zIndex: '1' },
+      animation: {
+        type: 'slideDown',
+        duration: 500,
+        size: 'xlarge'
+      },
     },
     button: {
       plain: true,

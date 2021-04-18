@@ -3,8 +3,7 @@ import { Box, Button } from 'grommet';
 import Navs from './Navs'
 import { Moon, Sun } from 'grommet-icons'
 
-const Header = ({ darkMode, setDarkMode, size }) => {
-
+const Header = ({ darkMode, setDarkMode, showNavBar, size }) => {
 
   const props = {
     main: {
@@ -28,8 +27,8 @@ const Header = ({ darkMode, setDarkMode, size }) => {
 
   return (
     <Box {...props.main}>
-      <Button {...props.icon}/>
-      <Navs />
+      <Button {...props.icon} />
+      {!showNavBar && size!=='small' && <Navs />}
     </Box>
   )
 }

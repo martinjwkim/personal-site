@@ -44,3 +44,12 @@
   width: 20px;
   transform: translate(-50%, -50%) rotate(180deg);
 }
+
+.icon.close {
+  background-color: transparent;
+  animation-name: close-to-open;
+  animation-duration: .3s;
+  animation-delay: .5s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}

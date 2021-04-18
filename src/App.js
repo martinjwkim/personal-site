@@ -62,6 +62,7 @@ function App() {
     home: {
       darkMode,
       setDarkMode,
+      showNavBar,
     },
     contact: {
       scrollToTop,
@@ -80,7 +81,7 @@ function App() {
               <Portfolio size={size} />
               <Contact {...props.contact} size={size} />
             </Box>
-            {showNavBar && <NavBar />}
+            {(showNavBar || size==='small') && <NavBar />}
           </Box>
         )}
       </ResponsiveContext.Consumer>
