@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Layer } from 'grommet';
+import { Box, Collapsible, Layer } from 'grommet';
 import NavBarIcon from './NavBarIcon/NavBarIcon'
 
 function NavBar() {
@@ -13,14 +13,32 @@ function NavBar() {
       position: 'top-right',
       animate: false,
       animation: false,
-      margin: 'medium',
       plain: true,
     },
+    icon: {
+      openNav,
+      setOpenNav
+    },
+    collapsible: {
+      direction: 'horizontal',
+      open: openNav,
+    },
+    main: {
+      border: { color: 'brand' },
+      height: {min: '100vh'},
+      width: 'small',
+    }
   }
 
   return (
     <Layer {...props.layer}>
-      <NavBarIcon />
+      <Box direction='row'>
+        <NavBarIcon {...props.icon} />
+        <Collapsible {...props.collapsible}>
+          <Box {...props.main}>
+          </Box>
+        </Collapsible>
+      </Box>
     </Layer>
   );
 }

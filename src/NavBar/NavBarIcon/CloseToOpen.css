@@ -1,8 +1,8 @@
 .cto-top, .cto-bot, .cto-mid {
   position: absolute;
   top: 50%;
-  animation-delay: 2s;
-  animation-duration: 0.5s;
+  animation-delay: .5s;
+  animation-duration: 0.3s;
   animation-timing-function: linear;
   animation-fill-mode: forwards;
  }

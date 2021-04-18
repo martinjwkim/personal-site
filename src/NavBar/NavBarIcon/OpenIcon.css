@@ -1,7 +1,7 @@
  .open-top, .open-bot, .open-mid {
   position: absolute;
   top: 50%;
-  transition: all 0.5s;
+  transition: all 0.3s;
   transform: translate(-50%, -50%);
   width: 20px;
  }
