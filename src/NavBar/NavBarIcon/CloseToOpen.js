@@ -7,9 +7,9 @@ function CloseToOpen() {
 
   return (
     <Stack>
-      <div className={isAnimating? 'cto-top' : 'open-top'} onAnimationEnd={()=>setIsAnimating(false)}></div>
-      <div className={isAnimating? 'cto-mid' : 'open-mid'}></div>
-      <div className={isAnimating? 'cto-bot' : 'open-bot'}></div>
+      <div className={isAnimating ? 'cto-top' : 'open-top'} onAnimationEnd={() => setIsAnimating(false)}></div>
+      <div className={isAnimating ? 'cto-mid' : 'open-mid'}></div>
+      <div className={isAnimating ? 'cto-bot' : 'open-bot'}></div>
     </Stack>
   );
 }
