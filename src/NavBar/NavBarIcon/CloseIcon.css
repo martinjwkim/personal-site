@@ -11,7 +11,7 @@
 }
 
 .close-top {
-  border-top: 3px solid white;
+  border-top: 3px solid white;;
   transform: translate(-50%, -50%) rotate(-45deg);
 }
 
@@ -32,10 +32,12 @@
 
 .icon:hover .close-top {
   transform: translate(-50%, -50%) rotate(45deg);
+  border-color: white;
 }
 
 .icon:hover .close-bot {
   transform: translate(-50%, -50%) rotate(-45deg);
+  border-color: white;
 }
 
 

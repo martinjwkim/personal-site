@@ -1,10 +1,17 @@
 import React, { useState } from 'react';
-import { Box, Collapsible, Layer } from 'grommet';
+import { Box, Layer } from 'grommet';
 import NavBarIcon from './NavBarIcon/NavBarIcon'
+import NavContent from './NavContent'
 
 function NavBar() {
 
   const [openNav, setOpenNav] = useState(false)
+  const [iconType, setIconType] = useState('open')
+
+  const handleClose = () => {
+    setOpenNav(false);
+    setIconType('close-to-open');
+  }
 
   const props = {
     layer: {
@@ -14,19 +21,17 @@ function NavBar() {
       animate: false,
       animation: false,
       plain: true,
+      onClickOutside: () => handleClose(),
+      onEsc: () => handleClose(),
     },
     icon: {
+      iconType,
+      setIconType,
       openNav,
       setOpenNav
     },
-    collapsible: {
-      direction: 'horizontal',
-      open: openNav,
-    },
-    main: {
-      border: { color: 'brand' },
-      height: {min: '100vh'},
-      width: 'small',
+    content: {
+      openNav
     }
   }
 
@@ -34,10 +39,7 @@ function NavBar() {
     <Layer {...props.layer}>
       <Box direction='row'>
         <NavBarIcon {...props.icon} />
-        <Collapsible {...props.collapsible}>
-          <Box {...props.main}>
-          </Box>
-        </Collapsible>
+        <NavContent {...props.content} />
       </Box>
     </Layer>
   );

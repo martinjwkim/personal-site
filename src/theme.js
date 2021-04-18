@@ -8,6 +8,9 @@ const theme = deepMerge(grommet, {
     breakpoints: {
     }
   },
+  collapsible: {
+    minSpeed: 500,
+  },
   checkBox: {
     border: {
       color: {
