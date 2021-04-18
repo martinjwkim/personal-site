@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Box, Grommet, ResponsiveContext } from 'grommet';
 import About from './About/About'
 import Home from './Home/Home'
@@ -11,6 +11,7 @@ import theme from './theme'
 function App() {
 
   const [darkMode, setDarkMode] = useState(false);
+  const [showNavBar, setShowNavBar] = useState(false);
   const grommetRef = useRef();
 
   const scrollToTop = () => {
@@ -19,6 +20,20 @@ function App() {
       behavior: "smooth"
     });
   }
+
+  useEffect(()=>{
+    const handleScroll = () => {
+      const scrollY = grommetRef.current.scrollTop
+
+      if(scrollY > 100){
+        setShowNavBar(true);
+      } else {
+        setShowNavBar(false);
+      }
+    }
+
+    grommetRef.current.addEventListener('scroll', handleScroll);
+  },[])
 
   const props = {
     grommet: {
@@ -65,7 +80,7 @@ function App() {
               <Portfolio size={size} />
               <Contact {...props.contact} size={size} />
             </Box>
-            <NavBar />
+            {showNavBar && <NavBar />}
           </Box>
         )}
       </ResponsiveContext.Consumer>
@@ -81,4 +96,3 @@ export default App;
 // button redesign
 // color card info background
 // proper links, pictures, card information
-// responsive navbar on scroll
