@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef } from 'react';
 import { Box, Grommet, ResponsiveContext } from 'grommet';
 import About from './About/About'
 import Home from './Home/Home'
@@ -11,7 +11,6 @@ import theme from './theme'
 function App() {
 
   const [darkMode, setDarkMode] = useState(false);
-  const [openNav, setOpenNav] = useState(false)
   const grommetRef = useRef();
 
   const scrollToTop = () => {
@@ -20,20 +19,6 @@ function App() {
       behavior: "smooth"
     });
   }
-
-  useEffect(()=>{
-    const handleScroll = () => {
-      const scrollY = grommetRef.current.scrollTop
-
-      if(scrollY > 1){
-        setOpenNav(true);
-      } else {
-        setOpenNav(false);
-      }
-    }
-
-    grommetRef.current.addEventListener('scroll', handleScroll);
-  },[])
 
   const props = {
     grommet: {
@@ -66,10 +51,6 @@ function App() {
     contact: {
       scrollToTop,
     },
-    navbar: {
-      openNav,
-      setOpenNav,
-    }
   }
 
   return (
@@ -84,7 +65,7 @@ function App() {
               <Portfolio size={size} />
               <Contact {...props.contact} size={size} />
             </Box>
-            {(openNav || size==='small') && <NavBar {...props.navbar}/>}
+            <NavBar />
           </Box>
         )}
       </ResponsiveContext.Consumer>

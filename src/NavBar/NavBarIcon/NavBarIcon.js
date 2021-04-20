@@ -1,9 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Box } from 'grommet';
 import OpenIcon from './OpenIcon'
 import OpenToClose from './OpenToClose'
 import CloseToOpen from './CloseToOpen';
-import './NavBarIcon.css'
 import './OpenIcon.css'
 import './OpenToClose.css'
 import './CloseIcon.css'
@@ -29,7 +28,8 @@ function NavBarIcon({ openNav, setOpenNav, iconType, setIconType }) {
       height: '52px',
       justify: 'center',
       align: 'center',
-      className: `icon ${openNav ? 'open' : 'close'}`,
+      focusIndicator: false,
+      className: `icon`,
       onClick: () => handleClick(),
     },
   }

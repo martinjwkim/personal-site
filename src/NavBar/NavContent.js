@@ -1,6 +1,5 @@
 import React from 'react';
-import { Box, Collapsible, Heading } from 'grommet';
-import { v4 as uuidv4 } from 'uuid';
+import { Box, Button } from 'grommet';
 
 
 function NavContent({ openNav }) {
@@ -18,26 +17,22 @@ function NavContent({ openNav }) {
       gap: 'small',
       direction: 'row',
     },
-    heading: {
-      level: 3,
-      margin: 'none',
-    },
-    navItem: {
+    button: {
+      plain: true,
+      focusIndicator: false,
     }
   }
 
   const showNavItems = () => (
     ['Home', 'About', 'Portfolio', 'Contact'].map(label =>
-      <Heading {...props.heading} key={uuidv4()}>{label}</Heading>
+      <Button {...props.button} label={label} key={label} onClick={() =>{}} />
     )
   )
 
   return (
-    <Collapsible {...props.collapsible}>
       <Box {...props.main}>
         {showNavItems()}
       </Box>
-    </Collapsible>
   );
 }
 

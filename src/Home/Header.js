@@ -1,6 +1,5 @@
 import React from 'react';
 import { Box, Button } from 'grommet';
-import Navs from './Navs'
 import { Moon, Sun } from 'grommet-icons'
 
 const Header = ({ darkMode, setDarkMode }) => {
