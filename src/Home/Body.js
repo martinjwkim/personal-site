@@ -22,7 +22,7 @@ function Body({ size }) {
 
   return (
     <Box {...props.main}>
-      <Heading {...props.heading}>Martin Kim</Heading>
+      <Heading {...props.heading}>MARTIN KIM</Heading>
       <TypedComponent />
       <Socials />
     </Box>

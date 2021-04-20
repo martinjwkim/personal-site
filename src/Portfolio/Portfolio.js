@@ -23,7 +23,7 @@ const Portfolio = ({size}) => {
       pad: {vertical: 'medium'}
     },
     heading: {
-      level: 3,
+      level: 2,
     },
     hcontainer: {
       ref,
@@ -46,7 +46,7 @@ const Portfolio = ({size}) => {
   return (
     <Box {...props.main}>
       <Box {...props.hcontainer}>
-        <Heading {...props.heading}>Things I've been working on...</Heading>
+        <Heading {...props.heading}>WHAT I'VE BEEN UP TO...</Heading>
       </Box>
       {cardData.map(data => (<Card data={data} size={size} key={data.title} />))}
     </Box >

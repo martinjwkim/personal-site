@@ -19,12 +19,12 @@ const CardInfo = ({ setShowModal, data, size }) => {
       id: 'StyledButton'
     },
     title: {
-      level: 1,
+      level: 2,
       alignSelf: 'center',
       margin: 'small',
     },
     stack: {
-      level: 5,
+      level: 6,
       alignSelf: 'center',
       margin: 'small',
     },

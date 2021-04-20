@@ -4,12 +4,18 @@ import { deepMerge } from "grommet/utils"
 const theme = deepMerge(grommet, {
   global: {
     font: {
+      family: "Playfair Display,serif"
     },
     breakpoints: {
     },
     colors:
     {
       brand: '#7D4CDB'
+    }
+  },
+  paragraph: {
+    font: {
+      family: 'Montserrat,sans-serif'
     }
   },
   button: {

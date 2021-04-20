@@ -97,7 +97,7 @@ const Bio = ({ size }) => {
   return (
     <Box {...props.main}>
       <Box {...props.hcontainer}>
-        <Heading {...props.heading}>A little about me...</Heading>
+        <Heading {...props.heading}>ABOUT ME...</Heading>
       </Box>
       <Box {...props.blurbs}>
         {blurbs.map(data => <Blurb key={data.name} {...data} />)}
