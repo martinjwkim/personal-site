@@ -54,7 +54,7 @@ function ContactForm() {
               </Box>
             </Box>
           </Collapsible>
-          <Button type="submit" primary label="Submit" alignSelf='end' />
+          <Button type="submit" label="Submit" alignSelf='end' id='StyledButton'/>
         </Box>
       </Form>
     </Box>

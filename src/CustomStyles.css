@@ -1,0 +1,24 @@
+#StyledButton {
+  color: #5CC4C0;
+  font-size: 14px;
+  border-width: 1px;
+  border-radius: 0px;
+  border-color: #5CC4C0;
+  transition: all 0.3s linear;
+}
+
+#StyledButton:hover {
+  box-shadow: 0px 0px 0px 0px #5CC4C0;
+  color: white;
+  background: #5CC4C0;
+}
+
+#StyledButton path {
+  stroke: #5CC4C0;
+  transition: all 0.3s linear;
+
+}
+
+#StyledButton:hover path {
+  stroke: white;
+}

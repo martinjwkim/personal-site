@@ -14,9 +14,9 @@ const CardInfo = ({ setShowModal, data, size }) => {
     button: {
       label: 'LEARN MORE',
       size,
-      primary: true,
       alignSelf: 'center',
-      onClick: () => setShowModal(true)
+      onClick: () => setShowModal(true),
+      id: 'StyledButton'
     },
     title: {
       level: 1,

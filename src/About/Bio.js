@@ -61,11 +61,9 @@ const Bio = ({ size }) => {
     },
     button: {
       fill: false,
-      secondary: true,
       label: 'Download Resume',
-      color: '#5CC4C0',
       reverse: true,
-      icon: <Download size='small' />,
+      icon: <Download size='small'/>,
       alignSelf: size === 'xsmall' ? 'center' : 'start',
       margin: { left: size === 'xsmall' ? 'none' : "medium" },
       size: size === 'xsmall' ? 'small' : size,

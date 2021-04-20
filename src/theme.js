@@ -7,6 +7,10 @@ const theme = deepMerge(grommet, {
     },
     breakpoints: {
     },
+    colors:
+    {
+      brand: '#7D4CDB'
+    }
   },
   button: {
     extend: {

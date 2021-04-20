@@ -1,6 +1,5 @@
 import React from 'react';
 import { Box, Button } from 'grommet';
-import { v4 as uuidv4 } from 'uuid';
 import { Close } from 'grommet-icons'
 
 const ModalButtons = ({ data, setShowModal, size }) => {
@@ -16,7 +15,12 @@ const ModalButtons = ({ data, setShowModal, size }) => {
       alignSelf: 'center',
       size: 'small',
       margin: 'none',
+      id: 'StyledButton'
     },
+    close: {
+      icon: <Close />,
+      onClick: () => setShowModal(false)
+    }
   }
 
   const showButtons = () => {
@@ -25,10 +29,6 @@ const ModalButtons = ({ data, setShowModal, size }) => {
         label: 'GITHUB',
         href: data.github_url,
       },
-      {
-        icon: <Close />,
-        onClick: () => setShowModal(false)
-      }
     ];
 
     if (data.demo_url){
@@ -40,12 +40,13 @@ const ModalButtons = ({ data, setShowModal, size }) => {
       )
     }
 
-    return buttons.map(button=><Button key={uuidv4()} {...button} {...props.button}/>)
+    return buttons.map(button=><Button key={button.label} {...button} {...props.button}/>)
   }
 
   return (
     <Box {...props.main}>
       {showButtons()}
+      <Button {...props.close}/>
     </Box>
 
   )
