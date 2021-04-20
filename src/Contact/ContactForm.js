@@ -43,7 +43,7 @@ function ContactForm() {
           <TextInput name="name" placeholder="Name" required />
           <TextInput name="email" placeholder="Enter Email" required />
           <Box height='150px'>
-            <TextArea name="message" placeholder="Your Message" fill required />
+            <TextArea name="message" resize={false} placeholder="Your Message" fill required />
           </Box>
           <Collapsible open={showAlert}>
             <Box direction='row' justify='between' background='status-ok'>

@@ -35,7 +35,7 @@ function Contact({ scrollToTop }) {
   return (
     <Box {...props.main}>
       <Box {...props.contact}>
-        <Heading {...props.heading}>CONTACT</Heading>
+        <Heading {...props.heading}>CONTACT ME</Heading>
         <Heading {...props.sub}>I'd love to hear from you!</Heading>
         <ContactForm />
       </Box>

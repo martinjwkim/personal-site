@@ -1,8 +1,9 @@
 import React from 'react';
-import { Box, Button, Heading, ThemeContext } from 'grommet';
+import { Box, Heading } from 'grommet';
 import Blurb from './Blurb'
 import { Code, Download, Location, Notes } from 'grommet-icons'
 import { useInView } from 'react-hook-inview'
+import StyledButton from '../StyledButton'
 
 
 const Bio = ({ size }) => {
@@ -62,15 +63,15 @@ const Bio = ({ size }) => {
     },
     button: {
       fill: false,
-      primary: true,
+      secondary: true,
       label: 'Download Resume',
+      color: '#5CC4C0',
       reverse: true,
       icon: <Download size='small' />,
       alignSelf: size === 'xsmall' ? 'center' : 'start',
       margin: { left: size === 'xsmall' ? 'none' : "medium" },
       size: size === 'xsmall' ? 'small' : size,
     },
-    styledButton: { value: { text: { medium: { size: '14px' } } } }
   }
 
   const blurbs = [
@@ -103,11 +104,9 @@ const Bio = ({ size }) => {
       </Box>
       <Box {...props.blurbs}>
         {blurbs.map(data => <Blurb key={data.name} {...data} />)}
-        <ThemeContext.Extend {...props.styledButton}>
-          <Box {...props.bcontainer}>
-            <Button {...props.button} />
-          </Box>
-        </ThemeContext.Extend>
+        <Box {...props.bcontainer}>
+          <StyledButton {...props.button} />
+        </Box>
       </Box>
     </Box>
   )

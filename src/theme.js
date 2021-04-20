@@ -6,7 +6,13 @@ const theme = deepMerge(grommet, {
     font: {
     },
     breakpoints: {
-    }
+    },
+  },
+  button: {
+    extend: {
+      textTransform: 'uppercase',
+      letterSpacing: '0.5px',
+    },
   },
   collapsible: {
     minSpeed: 500,
