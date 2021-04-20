@@ -7,6 +7,7 @@ import Contact from './Contact/Contact'
 import NavBar from './NavBar/NavBar'
 import Background from './Background'
 import theme from './theme'
+import './StyledButton.css'
 
 function App() {
 

@@ -1,10 +1,8 @@
 import React from 'react';
-import { Box, Heading } from 'grommet';
+import { Box, Button, Heading } from 'grommet';
 import Blurb from './Blurb'
 import { Code, Download, Location, Notes } from 'grommet-icons'
 import { useInView } from 'react-hook-inview'
-import StyledButton from '../StyledButton'
-
 
 const Bio = ({ size }) => {
 
@@ -52,7 +50,7 @@ const Bio = ({ size }) => {
           duration: 1000,
         },
       ] : 'fadeOut',
-      ref: bref
+      ref: bref,
     },
     heading: {
       level: 2,
@@ -71,6 +69,7 @@ const Bio = ({ size }) => {
       alignSelf: size === 'xsmall' ? 'center' : 'start',
       margin: { left: size === 'xsmall' ? 'none' : "medium" },
       size: size === 'xsmall' ? 'small' : size,
+      id: 'StyledButton'
     },
   }
 
@@ -105,7 +104,7 @@ const Bio = ({ size }) => {
       <Box {...props.blurbs}>
         {blurbs.map(data => <Blurb key={data.name} {...data} />)}
         <Box {...props.bcontainer}>
-          <StyledButton {...props.button} />
+          <Button {...props.button} />
         </Box>
       </Box>
     </Box>
