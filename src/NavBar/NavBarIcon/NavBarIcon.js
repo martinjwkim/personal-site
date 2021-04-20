@@ -24,7 +24,7 @@ function NavBarIcon({ openNav, setOpenNav, iconType, setIconType }) {
 
   const props = {
     main: {
-      margin: { top: 'medium', right: 'medium' },
+      margin: 'none',
       width: '52px',
       height: '52px',
       justify: 'center',

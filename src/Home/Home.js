@@ -3,7 +3,7 @@ import { Box } from 'grommet';
 import Body from './Body'
 import Header from './Header'
 
-const Home = ({ darkMode, setDarkMode, size, showNavBar }) => {
+const Home = ({ darkMode, setDarkMode, size }) => {
 
   const props = {
     main: {
@@ -18,8 +18,6 @@ const Home = ({ darkMode, setDarkMode, size, showNavBar }) => {
     header: {
       darkMode,
       setDarkMode,
-      size,
-      showNavBar
     },
     footer: {
       height: size==='small' ? 'small' : 'xsmall',

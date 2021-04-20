@@ -25,12 +25,9 @@ function NavBar() {
       onEsc: () => handleClose(),
     },
     main: {
+      background: '#2b00d4',
       direction: 'row',
-      animation: {
-        type: 'fadeIn',
-        delay: 300,
-        duration: 1000,
-      }
+      margin: 'medium'
     },
     icon: {
       iconType,

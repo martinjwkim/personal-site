@@ -1,8 +1,6 @@
 import React from 'react';
-import { Box, Collapsible } from 'grommet';
-import NavItem from './NavItem'
+import { Box, Collapsible, Heading } from 'grommet';
 import { v4 as uuidv4 } from 'uuid';
-import { Github, Twitter, Instagram, Facebook } from 'grommet-icons'
 
 
 function NavContent({ openNav }) {
@@ -13,24 +11,25 @@ function NavContent({ openNav }) {
       open: openNav,
     },
     main: {
-      height: { min: '100vh' },
-      background: '#2b00d4',
+      height: '52px',
       align: 'center',
       justify: 'center',
       pad: 'small',
       gap: 'small',
+      direction: 'row',
+    },
+    heading: {
+      level: 3,
+      margin: 'none',
     },
     navItem: {
     }
   }
 
   const showNavItems = () => (
-    [
-      { label: 'Home', icon: <Github /> },
-      { label: 'About', icon: <Twitter /> },
-      { label: 'Portfolio', icon: <Instagram /> },
-      { label: 'Contact', icon: <Facebook /> }
-    ].map(data => <NavItem key={uuidv4()} {...data}/>)
+    ['Home', 'About', 'Portfolio', 'Contact'].map(label =>
+      <Heading {...props.heading} key={uuidv4()}>{label}</Heading>
+    )
   )
 
   return (

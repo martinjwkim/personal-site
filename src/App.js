@@ -11,7 +11,7 @@ import theme from './theme'
 function App() {
 
   const [darkMode, setDarkMode] = useState(false);
-  const [showNavBar, setShowNavBar] = useState(false);
+  const [openNav, setOpenNav] = useState(false)
   const grommetRef = useRef();
 
   const scrollToTop = () => {
@@ -25,10 +25,10 @@ function App() {
     const handleScroll = () => {
       const scrollY = grommetRef.current.scrollTop
 
-      if(scrollY > 100){
-        setShowNavBar(true);
+      if(scrollY > 1){
+        setOpenNav(true);
       } else {
-        setShowNavBar(false);
+        setOpenNav(false);
       }
     }
 
@@ -62,11 +62,14 @@ function App() {
     home: {
       darkMode,
       setDarkMode,
-      showNavBar,
     },
     contact: {
       scrollToTop,
     },
+    navbar: {
+      openNav,
+      setOpenNav,
+    }
   }
 
   return (
@@ -81,7 +84,7 @@ function App() {
               <Portfolio size={size} />
               <Contact {...props.contact} size={size} />
             </Box>
-            {(showNavBar || size==='small') && <NavBar />}
+            {(openNav || size==='small') && <NavBar {...props.navbar}/>}
           </Box>
         )}
       </ResponsiveContext.Consumer>
