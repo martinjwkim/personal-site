@@ -1,17 +1,20 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Box, Grommet, ResponsiveContext } from 'grommet';
-import About from './About/About'
-import Home from './Home/Home'
-import Portfolio from './Portfolio/Portfolio'
-import Contact from './Contact/Contact'
-import NavBar from './NavBar/NavBar'
-import Background from './Background'
-import theme from './theme'
-import './CustomStyles.css'
+import About from './About/About';
+import Home from './Home/Home';
+import Portfolio from './Portfolio/Portfolio';
+import Contact from './Contact/Contact';
+import NavBar from './NavBar/NavBar';
+import Background from './Background';
+import theme from './theme';
+import useWindowDimensions from './useWindowDimensions';
+import './CustomStyles.css';
+import $ from 'jquery';
 
 function App() {
 
   const [darkMode, setDarkMode] = useState(false);
+  const { h } = useWindowDimensions();
   const grommetRef = useRef();
 
   const scrollToTop = () => {
@@ -20,6 +23,17 @@ function App() {
       behavior: "smooth"
     });
   }
+
+  useEffect(() => {
+    grommetRef.current.addEventListener('scroll', () => {
+      const scroll = grommetRef.current.scrollTop;
+      if (scroll < h) {
+        $('#background-img').css({
+          width: `${100+ scroll/5}%`
+        })
+      }
+    })
+  }, [h])
 
   const props = {
     grommet: {
@@ -43,7 +57,7 @@ function App() {
         },
       },
       gap: 'xlarge',
-      pad: {top: 'xlarge'}
+      pad: { top: 'xlarge' },
     },
     home: {
       darkMode,
@@ -60,7 +74,7 @@ function App() {
         {size => (
           <Box>
             <Background />
-            <Home {...props.home} size={size}/>
+            <Home {...props.home} size={size} />
             <Box {...props.main}>
               <About size={size} />
               <Portfolio size={size} />
