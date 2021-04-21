@@ -28,8 +28,10 @@ function App() {
     grommetRef.current.addEventListener('scroll', () => {
       const scroll = grommetRef.current.scrollTop;
       if (scroll < h) {
+        console.log('zooming')
         $('#background-img').css({
-          width: `${100+ scroll/5}%`
+          width: `${100+ 200*scroll/h}%`,
+          height: `${100+ 200*scroll/h}%`
         })
       }
     })
