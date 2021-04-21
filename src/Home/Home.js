@@ -9,9 +9,9 @@ const Home = ({ darkMode, setDarkMode, size }) => {
     main: {
       direction: 'column',
       justify: "between",
-      height: {min: 'large'},
+      height: {min: '100vh'},
+      width: {min: '100vw'},
       alignContent: 'center',
-      width: { max: '1200px' },
       fill: true,
       alignSelf: 'center',
     },

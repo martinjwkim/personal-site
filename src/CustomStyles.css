@@ -22,3 +22,13 @@
 #StyledButton:hover path {
   stroke: white;
 }
+
+.Background {
+  background: url(./imac-zoomedout.png) no-repeat center center;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+}
