@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box } from 'grommet';
-import Body from './Body'
-import Header from './Header'
+// import Body from './Body'
+// import Header from './Header'
 
 const Home = ({ darkMode, setDarkMode, size }) => {
 
@@ -26,9 +26,9 @@ const Home = ({ darkMode, setDarkMode, size }) => {
 
   return (
     <Box {...props.main}>
-      <Header {...props.header}/>
-      <Body size={size} />
-      <Box {...props.footer}></Box>
+      {/* <Header {...props.header}/> */}
+      {/*<Body size={size} />
+      <Box {...props.footer}></Box> */}
     </Box>
   )
 }

@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { Box, Grommet, ResponsiveContext } from 'grommet';
 import About from './About/About';
 import Home from './Home/Home';
+import Screen from './Screen'
 import Portfolio from './Portfolio/Portfolio';
 import Contact from './Contact/Contact';
 import NavBar from './NavBar/NavBar';
@@ -28,10 +29,9 @@ function App() {
     grommetRef.current.addEventListener('scroll', () => {
       const scroll = grommetRef.current.scrollTop;
       if (scroll < h) {
-        console.log('zooming')
         $('#background-img').css({
-          width: `${100+ 200*scroll/h}%`,
-          height: `${100+ 200*scroll/h}%`
+          width: `${100+ 130*scroll/h}%`,
+          height: `${100+ 130*scroll/h}%`
         })
       }
     })
@@ -48,7 +48,6 @@ function App() {
           light: 'light-1',
           dark: '#181818',
         },
-        opacity: 'medium',
       }
     },
     main: {
@@ -76,6 +75,8 @@ function App() {
         {size => (
           <Box>
             <Background />
+            <Screen size={size}/>
+            <Box width='100vw' height='100vh'></Box>
             <Home {...props.home} size={size} />
             <Box {...props.main}>
               <About size={size} />
