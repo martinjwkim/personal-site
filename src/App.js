@@ -28,12 +28,10 @@ function App() {
   useEffect(() => {
     grommetRef.current.addEventListener('scroll', () => {
       const scroll = grommetRef.current.scrollTop;
-      if (scroll < h) {
-        $('#background-img').css({
-          width: `${100+ 130*scroll/h}%`,
-          height: `${100+ 130*scroll/h}%`
-        })
-      }
+      $('#background-img').css({
+        width: `${100 + 130 * scroll / h}%`,
+        height: `${100 + 130 * scroll / h}%`
+      })
     })
   }, [h])
 
@@ -75,7 +73,7 @@ function App() {
         {size => (
           <Box>
             <Background />
-            <Screen size={size}/>
+            <Screen size={size} />
             <Box width='100vw' height='100vh'></Box>
             <Home {...props.home} size={size} />
             <Box {...props.main}>
