@@ -29,7 +29,8 @@
   position: absolute;
   z-index: 50;
   pointer-events: none;
-  overflow: hidden;
+  overflow: visible;
+  transform: translate(-50%, -50%);
 }
 
 .Background img {
@@ -38,7 +39,30 @@
   height: 100%;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+}
+
+.zoom-in {
+  animation-name: zoom-in;
+  animation-duration: 2s;
+  animation-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
+  animation-fill-mode: forwards;
+}
+
+@keyframes zoom-in {
+  from {transform: scale(1,1)}
+  to {transform: scale(2.5, 2.5)}
+}
+
+.zoom-out {
+  animation-name: zoom-out;
+  animation-duration: 2s;
+  animation-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
+  animation-fill-mode: forwards;
+}
+
+@keyframes zoom-out {
+  from {transform: scale(2.5, 2.5)}
+  to {transform: scale(1,1)}
 }
 
 .Screen {

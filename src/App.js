@@ -10,13 +10,14 @@ import Background from './Background';
 import theme from './theme';
 import useWindowDimensions from './useWindowDimensions';
 import './CustomStyles.css';
-import $ from 'jquery';
 
 function App() {
 
   const [darkMode, setDarkMode] = useState(false);
   const { h } = useWindowDimensions();
   const grommetRef = useRef();
+  const backgroundRef = useRef();
+  const [animationType, setAnimationType] = useState('')
 
   const scrollToTop = () => {
     grommetRef.current.scrollTo({
@@ -26,13 +27,30 @@ function App() {
   }
 
   useEffect(() => {
+
+    // const scroll = {
+    //   multiplier: 1.5,
+    //   current: 0,
+    //   previous: 0,
+    //   change: 0,
+    // };
+
+    // const scrollHandler = () => {
+    //   scroll.current = grommetRef.current.scrollTop;
+    //   scroll.previous += (scroll.current - scroll.previous);
+    //   scroll.change = scroll.multiplier * scroll.previous/h;
+
+    //   backgroundRef.current.style.transform = `scale(${1+scroll.change}, ${1+scroll.change})`;
+
+    //   requestAnimationFrame(()=> scrollHandler());
+    // }
+
     grommetRef.current.addEventListener('scroll', () => {
+      // requestAnimationFrame(()=> scrollHandler());
       const scroll = grommetRef.current.scrollTop;
-      $('#background-img').css({
-        width: `${100 + 130 * scroll / h}%`,
-        height: `${100 + 130 * scroll / h}%`
-      })
+      setAnimationType(scroll > 0 ? 'zoom-in' : 'zoom-out')
     })
+
   }, [h])
 
   const props = {
@@ -72,8 +90,8 @@ function App() {
       <ResponsiveContext.Consumer>
         {size => (
           <Box>
-            <Background />
-            <Screen size={size} />
+            <Background backgroundRef={backgroundRef} animationType={animationType} />
+            <Screen size={size} animationType={animationType} />
             <Box width='100vw' height='100vh'></Box>
             <Home {...props.home} size={size} />
             <Box {...props.main}>

@@ -3,7 +3,7 @@ import { Box, Heading } from 'grommet';
 import TypedComponent from './Home/TypedComponent'
 import Socials from './Home/Socials'
 
-const Screen = ({size}) => {
+const Screen = ({size, animationType}) => {
 
   const props = {
     heading: {
