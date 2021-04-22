@@ -108,3 +108,35 @@
   display: flex;
   overflow: hidden;
 }
+
+.Screen.zoom-in {
+  animation-name: s-zoom-in;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes s-zoom-in {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.Screen.zoom-out {
+  animation-name: s-zoom-out;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes s-zoom-out {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

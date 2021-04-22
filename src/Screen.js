@@ -22,8 +22,8 @@ const Screen = ({ size, setAnimationType, animationType }) => {
   }
 
   return (
-    <div className='Screen' style={{pointerEvents: animationType==='zoom-in' ? 'none' : 'auto'}}>
-      <Box direction='row' gap='small' margin={{top: '3vh'}}>
+    <div className={`Screen ${animationType}`} style={{pointerEvents: animationType==='zoom-in' ? 'none' : 'auto'}}>
+      <Box direction='row' gap='small' margin={{top: '3vh'}} >
         <Heading {...props.heading}>MARTIN</Heading>
         <Heading {...props.heading}>KIM</Heading>
       </Box>
