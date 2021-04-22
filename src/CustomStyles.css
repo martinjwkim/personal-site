@@ -16,10 +16,29 @@
 #StyledButton path {
   stroke: #5CC4C0;
   transition: all 0.3s linear;
-
 }
 
-#StyledButton:hover path {
+#ScreenButton {
+  color: black;
+  font-size: 14px;
+  border-width: 1px;
+  border-radius: 0px;
+  border-color: black;
+  transition: all 0.3s linear;
+}
+
+#ScreenButton:hover {
+  box-shadow: 0px 0px 0px 0px black;
+  color: white;
+  background: black;
+}
+
+#ScreenButton path {
+  stroke: black;
+  transition: all 0.3s linear;
+}
+
+#ScreenButton:hover path {
   stroke: white;
 }
 
@@ -54,8 +73,8 @@
     height: 100%;
   }
   to {
-    width: 250%;
-    height: 250%;
+    width: 230%;
+    height: 230%;
   }
 }
 
@@ -68,8 +87,8 @@
 
 @keyframes zoom-out {
   from {
-    width: 250%;
-    height: 250%;
+    width: 230%;
+    height: 230%;
   }
   to {
     width: 100%;
@@ -84,7 +103,6 @@
   top: 0%;
   left: 0%;
   position: absolute;
-  pointer-events: none;
   align-items: center;
   justify-content: center;
   display: flex;

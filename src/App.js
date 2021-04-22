@@ -8,7 +8,6 @@ import Contact from './Contact/Contact';
 import NavBar from './NavBar/NavBar';
 import Background from './Background';
 import theme from './theme';
-import $ from 'jquery';
 import './CustomStyles.css';
 
 function App() {
@@ -23,13 +22,6 @@ function App() {
       behavior: "smooth"
     });
   }
-
-  useEffect(() => {
-    grommetRef.current.addEventListener('scroll', () => {
-      const scroll = grommetRef.current.scrollTop;
-      setAnimationType(scroll > 0 ? 'zoom-in' : 'zoom-out')
-    })
-  }, [])
 
   const props = {
     grommet: {
@@ -69,9 +61,8 @@ function App() {
       <ResponsiveContext.Consumer>
         {size => (
           <Box>
+            <Screen size={size} setAnimationType={setAnimationType}/>
             <Background animationType={animationType}/>
-            <Screen size={size} />
-            <Box width='100vw' height='100vh'></Box>
             <Home {...props.home} size={size} />
             <Box {...props.main}>
               <About size={size} />

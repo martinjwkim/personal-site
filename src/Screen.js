@@ -1,9 +1,16 @@
 import React from 'react';
-import { Box, Heading } from 'grommet';
+import { Box, Button, Heading } from 'grommet';
+import $ from 'jquery'
 import TypedComponent from './Home/TypedComponent'
-import Socials from './Home/Socials'
 
-const Screen = ({ size }) => {
+const Screen = ({ size, setAnimationType }) => {
+
+  const handleClick = () => {
+    setAnimationType('zoom-in');
+    $('.Screen').css({
+      'pointer-events': 'none',
+    })
+  }
 
   const props = {
     heading: {
@@ -13,6 +20,13 @@ const Screen = ({ size }) => {
       size,
       margin: { horizontal: 'none', vertical: 'small' }
     },
+    button: {
+      label: 'Learn More',
+      id: 'ScreenButton',
+      focusIndicator: false,
+      margin: 'small',
+      onClick: ()=>handleClick(),
+    }
   }
 
   return (
@@ -22,7 +36,7 @@ const Screen = ({ size }) => {
         <Heading {...props.heading}>KIM</Heading>
       </Box>
       <TypedComponent />
-      <Socials />
+      <Button {...props.button}/>
     </div>
   )
 }
