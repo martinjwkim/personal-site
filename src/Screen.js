@@ -3,7 +3,7 @@ import { Box, Heading } from 'grommet';
 import TypedComponent from './Home/TypedComponent'
 import Socials from './Home/Socials'
 
-const Screen = ({size, animationType}) => {
+const Screen = ({ size }) => {
 
   const props = {
     heading: {
@@ -11,7 +11,7 @@ const Screen = ({size, animationType}) => {
       textAlign: 'center',
       level: 1,
       size,
-      margin: {horizontal: 'none', vertical: 'small'}
+      margin: { horizontal: 'none', vertical: 'small' }
     },
   }
 

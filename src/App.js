@@ -8,16 +8,14 @@ import Contact from './Contact/Contact';
 import NavBar from './NavBar/NavBar';
 import Background from './Background';
 import theme from './theme';
-import useWindowDimensions from './useWindowDimensions';
+import $ from 'jquery';
 import './CustomStyles.css';
 
 function App() {
 
   const [darkMode, setDarkMode] = useState(false);
-  const { h } = useWindowDimensions();
+  const [animationType, setAnimationType] = useState('');
   const grommetRef = useRef();
-  const backgroundRef = useRef();
-  const [animationType, setAnimationType] = useState('')
 
   const scrollToTop = () => {
     grommetRef.current.scrollTo({
@@ -27,31 +25,11 @@ function App() {
   }
 
   useEffect(() => {
-
-    // const scroll = {
-    //   multiplier: 1.5,
-    //   current: 0,
-    //   previous: 0,
-    //   change: 0,
-    // };
-
-    // const scrollHandler = () => {
-    //   scroll.current = grommetRef.current.scrollTop;
-    //   scroll.previous += (scroll.current - scroll.previous);
-    //   scroll.change = scroll.multiplier * scroll.previous/h;
-
-    //   backgroundRef.current.style.transform = `scale(${1+scroll.change}, ${1+scroll.change})`;
-
-    //   requestAnimationFrame(()=> scrollHandler());
-    // }
-
     grommetRef.current.addEventListener('scroll', () => {
-      // requestAnimationFrame(()=> scrollHandler());
       const scroll = grommetRef.current.scrollTop;
       setAnimationType(scroll > 0 ? 'zoom-in' : 'zoom-out')
     })
-
-  }, [h])
+  }, [])
 
   const props = {
     grommet: {
@@ -64,7 +42,8 @@ function App() {
           light: 'light-1',
           dark: '#181818',
         },
-      }
+      },
+      className: 'Grommet',
     },
     main: {
       background: {
@@ -90,8 +69,8 @@ function App() {
       <ResponsiveContext.Consumer>
         {size => (
           <Box>
-            <Background backgroundRef={backgroundRef} animationType={animationType} />
-            <Screen size={size} animationType={animationType} />
+            <Background animationType={animationType}/>
+            <Screen size={size} />
             <Box width='100vw' height='100vh'></Box>
             <Home {...props.home} size={size} />
             <Box {...props.main}>

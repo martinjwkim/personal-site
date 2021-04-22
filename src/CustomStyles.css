@@ -29,8 +29,7 @@
   position: absolute;
   z-index: 50;
   pointer-events: none;
-  overflow: visible;
-  transform: translate(-50%, -50%);
+  overflow: hidden;
 }
 
 .Background img {
@@ -39,30 +38,43 @@
   height: 100%;
   top: 50%;
   left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .zoom-in {
   animation-name: zoom-in;
   animation-duration: 2s;
-  animation-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
+  animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
 }
 
 @keyframes zoom-in {
-  from {transform: scale(1,1)}
-  to {transform: scale(2.5, 2.5)}
+  from {
+    width: 100%;
+    height: 100%;
+  }
+  to {
+    width: 250%;
+    height: 250%;
+  }
 }
 
 .zoom-out {
   animation-name: zoom-out;
   animation-duration: 2s;
-  animation-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
+  animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
 }
 
 @keyframes zoom-out {
-  from {transform: scale(2.5, 2.5)}
-  to {transform: scale(1,1)}
+  from {
+    width: 250%;
+    height: 250%;
+  }
+  to {
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .Screen {
@@ -77,4 +89,8 @@
   justify-content: center;
   display: flex;
   padding-top: 2vh;
+}
+
+.Grommet{
+
 }
