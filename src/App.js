@@ -21,6 +21,10 @@ function App() {
       top: 0,
       behavior: "smooth"
     });
+
+    setTimeout(()=>{
+      setAnimationType('zoom-out')
+    },500)
   }
 
   const props = {
