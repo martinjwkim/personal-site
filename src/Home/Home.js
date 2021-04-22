@@ -1,9 +1,9 @@
 import React from 'react';
-import { Box } from 'grommet';
+import { Box, Button } from 'grommet';
 // import Body from './Body'
 // import Header from './Header'
 
-const Home = ({ darkMode, setDarkMode, size }) => {
+const Home = ({ darkMode, setDarkMode, setAnimationType }) => {
 
   const props = {
     main: {
@@ -21,11 +21,19 @@ const Home = ({ darkMode, setDarkMode, size }) => {
     },
     footer: {
       height: 'xsmall',
+    },
+    button: {
+      label: 'BACK',
+      id: 'StyledButton',
+      alignSelf: 'center',
+      margin: 'large',
+      onClick: () => setAnimationType('zoom-out')
     }
   }
 
   return (
     <Box {...props.main}>
+      <Button {...props.button}/>
       {/* <Header {...props.header}/> */}
       {/*<Body size={size} />
       <Box {...props.footer}></Box> */}

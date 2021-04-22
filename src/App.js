@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef } from 'react';
 import { Box, Grommet, ResponsiveContext } from 'grommet';
 import About from './About/About';
 import Home from './Home/Home';
@@ -50,6 +50,7 @@ function App() {
     home: {
       darkMode,
       setDarkMode,
+      setAnimationType
     },
     contact: {
       scrollToTop,
@@ -61,7 +62,7 @@ function App() {
       <ResponsiveContext.Consumer>
         {size => (
           <Box>
-            <Screen size={size} setAnimationType={setAnimationType}/>
+            <Screen size={size} animationType={animationType} setAnimationType={setAnimationType}/>
             <Background animationType={animationType}/>
             <Home {...props.home} size={size} />
             <Box {...props.main}>

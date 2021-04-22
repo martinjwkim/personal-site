@@ -1,16 +1,8 @@
 import React from 'react';
 import { Box, Button, Heading } from 'grommet';
-import $ from 'jquery'
 import TypedComponent from './Home/TypedComponent'
 
-const Screen = ({ size, setAnimationType }) => {
-
-  const handleClick = () => {
-    setAnimationType('zoom-in');
-    $('.Screen').css({
-      'pointer-events': 'none',
-    })
-  }
+const Screen = ({ size, setAnimationType, animationType }) => {
 
   const props = {
     heading: {
@@ -25,13 +17,13 @@ const Screen = ({ size, setAnimationType }) => {
       id: 'ScreenButton',
       focusIndicator: false,
       margin: 'small',
-      onClick: ()=>handleClick(),
+      onClick: ()=>setAnimationType('zoom-in'),
     }
   }
 
   return (
-    <div className='Screen'>
-      <Box direction='row' gap='small'>
+    <div className='Screen' style={{pointerEvents: animationType==='zoom-in' ? 'none' : 'auto'}}>
+      <Box direction='row' gap='small' margin={{top: '3vh'}}>
         <Heading {...props.heading}>MARTIN</Heading>
         <Heading {...props.heading}>KIM</Heading>
       </Box>
