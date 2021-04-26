@@ -76,7 +76,7 @@
   to {
     width: 250%;
     height: 250%;
-    top: 47%;
+    top: 46%;
   }
 }
 
@@ -91,7 +91,7 @@
   from {
     width: 250%;
     height: 250%;
-    top: 47%;
+    top: 46%;
   }
   to {
     width: 100%;
@@ -145,4 +145,14 @@
   to {
     opacity: 1;
   }
+}
+
+#Github {
+  width: 30px;
+  height: 30px;
+}
+
+#Twitter {
+  width: 26px;
+  height: 26px;
 }

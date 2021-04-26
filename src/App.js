@@ -49,7 +49,6 @@ function App() {
         },
       },
       gap: 'xlarge',
-      pad: { top: 'xlarge' },
     },
     home: {
       darkMode,
@@ -68,8 +67,8 @@ function App() {
           <Box>
             <Screen size={size} animationType={animationType} setAnimationType={setAnimationType} />
             <Background animationType={animationType} />
-            <Home {...props.home} size={size} />
             <Box {...props.main}>
+              <Home {...props.home} size={size} />
               <About size={size} />
               <Portfolio size={size} />
               <Contact {...props.contact} size={size} />

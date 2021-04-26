@@ -1,32 +1,28 @@
 import React from 'react';
 import { Box, Button } from 'grommet';
-// import Body from './Body'
-// import Header from './Header'
+import Socials from './Socials'
 
-const Home = ({ darkMode, setDarkMode, setAnimationType }) => {
+const Home = ({ darkMode, setDarkMode, setAnimationType, size }) => {
 
   const props = {
     main: {
-      direction: 'column',
+      direction: 'row',
       justify: "between",
-      height: {min: '100vh'},
-      width: {min: '100vw'},
       alignContent: 'center',
       fill: true,
       alignSelf: 'center',
+      height: {min: 'large'},
+      width: {max: '1200px'},
+      border: true,
     },
     header: {
       darkMode,
       setDarkMode,
     },
-    footer: {
-      height: 'xsmall',
-    },
     button: {
       label: 'BACK',
       id: 'StyledButton',
       alignSelf: 'center',
-      margin: 'large',
       onClick: () => setAnimationType('zoom-out')
     }
   }
@@ -34,9 +30,7 @@ const Home = ({ darkMode, setDarkMode, setAnimationType }) => {
   return (
     <Box {...props.main}>
       <Button {...props.button}/>
-      {/* <Header {...props.header}/> */}
-      {/*<Body size={size} />
-      <Box {...props.footer}></Box> */}
+      <Socials />
     </Box>
   )
 }
