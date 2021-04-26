@@ -22,9 +22,9 @@ function App() {
       behavior: "smooth"
     });
 
-    setTimeout(()=>{
+    setTimeout(() => {
       setAnimationType('zoom-out')
-    },500)
+    }, 500)
   }
 
   const props = {
@@ -66,15 +66,15 @@ function App() {
       <ResponsiveContext.Consumer>
         {size => (
           <Box>
-            <Screen size={size} animationType={animationType} setAnimationType={setAnimationType}/>
-            <Background animationType={animationType}/>
+            <Screen size={size} animationType={animationType} setAnimationType={setAnimationType} />
+            <Background animationType={animationType} />
             <Home {...props.home} size={size} />
             <Box {...props.main}>
               <About size={size} />
               <Portfolio size={size} />
               <Contact {...props.contact} size={size} />
+              <NavBar />
             </Box>
-            <NavBar />
           </Box>
         )}
       </ResponsiveContext.Consumer>

@@ -46,12 +46,12 @@
   height: 100vh;
   width: 100vw;
   position: absolute;
-  z-index: 50;
   pointer-events: none;
   overflow: hidden;
+  z-Index: 30;
 }
 
-.computer-background {
+.Background img {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -60,17 +60,7 @@
   transform: translate(-50%, -50%);
 }
 
-.nature-background {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 50%;
-  left: 50%;
-  z-index: -50;
-  transform: translate(-50%, -50%);
-}
-
-.computer-background.zoom-in {
+.Background img.zoom-in {
   animation-name: b-zoom-in;
   animation-duration: 2s;
   animation-timing-function: ease-in-out;
@@ -81,14 +71,16 @@
   from {
     width: 100%;
     height: 100%;
+    top: 50%;
   }
   to {
-    width: 230%;
-    height: 230%;
+    width: 250%;
+    height: 250%;
+    top: 47%;
   }
 }
 
-.computer-background.zoom-out {
+.Background img.zoom-out {
   animation-name: b-zoom-out;
   animation-duration: 2s;
   animation-timing-function: ease-in-out;
@@ -97,12 +89,14 @@
 
 @keyframes b-zoom-out {
   from {
-    width: 230%;
-    height: 230%;
+    width: 250%;
+    height: 250%;
+    top: 47%;
   }
   to {
     width: 100%;
     height: 100%;
+    top: 50%;
   }
 }
 
@@ -117,6 +111,8 @@
   justify-content: center;
   display: flex;
   overflow: hidden;
+  background: 'transparent';
+  z-Index: 25;
 }
 
 .Screen.zoom-in {
