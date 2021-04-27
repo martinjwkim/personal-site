@@ -2,32 +2,28 @@ import React from 'react';
 import { Box } from 'grommet';
 import Portrait from './Portrait'
 import Bio from './Bio'
-import aboutBackground from '../paint.png'
 
 
-const About = ({size}) => {
+const About = ({ size }) => {
 
   const props = {
     main: {
-      direction: size==='small' ? 'column' : 'row',
+      direction: size === 'small' ? 'column' : 'row',
       align: 'center',
-      justify: size==='small' ? 'center' : 'evenly',
+      justify: size === 'small' ? 'center' : 'evenly',
       fill: true,
       pad: 'medium',
-      height: {min: 'large'},
-      width: {max: '1200px'},
+      height: { min: 'large' },
+      width: { max: '1200px' },
       alignSelf: 'center',
       gap: 'medium',
-      className: 'About'
     },
-
   }
 
   return (
     <Box {...props.main}>
-      <img src={aboutBackground} alt='about-background' className='About-background'/>
-      <Portrait size={size}/>
-      <Bio size={size}/>
+      <Portrait size={size} />
+      <Bio size={size} />
     </Box >
   )
 }

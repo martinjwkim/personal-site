@@ -33,7 +33,7 @@ const Blurb = ({ icon, paragraph }) => {
       fill: true,
       size: 'small',
       margin: 'none',
-      alignSelf: 'start'
+      alignSelf: 'start',
     }
   }
 

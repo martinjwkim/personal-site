@@ -47,8 +47,10 @@ function App() {
           light: 'light-1',
           dark: '#181818',
         },
+        image: "url(/desk.jpeg)",
+        repeat: 'repeat',
+        size: '100% 5%'
       },
-      gap: 'medium',
     },
     home: {
       darkMode,

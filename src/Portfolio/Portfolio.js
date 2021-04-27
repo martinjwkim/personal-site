@@ -5,7 +5,7 @@ import cardData from './cardData'
 import { useInView } from 'react-hook-inview'
 
 
-const Portfolio = ({size}) => {
+const Portfolio = ({ size }) => {
 
   const [ref, inView] = useInView({
     threshold: 0,
@@ -17,10 +17,10 @@ const Portfolio = ({size}) => {
       fill: 'horizontal',
       align: 'center',
       justify: 'center',
-      width: {max: '1200px'},
+      width: { max: '1200px' },
       alignSelf: 'center',
       gap: 'xlarge',
-      pad: {vertical: 'medium'}
+      pad: { vertical: 'medium' }
     },
     heading: {
       level: 2,
@@ -50,6 +50,7 @@ const Portfolio = ({size}) => {
       </Box>
       {cardData.map(data => (<Card data={data} size={size} key={data.title} />))}
     </Box >
+
   )
 }
 

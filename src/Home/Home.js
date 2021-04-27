@@ -1,6 +1,8 @@
 import React from 'react';
 import { Box, Button } from 'grommet';
 import Socials from './Socials'
+import keyboard from './keyboard.png'
+import coffee from './coffee.png'
 
 const Home = ({ darkMode, setDarkMode, setAnimationType }) => {
 
@@ -10,6 +12,7 @@ const Home = ({ darkMode, setDarkMode, setAnimationType }) => {
       alignSelf: 'center',
       height: { min: 'large' },
       width: { max: '1200px' },
+      className: 'Home'
     },
     header: {
       darkMode,
@@ -21,30 +24,19 @@ const Home = ({ darkMode, setDarkMode, setAnimationType }) => {
       alignSelf: 'center',
       onClick: () => setAnimationType('zoom-out')
     },
-    outer: {
-      background: {
-        image: 'url(/keyboard.jpg)',
-        position: 'bottom',
-        repeat: 'no-repeat',
-        size: '100% 100%',
-      },
-    }
   }
 
   return (
-    <Box {...props.outer}>
-      <Box background='linear-gradient(transparent, 85%, #F8F8F8)'>
-        <Box {...props.main}>
-          <Box>
-            <Button {...props.button} />
-          </Box>
-          <Box direction='row' justify='between' align='center'>
-            <Box>
-
-            </Box>
-            <Socials />
-          </Box>
+    <Box {...props.main}>
+      <img src={keyboard} alt='keyboard' className='keyboard'/>
+      <img src={coffee} alt='coffee' className='coffee'/>
+      <Box>
+        <Button {...props.button} />
+      </Box>
+      <Box direction='row' justify='between' align='center'>
+        <Box>
         </Box>
+        <Socials />
       </Box>
     </Box>
   )

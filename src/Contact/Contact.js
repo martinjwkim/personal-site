@@ -29,7 +29,7 @@ function Contact({ scrollToTop }) {
     },
     footer: {
       scrollToTop,
-    }
+    },
   }
 
   return (
@@ -39,7 +39,7 @@ function Contact({ scrollToTop }) {
         <Heading {...props.sub}>I'd love to hear from you!</Heading>
         <ContactForm />
       </Box>
-      <Footer {...props.footer}/>
+      <Footer {...props.footer} />
     </Box>
   );
 }

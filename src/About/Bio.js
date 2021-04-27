@@ -100,7 +100,7 @@ const Bio = ({ size }) => {
         <Heading {...props.heading}>ABOUT ME...</Heading>
       </Box>
       <Box {...props.blurbs}>
-        {blurbs.map(data => <Blurb key={data.name} {...data} />)}
+        {blurbs.map(data => <Blurb key={data.name} {...data}/>)}
         <Box {...props.bcontainer}>
           <Button {...props.button} />
         </Box>
