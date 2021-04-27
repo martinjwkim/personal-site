@@ -48,7 +48,7 @@ function App() {
           dark: '#181818',
         },
       },
-      gap: 'xlarge',
+      gap: 'medium',
     },
     home: {
       darkMode,
@@ -72,8 +72,8 @@ function App() {
               <About size={size} />
               <Portfolio size={size} />
               <Contact {...props.contact} size={size} />
-              <NavBar />
             </Box>
+            <NavBar />
           </Box>
         )}
       </ResponsiveContext.Consumer>
