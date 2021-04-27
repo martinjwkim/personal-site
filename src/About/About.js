@@ -2,6 +2,7 @@ import React from 'react';
 import { Box } from 'grommet';
 import Portrait from './Portrait'
 import Bio from './Bio'
+import aboutBackground from '../paint.png'
 
 
 const About = ({size}) => {
@@ -16,13 +17,15 @@ const About = ({size}) => {
       height: {min: 'large'},
       width: {max: '1200px'},
       alignSelf: 'center',
-      gap: 'medium'
+      gap: 'medium',
+      className: 'About'
     },
 
   }
 
   return (
     <Box {...props.main}>
+      <img src={aboutBackground} alt='about-background' className='About-background'/>
       <Portrait size={size}/>
       <Bio size={size}/>
     </Box >

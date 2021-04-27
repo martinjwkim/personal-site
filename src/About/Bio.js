@@ -18,7 +18,7 @@ const Bio = ({ size }) => {
 
   const props = {
     main: {
-      width: 'large'
+      width: 'large',
     },
     hcontainer: {
       animation: hInView ? [
