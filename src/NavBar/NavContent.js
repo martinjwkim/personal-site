@@ -2,7 +2,7 @@ import React from 'react';
 import { Box, Button } from 'grommet';
 
 
-function NavContent({ openNav }) {
+function NavContent({ openNav, size }) {
 
   const props = {
     collapsible: {
@@ -10,12 +10,11 @@ function NavContent({ openNav }) {
       open: openNav,
     },
     main: {
-      height: '52px',
       align: 'center',
       justify: 'center',
       pad: 'small',
       gap: 'small',
-      direction: 'row',
+      direction: size === 'small' ? 'column' : 'row',
     },
     button: {
       plain: true,
@@ -25,14 +24,14 @@ function NavContent({ openNav }) {
 
   const showNavItems = () => (
     ['Home', 'About', 'Portfolio', 'Contact'].map(label =>
-      <Button {...props.button} label={label} key={label} onClick={() =>{}} />
+      <Button {...props.button} label={label} key={label} onClick={() => { }} />
     )
   )
 
   return (
-      <Box {...props.main}>
-        {showNavItems()}
-      </Box>
+    <Box {...props.main}>
+      {showNavItems()}
+    </Box>
   );
 }
 

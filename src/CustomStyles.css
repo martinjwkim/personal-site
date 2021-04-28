@@ -189,6 +189,14 @@
   left: 50%;
 }
 
+.plant{
+  z-Index: -1;
+  position: absolute;
+  transform: rotate(180deg) scale(0.3, 0.3);
+  top: -55%;
+  left: 40%;
+}
+
 .paper{
   z-Index: -1;
   position: absolute;

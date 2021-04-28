@@ -23,7 +23,7 @@ const About = ({ size }) => {
 
   return (
     <Box {...props.main}>
-      <img src={frame} alt='frame' className='frame' />
+      {size!=='small' && <img src={frame} alt='frame' className='frame' />}
       <Portrait size={size} />
       <Bio size={size} />
     </Box >

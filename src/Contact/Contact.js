@@ -1,9 +1,9 @@
 import React from 'react';
 import { Box, Heading } from 'grommet';
 import ContactForm from './ContactForm'
-import paper from '../images/paper.png'
+// import paper from '../images/paper.png'
 
-function Contact() {
+function Contact({ size }) {
 
   const props = {
     main: {
@@ -31,14 +31,14 @@ function Contact() {
   }
 
   return (
-      <Box {...props.main}>
-        <Box {...props.contact}>
-          <img src={paper} alt='paper' className='paper' />
-          <Heading {...props.heading}>CONTACT ME</Heading>
-          <Heading {...props.sub}>I'd love to hear from you!</Heading>
-          <ContactForm />
-        </Box>
+    <Box {...props.main}>
+      <Box {...props.contact}>
+        {/* {size !== 'small' && <img src={paper} alt='paper' className='paper' />} */}
+        <Heading {...props.heading}>CONTACT ME</Heading>
+        <Heading {...props.sub}>I'd love to hear from you!</Heading>
+        <ContactForm />
       </Box>
+    </Box>
   );
 }
 

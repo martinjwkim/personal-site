@@ -3,7 +3,7 @@ import { Box, Collapsible, Layer } from 'grommet';
 import NavBarIcon from './NavBarIcon/NavBarIcon'
 import NavContent from './NavContent'
 
-function NavBar() {
+function NavBar({ size }) {
 
   const [iconType, setIconType] = useState('open')
   const [openNav, setOpenNav] = useState(false)
@@ -40,7 +40,8 @@ function NavBar() {
       setOpenNav
     },
     content: {
-      openNav
+      openNav,
+      size
     }
 
   }
