@@ -36,7 +36,7 @@ const Home = ({ darkMode, setDarkMode, setAnimationType }) => {
       <Box direction='row' justify='between' align='center'>
         <Box>
         </Box>
-        <Socials />
+        <Socials direction='column' color='#005BEA'/>
       </Box>
     </Box>
   )

@@ -176,10 +176,32 @@
 }
 
 .Footer {
-  background: #145DA0;
-  width: 100vw;
   position: relative;
-  left: 0;
-  bottom: 0;
+  align-items: center;
+  justify-content: center;
 }
 
+.Footer-background {
+  position: absolute;
+  width: calc(100vw - 20px);
+  height: 120px;
+  transform: translateY(calc(-100% - 10px));
+  border: #003060 3px solid;
+  margin: 5px;
+}
+
+.Footer-iconBox {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  left: 50%;
+  top: -23px;
+  border: #003060 3px solid;
+  transform: translateX(-50%);
+  justify-content: center;
+}
+
+.Footer-content {
+  position: relative;
+  bottom: 2%;
+}

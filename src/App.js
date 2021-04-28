@@ -76,7 +76,7 @@ function App() {
     <Grommet {...props.grommet}>
       <ResponsiveContext.Consumer>
         {size => (
-          <Box>
+          <Box overflow='hidden'>
             <Screen size={size} animationType={animationType} setAnimationType={setAnimationType} />
             <Background animationType={animationType} />
             <Box {...props.main}>

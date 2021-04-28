@@ -12,7 +12,6 @@ function Contact({ scrollToTop }) {
       fill: 'horizontal',
       width: { max: '1200px' },
       alignSelf: 'center',
-      overflow: 'visible',
     },
     contact: {
       align: 'center',
@@ -34,11 +33,13 @@ function Contact({ scrollToTop }) {
   }
 
   return (
-    <Box {...props.main}>
-      <Box {...props.contact}>
-        <Heading {...props.heading}>CONTACT ME</Heading>
-        <Heading {...props.sub}>I'd love to hear from you!</Heading>
-        <ContactForm />
+    <Box>
+      <Box {...props.main}>
+        <Box {...props.contact}>
+          <Heading {...props.heading}>CONTACT ME</Heading>
+          <Heading {...props.sub}>I'd love to hear from you!</Heading>
+          <ContactForm />
+        </Box>
       </Box>
       <Footer {...props.footer} />
     </Box>
