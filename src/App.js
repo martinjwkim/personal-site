@@ -33,7 +33,8 @@ function App() {
     grommetRef.current.addEventListener('scroll', () => {
       const scroll = grommetRef.current.scrollTop;
       $('.coffee').css("transform", `translate(50%, 50%) scale(0.5, 0.5) rotate(${-90*scroll/800}deg)`);
-      $('.paper').css('transform', `scale(0.35, 0.3) translate(0, ${2*(4800-h-scroll)}px) rotate(${45*(4800-h-scroll)/h}deg)`)
+      $('.paper').css('transform', `scale(0.35, 0.3) translate(0, ${2*(4800-h-scroll)}px) rotate(${45*(4800-h-scroll)/h}deg)`);
+      $('.frame').css("transform", `translate(-${(0.01*(1152-h/2-scroll))**2}%,${(0.05*(1152-h/2-scroll))}%)`);
     })
   },[h])
 
