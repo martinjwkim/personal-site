@@ -112,6 +112,7 @@
   display: flex;
   overflow: hidden;
   background: 'transparent';
+  pointer-events: none;
   z-Index: 25;
 }
 
@@ -159,36 +160,34 @@
 
 .Home {
   position: relative;
+  z-Index: 1;
 }
 
-.Contact {
+.Contact{
   position: relative;
-}
-
-.Contact-form {
   z-Index: 1;
 }
 
 .keyboard{
+  z-Index: -1;
   position: absolute;
   transform: scale(0.5, 0.5) rotate(-20deg);
-  top: -10%;
+  top: -50%;
   left: -40%;
 }
 
 .coffee{
+  z-Index: -1;
   position: absolute;
   transform: translate(50%, 50%) scale(0.5, 0.5);
-  top: 10%;
+  top: 12%;
   left: 50%;
 }
 
 .paper{
+  z-Index: -1;
   position: absolute;
   transform: scale(0.35, 0.3);
-  opacity: 60%;
-  top: -83%;
-  left: -9.2%;
 }
 
 .Footer {

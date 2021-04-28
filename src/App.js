@@ -7,6 +7,7 @@ import Portfolio from './Portfolio/Portfolio';
 import Contact from './Contact/Contact';
 import NavBar from './NavBar/NavBar';
 import Background from './Background';
+import Footer from './Footer'
 import theme from './theme';
 import $ from 'jquery'
 import './CustomStyles.css';
@@ -33,7 +34,7 @@ function App() {
   useEffect(()=>{
     grommetRef.current.addEventListener('scroll', () => {
       const scroll = grommetRef.current.scrollTop;
-      $('.coffee').css("transform", `translate(50%, 50%) scale(0.5, 0.5) rotate(${-90*scroll/h}deg)`);
+      $('.coffee').css("transform", `translate(50%, 50%) scale(0.5, 0.5) rotate(${-90*scroll/800}deg)`);
       $('.paper').css('transform', `scale(0.35, 0.3) translate(0, ${2*(4800-h-scroll)}px) rotate(${45*(4800-h-scroll)/h}deg)`)
     })
   },[h])
@@ -78,13 +79,14 @@ function App() {
       <ResponsiveContext.Consumer>
         {size => (
           <Box overflow='hidden'>
-            <Screen size={size} animationType={animationType} setAnimationType={setAnimationType} />
-            <Background animationType={animationType} />
+            {/* <Screen animationType={animationType} setAnimationType={setAnimationType}/> */}
+            {/* <Background animationType={animationType} /> */}
             <Box {...props.main}>
-              <Home {...props.home} size={size} />
+              <Home {...props.home} size={size} animationType={animationType}/>
               <About size={size} />
               <Portfolio size={size} />
               <Contact {...props.contact} size={size} />
+              <Footer scrollToTop={scrollToTop}/>
             </Box>
             <NavBar />
           </Box>

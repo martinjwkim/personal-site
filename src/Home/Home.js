@@ -1,10 +1,11 @@
 import React from 'react';
-import { Box, Button } from 'grommet';
+import { Box } from 'grommet';
 import Socials from './Socials'
+import Body from './Body'
 import keyboard from './keyboard.png'
 import coffee from './coffee.png'
 
-const Home = ({ darkMode, setDarkMode, setAnimationType }) => {
+const Home = ({ darkMode, setDarkMode, setAnimationType, animationType }) => {
 
   const props = {
     main: {
@@ -12,31 +13,24 @@ const Home = ({ darkMode, setDarkMode, setAnimationType }) => {
       alignSelf: 'center',
       height: { min: 'large' },
       width: { max: '1200px' },
+      justify: 'center',
+      pad: 'large',
       className: 'Home'
     },
     header: {
       darkMode,
       setDarkMode,
     },
-    button: {
-      label: 'BACK',
-      id: 'StyledButton',
-      alignSelf: 'center',
-      onClick: () => setAnimationType('zoom-out')
-    },
   }
 
   return (
     <Box {...props.main}>
-      <img src={keyboard} alt='keyboard' className='keyboard'/>
-      <img src={coffee} alt='coffee' className='coffee'/>
-      <Box>
-        <Button {...props.button} />
-      </Box>
+      <img src={keyboard} alt='keyboard' className='keyboard' />
+      <img src={coffee} alt='coffee' className='coffee' />
       <Box direction='row' justify='between' align='center'>
-        <Box>
-        </Box>
-        <Socials direction='column' color='#005BEA'/>
+        <Box width='xxsmall'></Box>
+        <Body animationType={animationType} setAnimationType={setAnimationType} />
+        <Socials direction='column' color='#005BEA' />
       </Box>
     </Box>
   )
