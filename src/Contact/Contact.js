@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, Heading } from 'grommet';
 import ContactForm from './ContactForm'
-import paper from './paper.png'
+import paper from '../images/paper.png'
 
 function Contact() {
 

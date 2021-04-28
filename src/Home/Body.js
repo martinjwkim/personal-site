@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Button, Heading } from 'grommet';
+import { Box, Heading } from 'grommet';
 import TypedComponent from './TypedComponent'
 
 function Body({ size, setAnimationType, animationType }) {

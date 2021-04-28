@@ -1,5 +1,5 @@
 import React from 'react';
-import background from './imac-combined.png'
+import background from '.images/imac-combined.png'
 
 const Background = ({ animationType }) => {
 

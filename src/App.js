@@ -2,11 +2,9 @@ import React, { useState, useRef, useEffect } from 'react';
 import { Box, Grommet, ResponsiveContext } from 'grommet';
 import About from './About/About';
 import Home from './Home/Home';
-import Screen from './Screen'
 import Portfolio from './Portfolio/Portfolio';
 import Contact from './Contact/Contact';
 import NavBar from './NavBar/NavBar';
-import Background from './Background';
 import Footer from './Footer'
 import theme from './theme';
 import $ from 'jquery'

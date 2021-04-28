@@ -2,8 +2,8 @@ import React from 'react';
 import { Box } from 'grommet';
 import Socials from './Socials'
 import Body from './Body'
-import keyboard from './keyboard.png'
-import coffee from './coffee.png'
+import keyboard from '../images/keyboard.png'
+import coffee from '../images/coffee.png'
 
 const Home = ({ darkMode, setDarkMode, setAnimationType, animationType }) => {
 
