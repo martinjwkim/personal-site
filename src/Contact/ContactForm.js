@@ -46,7 +46,7 @@ function ContactForm() {
             <TextArea name="message" resize={false} placeholder="Your Message" fill required />
           </Box>
           <Collapsible open={showAlert}>
-            <Box direction='row' justify='between' background='status-ok'>
+            <Box direction='row' justify='between' background=''>
               <Box width='15px'></Box>
               <Paragraph margin='xsmall' size='small' alignSelf='center'>Your message was successfully sent. Thank you!</Paragraph>
               <Box justify='center' align='end' onClick={()=>setShowAlert(false)}>

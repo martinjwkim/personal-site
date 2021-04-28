@@ -161,6 +161,14 @@
   position: relative;
 }
 
+.Contact {
+  position: relative;
+}
+
+.Contact-form {
+  z-Index: 1;
+}
+
 .keyboard{
   position: absolute;
   transform: scale(0.5, 0.5) rotate(-20deg);
@@ -173,6 +181,14 @@
   transform: translate(50%, 50%) scale(0.5, 0.5);
   top: 10%;
   left: 50%;
+}
+
+.paper{
+  position: absolute;
+  transform: scale(0.35, 0.3);
+  opacity: 60%;
+  top: -83%;
+  left: -9.2%;
 }
 
 .Footer {

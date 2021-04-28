@@ -19,7 +19,7 @@ const Portfolio = ({ size }) => {
       justify: 'center',
       width: { max: '1200px' },
       alignSelf: 'center',
-      gap: 'xlarge',
+      gap: 'large',
       pad: { vertical: 'medium' }
     },
     heading: {
@@ -48,7 +48,9 @@ const Portfolio = ({ size }) => {
       <Box {...props.hcontainer}>
         <Heading {...props.heading}>WHAT I'VE BEEN UP TO...</Heading>
       </Box>
-      {cardData.map(data => (<Card data={data} size={size} key={data.title} />))}
+      <Box gap='xlarge'>
+        {cardData.map(data => (<Card data={data} size={size} key={data.title} />))}
+      </Box>
     </Box >
 
   )
