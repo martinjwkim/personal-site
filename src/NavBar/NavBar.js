@@ -29,7 +29,7 @@ function NavBar() {
       open: openNav,
     },
     main: {
-      background: '#2b00d4',
+      background: '#003060',
       direction: 'row',
       margin: 'medium'
     },

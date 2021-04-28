@@ -15,7 +15,7 @@ const Footer = ({ scrollToTop }) => {
     <Stack anchor='top' interactiveChild='last'>
       <Box {...props.main}>
         <Box basis='1/3'></Box>
-        <Box basis='2/3' background={{ color: 'brand' }} justify='end' align='center'>
+        <Box basis='2/3' background={{ color: '#145DA0' }} justify='end' align='center'>
           <Paragraph size='small'>created by Martin Kim</Paragraph>
         </Box>
       </Box>

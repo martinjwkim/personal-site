@@ -14,18 +14,11 @@ function Socials() {
       align: 'center',
       gap: 'medium',
     },
-    icon: {
-      background: 'light-4',
-      round: true,
-      height: '50px',
-      width: '50px',
-      align: 'center',
-    }
   }
 
   const showIcons = () => (
     [<Github id='Github'/>, <Twitter id='Twitter'/>, <Linkedin />, <Facebook />, <Instagram />].map(icon =>
-        <Anchor key={uuidv4()} icon={icon} />
+        <Anchor key={uuidv4()} icon={icon} color='#005BEA'/>
     )
   )
 
