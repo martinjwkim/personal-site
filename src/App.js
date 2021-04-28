@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Box, Grommet, ResponsiveContext } from 'grommet';
 import About from './About/About';
 import Home from './Home/Home';
@@ -8,13 +8,16 @@ import Contact from './Contact/Contact';
 import NavBar from './NavBar/NavBar';
 import Background from './Background';
 import theme from './theme';
+import $ from 'jquery'
 import './CustomStyles.css';
+import useWindowDimensions from './useWindowDimensions'
 
 function App() {
 
   const [darkMode, setDarkMode] = useState(false);
   const [animationType, setAnimationType] = useState('');
   const grommetRef = useRef();
+  const { h } = useWindowDimensions();
 
   const scrollToTop = () => {
     grommetRef.current.scrollTo({
@@ -26,6 +29,13 @@ function App() {
       setAnimationType('zoom-out')
     }, 500)
   }
+
+  useEffect(()=>{
+    grommetRef.current.addEventListener('scroll', () => {
+      const scroll = grommetRef.current.scrollTop;
+      $('.coffee').css("transform", `translate(50%, 50%) scale(0.5, 0.5) rotate(${-90*scroll/h}deg)`);
+    })
+  },[h])
 
   const props = {
     grommet: {
@@ -55,7 +65,7 @@ function App() {
     home: {
       darkMode,
       setDarkMode,
-      setAnimationType
+      setAnimationType,
     },
     contact: {
       scrollToTop,

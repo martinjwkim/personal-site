@@ -161,16 +161,16 @@
   position: relative;
 }
 
-.Home .keyboard{
+.keyboard{
   position: absolute;
   transform: scale(0.5, 0.5) rotate(-20deg);
   top: -10%;
   left: -40%;
 }
 
-.Home .coffee{
+.coffee{
   position: absolute;
-  transform: translate(50%, 50%) rotate(0deg) scale(0.5, 0.5);
+  transform: translate(50%, 50%) scale(0.5, 0.5);
   top: 10%;
   left: 50%;
 }
