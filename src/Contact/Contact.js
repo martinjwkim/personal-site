@@ -12,6 +12,7 @@ function Contact({ scrollToTop }) {
       fill: 'horizontal',
       width: { max: '1200px' },
       alignSelf: 'center',
+      overflow: 'visible',
     },
     contact: {
       align: 'center',

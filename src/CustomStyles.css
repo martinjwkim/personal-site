@@ -174,3 +174,12 @@
   top: 10%;
   left: 50%;
 }
+
+.Footer {
+  background: #145DA0;
+  width: 100vw;
+  position: relative;
+  left: 0;
+  bottom: 0;
+}
+
