@@ -168,7 +168,7 @@
   z-Index: 1;
 }
 
-.About {
+.Portrait {
   position: relative;
   z-Index: 1;
 }
@@ -206,10 +206,11 @@
 .frame{
   z-Index: -1;
   position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-49.7%, -51%);
   height: 540px;
   width: 540px;
-  left: -2.3%;
-  top: 14%;
   opacity: 50%;
 }
 
@@ -248,4 +249,8 @@
   font-size: 30px;
   align-items: center;
   margin-top: 5px;
+}
+
+.ProfilePic {
+  border-radius: 100%;
 }

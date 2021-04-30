@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, Image } from 'grommet';
 import { useInView } from 'react-hook-inview'
-
+import frame from '../images/frame.png'
 
 const Portrait = ({ size }) => {
 
@@ -12,8 +12,7 @@ const Portrait = ({ size }) => {
 
   const props = {
     main: {
-      round: 'full',
-      overflow: 'hidden',
+      overflow: 'visible',
       height: size === 'small' ? 'small' : { max: 'medium' },
       width: size === 'small' ? 'small' : { max: 'medium' },
       fill: size==='small'? false : true,
@@ -24,16 +23,19 @@ const Portrait = ({ size }) => {
         duration: 4000,
         size: 'medium'
       },
+      className: 'Portrait'
     },
     image: {
       fit: "cover",
       src: "/portrait.png",
+      className: 'ProfilePic'
     }
   }
 
   return (
     <Box {...props.main}>
       <Image {...props.image} />
+      {size!=='small' && <img src={frame} alt='frame' className='frame' />}
     </Box>
   )
 }
