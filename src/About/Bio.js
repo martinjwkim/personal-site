@@ -63,11 +63,11 @@ const Bio = ({ size }) => {
       fill: false,
       label: 'Download Resume',
       reverse: true,
-      icon: <Download size='small'/>,
       alignSelf: size === 'xsmall' ? 'center' : 'start',
       margin: { left: size === 'xsmall' ? 'none' : "medium" },
       size: size === 'xsmall' ? 'small' : size,
-      id: 'StyledButton'
+      id: 'StyledButton',
+      href: "/martinjwkim-resume.pdf",
     },
   }
 
@@ -100,7 +100,7 @@ const Bio = ({ size }) => {
         <Heading {...props.heading}>ABOUT ME...</Heading>
       </Box>
       <Box {...props.blurbs}>
-        {blurbs.map(data => <Blurb key={data.name} {...data}/>)}
+        {blurbs.map(data => <Blurb key={data.name} {...data} />)}
         <Box {...props.bcontainer}>
           <Button {...props.button} />
         </Box>

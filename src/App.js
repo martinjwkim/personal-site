@@ -29,17 +29,37 @@ function App() {
     }, 500)
   }
 
-  useEffect(()=>{
-    
+  const handleNav = (nav) => {
+    let position;
+    let cHeight = 768;
+
+    if (nav === 'Home') {
+      position = 0;
+    } else if (nav === 'About') {
+      position = 1.5*cHeight-h/2;
+    } else if (nav === 'Portfolio') {
+      position = 2*cHeight;
+    } else if (nav === 'Contact') {
+      position = grommetRef.current.scrollHeight - 768;
+    }
+
+    grommetRef.current.scrollTo({
+      top: position,
+      behavior: "smooth"
+    });
+  }
+
+  useEffect(() => {
+
     grommetRef.current.addEventListener('scroll', () => {
 
       const scroll = grommetRef.current.scrollTop;
 
-      $('.coffee').css("transform", `translate(50%, ${50+30*scroll/h}%) scale(0.5, 0.5) rotate(${-90*scroll/800}deg)`);
-        // $('.paper').css('transform', `scale(0.35, 0.3) translate(0, ${2*(4800-h-scroll.previous)}px) rotate(${45*(4800-h-scroll.previous)/h}deg)`);
-        $('.frame').css("transform", `translate(-${49.7+Math.max(0,(1152-h/2-scroll)/20)}%, ${-51+Math.max(0,(1152-h/2-scroll)/20)}%)`);
+      $('.coffee').css("transform", `translate(50%, ${50 + 30 * scroll / h}%) scale(0.5, 0.5) rotate(${-90 * scroll / 800}deg)`);
+      // $('.paper').css('transform', `scale(0.35, 0.3) translate(0, ${2*(4800-h-scroll.previous)}px) rotate(${45*(4800-h-scroll.previous)/h}deg)`);
+      $('.frame').css("transform", `translate(-${49.7 + Math.max(0, (1152 - h / 2 - scroll) / 20)}%, ${-51 + Math.max(0, (1152 - h / 2 - scroll) / 20)}%)`);
     })
-  },[h])
+  }, [h])
 
   const props = {
     grommet: {
@@ -83,13 +103,13 @@ function App() {
             {/* <Screen animationType={animationType} setAnimationType={setAnimationType}/> */}
             {/* <Background animationType={animationType} /> */}
             <Box {...props.main}>
-              <Home {...props.home} size={size} animationType={animationType}/>
+              <Home {...props.home} size={size} animationType={animationType} />
               <About size={size} />
               <Portfolio size={size} />
               <Contact {...props.contact} size={size} />
-              <Footer scrollToTop={scrollToTop}/>
+              <Footer scrollToTop={scrollToTop} />
             </Box>
-            <NavBar size={size}/>
+            <NavBar size={size} handleNav={handleNav} />
           </Box>
         )}
       </ResponsiveContext.Consumer>

@@ -2,7 +2,7 @@ import React from 'react';
 import { Box, Button } from 'grommet';
 
 
-function NavContent({ openNav, size }) {
+function NavContent({ openNav, size, handleNav }) {
 
   const props = {
     collapsible: {
@@ -24,7 +24,7 @@ function NavContent({ openNav, size }) {
 
   const showNavItems = () => (
     ['Home', 'About', 'Portfolio', 'Contact'].map(label =>
-      <Button {...props.button} label={label} key={label} onClick={() => { }} />
+      <Button {...props.button} label={label} key={label} onClick={() => handleNav(label)} />
     )
   )
 
