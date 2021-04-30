@@ -18,7 +18,7 @@ const Portrait = ({ size }) => {
       fill: size==='small'? false : true,
       ref,
       animation: {
-        type: inView ? 'fadeIn' : 'fadeOut',
+        type: 'fadeIn',
         delay: 100,
         duration: 4000,
         size: 'medium'
