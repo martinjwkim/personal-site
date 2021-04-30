@@ -28,7 +28,7 @@ function TypedComponent() {
 
   return (
     <Box {...props.main}>
-      <Text ref={typedRef}></Text>
+      <Text ref={typedRef} size='xlarge'></Text>
     </Box>
   );
 }

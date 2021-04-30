@@ -17,7 +17,7 @@ function Body({ size, setAnimationType, animationType }) {
     heading: {
       textAlign: 'center',
       level: 1,
-      size,
+      size: 'large',
       margin: 'small'
     },
     button: {

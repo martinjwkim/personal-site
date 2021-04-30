@@ -16,8 +16,23 @@ function Socials({ direction, color }) {
   }
 
   const showIcons = () => (
-    [<Github id='Github' />, <Twitter id='Twitter' />, <Linkedin />, <Facebook />, <Instagram />].map(icon =>
-      <Anchor key={uuidv4()} icon={icon} color={color} />
+    [{
+      icon: <Github id='Github' />,
+      url: 'https://github.com/martinjwkim'
+    },{
+      icon: <Twitter id='Twitter' />,
+      url: 'https://twitter.com/martinjwkim'
+    },{
+      icon: <Linkedin />,
+      url: 'https://www.linkedin.com/in/martinjwkim/'
+    },{
+      icon: <Facebook />,
+      url: 'https://www.facebook.com/martinhadadreem/'
+    },{
+      icon: <Instagram />,
+      url: 'https://www.instagram.com/martinhadadreem/'
+    }].map(({ icon, url }) =>
+  <Anchor key={uuidv4()} icon={icon} color={color} href={url} />
     )
   )
 
