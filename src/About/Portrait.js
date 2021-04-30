@@ -18,7 +18,7 @@ const Portrait = ({ size }) => {
       fill: size==='small'? false : true,
       ref,
       animation: {
-        type: 'fadeIn',
+        type: inView ? 'fadeIn' : 'fadeOut',
         delay: 100,
         duration: 4000,
         size: 'medium'
@@ -34,8 +34,8 @@ const Portrait = ({ size }) => {
 
   return (
     <Box {...props.main}>
-      <Image {...props.image} />
       {size!=='small' && <img src={frame} alt='frame' className='frame' />}
+      <Image {...props.image} />
     </Box>
   )
 }

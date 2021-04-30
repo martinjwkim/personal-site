@@ -25,22 +25,28 @@ const ModalButtons = ({ data, setShowModal, size }) => {
 
   const showButtons = () => {
     let buttons = [
-      {
-        label: 'GITHUB',
-        href: data.github_url,
-      },
     ];
 
+    
     if (data.demo_url){
-      buttons.unshift(
+      buttons.push(
         {
           label: 'VIEW SITE',
           href: data.demo_url,
         },
-      )
-    }
-
-    return buttons.map(button=><Button key={button.label} {...button} {...props.button}/>)
+        )
+      }
+      
+      if (data.github_url){
+        buttons.push(
+          {
+            label: 'GITHUB',
+            href: data.github_url,
+          },
+        )
+      }
+      
+      return buttons.map(button=><Button key={button.label} {...button} {...props.button}/>)
   }
 
   return (
