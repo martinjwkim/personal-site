@@ -30,11 +30,39 @@ function App() {
   }
 
   useEffect(()=>{
+
+    const scroll = {
+      current: 0,
+      previous: 0,
+    }
+
+    const smoothScrollingHandler = () => {
+      scroll.current = grommetRef.current.scrollTop;
+      scroll.previous += scroll.current - scroll.previous;
+
+
+      requestAnimationFrame(()=>smoothScrollingHandler());
+    }
+
     grommetRef.current.addEventListener('scroll', () => {
-      const scroll = grommetRef.current.scrollTop;
-      $('.coffee').css("transform", `translate(50%, ${50+20*scroll/h}%) scale(0.5, 0.5) rotate(${-90*scroll/800}deg)`);
-      $('.paper').css('transform', `scale(0.35, 0.3) translate(0, ${2*(4800-h-scroll)}px) rotate(${45*(4800-h-scroll)/h}deg)`);
-      $('.frame').css("transform", `translate(-${Math.max(0,(1152-h/2-scroll)/20)}%, ${Math.max(0,(1152-h/2-scroll)/20)}%)`);
+
+      const scroll = {
+        current: 0,
+        previous: 0,
+      }
+  
+      const smoothScrollingHandler = () => {
+        scroll.current = grommetRef.current.scrollTop;
+        scroll.previous += scroll.current - scroll.previous;
+  
+        $('.coffee').css("transform", `translate(50%, ${50+20*scroll.previous/h}%) scale(0.5, 0.5) rotate(${-90*scroll.previous/800}deg)`);
+        $('.paper').css('transform', `scale(0.35, 0.3) translate(0, ${2*(4800-h-scroll.previous)}px) rotate(${45*(4800-h-scroll.previous)/h}deg)`);
+        $('.frame').css("transform", `translate(-${Math.max(0,(1152-h/2-scroll.previous)/20)}%, ${Math.max(0,(1152-h/2-scroll.previous)/20)}%)`);
+  
+        requestAnimationFrame(()=>smoothScrollingHandler());
+      }
+
+      requestAnimationFrame(()=>smoothScrollingHandler());
     })
   },[h])
 
