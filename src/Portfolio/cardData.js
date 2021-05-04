@@ -18,9 +18,9 @@ const cardData = [
     github_url: 'https://github.com/rithmschool/numbers_api',
     demo_url: 'https://google.com/',
     cover: '/numbers-api.jpg',
-    img_1: '/generic-background.png',
-    img_2: '/generic-background.png',
-    img_3: '/generic-background.png',
+    img_1: '/numbersapi-1.png',
+    img_2: '/numbersapi-2.png',
+    img_3: '/numbersapi-3.png',
     flipped: false,
   },
   {
