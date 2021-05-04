@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, Button, Heading } from 'grommet';
 import Blurb from './Blurb'
-import { Code, Download, Location, Notes } from 'grommet-icons'
+import { Code, Location, Notes } from 'grommet-icons'
 import { useInView } from 'react-hook-inview'
 
 const Bio = ({ size }) => {
