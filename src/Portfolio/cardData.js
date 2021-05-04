@@ -5,9 +5,9 @@ const cardData = [
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
     stack: 'React, Node, Python',
     cover: '/clever-counsel.jpg',
-    img_1: '/generic-background.png',
-    img_2: '/generic-background.png',
-    img_3: '/generic-background.png',
+    img_1: '/clevercounsel-1.png',
+    img_2: '/clevercounsel-2.png',
+    img_3: '/clevercounsel-3.png',
     flipped: true,
   },
   {
