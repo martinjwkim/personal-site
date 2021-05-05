@@ -45,8 +45,9 @@ const cardData = [
     demo_url: 'https://martinjwkim-warbler.herokuapp.com',
     cover: '/warbler.jpeg',
     img_1: '/warbler-1.png',
-    img_2: '/warbler-2.png',
+    img_2: '/warbler-4.png',
     img_3: '/warbler-3.png',
+    img_4: '/warbler-2.png',
     flipped: false,
   },
   {
