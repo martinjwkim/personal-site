@@ -10,7 +10,7 @@ const theme = deepMerge(grommet, {
     },
     colors:
     {
-      brand: '#7D4CDB'
+      brand: '#5CC4C0'
     }
   },
   paragraph: {
@@ -30,12 +30,12 @@ const theme = deepMerge(grommet, {
   checkBox: {
     border: {
       color: {
-        "light": "#7D4CDB"
+        "light": "#5CC4C0"
       }
     },
     toggle: {
       color: {
-        "light": "#7D4CDB"
+        "light": "#5CC4C0"
       }
     },
   },
