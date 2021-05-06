@@ -2,7 +2,11 @@ const cardData = [
   {
     title: 'CLEVER COUNSEL',
     subtitle: 'LEGAL SERVICE PLATFORM',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    description: [
+      '• Built various scalable API routes with Flask for a multi-layered React front-end web user interface.',
+      '• Designed a clean user login and form creation using React & CSS that proved user-friendly and simplified overall management.',
+      '• Integrated a web scraping system using Beautiful Soup to verify legal information through the California Secretary of State website.'
+    ],
     stack: 'React, Node, Python',
     cover: '/clever-counsel.jpg',
     img_1: '/clevercounsel-1.png',
@@ -13,7 +17,11 @@ const cardData = [
   {
     title: 'NUMBERS API',
     subtitle: 'TRIVIA RESOURCE',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    description: [
+      '• Built various scalable API routes with Flask for a multi-layered React front-end web user interface.',
+      '• Designed a clean user login and form creation using React & CSS that proved user-friendly and simplified overall management.',
+      '• Integrated a web scraping system using Beautiful Soup to verify legal information through the California Secretary of State website.'
+    ],
     stack: 'JavaScript, Python, Express',
     github_url: 'https://github.com/rithmschool/numbers_api',
     demo_url: 'https://google.com/',
@@ -26,7 +34,11 @@ const cardData = [
   {
     title: 'JOBLY',
     subtitle: 'PROFESSIONAL NETWORK',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    description: [
+      '• Built various scalable API routes with Flask for a multi-layered React front-end web user interface.',
+      '• Designed a clean user login and form creation using React & CSS that proved user-friendly and simplified overall management.',
+      '• Integrated a web scraping system using Beautiful Soup to verify legal information through the California Secretary of State website.'
+    ],
     stack: 'React, Express, Redux, PostgreSQL',
     github_url: 'https://github.com/martinjwkim/react-jobly',
     demo_url: 'https://google.com/',
@@ -39,7 +51,11 @@ const cardData = [
   {
     title: 'WARBLER',
     subtitle: 'SOCIAL NETWORK',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    description: [
+      '• Built various scalable API routes with Flask for a multi-layered React front-end web user interface.',
+      '• Designed a clean user login and form creation using React & CSS that proved user-friendly and simplified overall management.',
+      '• Integrated a web scraping system using Beautiful Soup to verify legal information through the California Secretary of State website.'
+    ],
     stack: 'Python, Flask, PostgreSQL',
     github_url: 'https://github.com/martinjwkim/warbler',
     demo_url: 'https://martinjwkim-warbler.herokuapp.com',
@@ -53,7 +69,11 @@ const cardData = [
   {
     title: 'CRYPTO TICKER',
     subtitle: 'INVESTMENT TRACKER',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    description: [
+      '• Built various scalable API routes with Flask for a multi-layered React front-end web user interface.',
+      '• Designed a clean user login and form creation using React & CSS that proved user-friendly and simplified overall management.',
+      '• Integrated a web scraping system using Beautiful Soup to verify legal information through the California Secretary of State website.'
+    ],
     stack: 'Python, Docker',
     github_url: 'https://github.com/martinjwkim/cryptoticker',
     cover: '/crypto-ticker.png',

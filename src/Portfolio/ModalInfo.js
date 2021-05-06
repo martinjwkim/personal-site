@@ -42,7 +42,7 @@ const ModalInfo = ({data, setShowModal, size}) => {
     <Box {...props.main} >
       <ModalHead {...props.head}/> 
       <Box {...props.line}></Box>
-      <Paragraph {...props.description}>{data.description}</Paragraph>
+      {data.description.map(p=><Paragraph key={p} {...props.description}>{p}</Paragraph>)}
       {size==='small' && <ModalButtons {...props.buttons} />}
     </Box>
   )
