@@ -71,9 +71,9 @@ const cardData = [
     title: 'CRYPTO TICKER',
     subtitle: 'INVESTMENT TRACKER',
     description: [
-      '• Built various scalable API routes with Flask for a multi-layered React front-end web user interface.',
-      '• Designed a clean user login and form creation using React & CSS that proved user-friendly and simplified overall management.',
-      '• Integrated a web scraping system using Beautiful Soup to verify legal information through the California Secretary of State website.'
+      `Crypto Ticker is an application used to display real-time cryptocurrency and financial stock information on an LED matrix panel using a Raspberry Pi.
+      At an adjustable rate, the software cycles through the different assets inputed by the user, retrieves its real-time data through a third party API, and maps a pattern to display the data on the connected LED panel.
+      `
     ],
     stack: 'Python, Docker',
     github_url: 'https://github.com/martinjwkim/cryptoticker',
