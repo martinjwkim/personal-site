@@ -3,10 +3,10 @@ const cardData = [
     title: 'CLEVER COUNSEL',
     subtitle: 'LEGAL SERVICE PLATFORM',
     description: [
-      "A full-stack application, built from the ground up, to assist Bet Tzedek Legal Services as a centralized platform for case intake and wage claim management in conjunction with the California Labor Commissioner's office.",
-      '• Built various scalable API routes with Flask for a multi-layered React front-end web user interface.',
-      '• Designed a clean user login and form creation using React & CSS that proved user-friendly and simplified overall management.',
-      '• Integrated a web scraping system using Beautiful Soup to verify legal information through the California Secretary of State website.'
+      `Clever Counsel is a full-stack application that I, as part of a team of 6, built from the ground up, to assist Bet Tzedek Legal Services as a centralized platform for case intake and wage claim management in conjunction with the California Labor Commissioner's office. 
+      I integrated a web scraping system using Beautiful Soup to verify legal information through the California Secretary of State website. 
+      I also assisted in building a scalable API that connected the database to the multi-layered front-end user interfaces for both account management and intake submissions.
+      Most recently, I am implementing a serverless crawler using AWS Lambda that performs Selenium related tasks in headless Chrome.`,
     ],
     stack: 'React, Node, Python',
     cover: '/clever-counsel.jpg',
@@ -19,13 +19,14 @@ const cardData = [
     title: 'NUMBERS API',
     subtitle: 'TRIVIA RESOURCE',
     description: [
-      '• Built various scalable API routes with Flask for a multi-layered React front-end web user interface.',
-      '• Designed a clean user login and form creation using React & CSS that proved user-friendly and simplified overall management.',
-      '• Integrated a web scraping system using Beautiful Soup to verify legal information through the California Secretary of State website.'
+      `The Numbers API is an open-source project built to provide trivia, math, and date related facts about any number.
+      My contribution to the project has consisted of transitioning the outdated front-end from jQuery to a more modern React architecture,
+      update the models used for scraping, and improve documentation surrounding the API for both users and contributers.
+      `
     ],
     stack: 'JavaScript, Python, Express',
     github_url: 'https://github.com/rithmschool/numbers_api',
-    demo_url: 'https://google.com/',
+    demo_url: 'https://numbersapi.com/',
     cover: '/numbers-api.jpg',
     img_1: '/numbersapi-1.png',
     img_2: '/numbersapi-2.png',
