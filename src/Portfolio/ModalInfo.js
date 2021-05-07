@@ -2,6 +2,8 @@ import React from 'react';
 import { Box, Paragraph } from 'grommet';
 import ModalHead from './ModalHead'
 import ModalButtons from './ModalButtons'
+import { v4 as uuidv4 } from 'uuid';
+
 
 const ModalInfo = ({data, setShowModal, size}) => {
 
@@ -42,7 +44,9 @@ const ModalInfo = ({data, setShowModal, size}) => {
     <Box {...props.main} >
       <ModalHead {...props.head}/> 
       <Box {...props.line}></Box>
-      {data.description.map(p=><Paragraph key={p} {...props.description}>{p}</Paragraph>)}
+      {data.description.map(p=><Paragraph key={uuidv4()} {...props.description}>{p}</Paragraph>)}
+      <Box {...props.line}></Box>
+      <Paragraph {...props.description}>Built with: {data.full_stack}</Paragraph>
       {size==='small' && <ModalButtons {...props.buttons} />}
     </Box>
   )
