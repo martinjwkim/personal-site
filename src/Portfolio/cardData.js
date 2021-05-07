@@ -38,7 +38,8 @@ const cardData = [
     subtitle: 'PROFESSIONAL NETWORK',
     description: [
       `Jobly is a full-stack web application inspired by Linked-In. 
-      The front-end user interface is built as a single page application for seamless navigation which securely connects to the relational database through the backend API which deals with authentication, application logic, and data operations.`
+      The front-end user interface is built as a single page application for seamless navigation which securely connects to the relational database through the backend API which deals with authentication, application logic, and data operations.
+      It has many similar functionalities as Linked-In such as user and company profile managment as well as employment exploration and application.`
     ],
     stack: 'React, Express, Redux, PostgreSQL',
     github_url: 'https://github.com/martinjwkim/react-jobly',
@@ -53,9 +54,8 @@ const cardData = [
     title: 'WARBLER',
     subtitle: 'SOCIAL NETWORK',
     description: [
-      '• Built various scalable API routes with Flask for a multi-layered React front-end web user interface.',
-      '• Designed a clean user login and form creation using React & CSS that proved user-friendly and simplified overall management.',
-      '• Integrated a web scraping system using Beautiful Soup to verify legal information through the California Secretary of State website.'
+      `Warbler is a full-stack web application inspired by Twitter.
+      Like Twitter, users are able to explore and follow one another and tweets are able to be posted, retweeted, liked, and commented on, creating a unique experience tailored for each profile. `
     ],
     stack: 'Python, Flask, PostgreSQL',
     github_url: 'https://github.com/martinjwkim/warbler',
