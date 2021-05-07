@@ -22,7 +22,7 @@ const cardData = [
     description: [
       `The Numbers API is an open-source project built to provide trivia, math, and date related facts about any number.
       My contribution to the project has consisted of transitioning the outdated front-end from jQuery to a more modern React architecture,
-      updating the models used to scrape and generate text files from Wikipedia, and improving documentation surrounding the API for both users and contributers.
+      updating the models used to scrape and generate text files from Wikipedia, and improving documentation surrounding the API for both users and contributors.
       `
     ],
     stack: 'JavaScript, Python, Express',
@@ -80,7 +80,7 @@ const cardData = [
       `
     ],
     stack: 'Python, Docker',
-    full_stack: '',
+    full_stack: 'Python, Docker',
     github_url: 'https://github.com/martinjwkim/cryptoticker',
     cover: '/crypto-ticker.png',
     img_1: '/generic-background.png',

@@ -45,8 +45,7 @@ const ModalInfo = ({data, setShowModal, size}) => {
       <ModalHead {...props.head}/> 
       <Box {...props.line}></Box>
       {data.description.map(p=><Paragraph key={uuidv4()} {...props.description}>{p}</Paragraph>)}
-      <Box {...props.line}></Box>
-      <Paragraph {...props.description}>Built with: {data.full_stack}</Paragraph>
+      <Paragraph fill size='small'><i>Built with: {data.full_stack}</i></Paragraph>
       {size==='small' && <ModalButtons {...props.buttons} />}
     </Box>
   )
