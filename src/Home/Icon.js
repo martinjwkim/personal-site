@@ -7,8 +7,8 @@ function Icon({ icon, color, href }) {
 
   const props = {
     main: {
-        onMouseEnter: ()=>setHover(true),
-		onMouseLeave: ()=>setHover(false),
+      onMouseEnter: ()=>setHover(true),
+		  onMouseLeave: ()=>setHover(false),
     },
     anchor: {
         icon,

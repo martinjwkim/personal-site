@@ -3,6 +3,7 @@ const cardData = [
     title: 'CLEVER COUNSEL',
     subtitle: 'LEGAL SERVICE PLATFORM',
     description: [
+      "A full-stack application, built from the ground up, to assist Bet Tzedek Legal Services as a centralized platform for case intake and wage claim management in conjunction with the California Labor Commissioner's office.",
       '• Built various scalable API routes with Flask for a multi-layered React front-end web user interface.',
       '• Designed a clean user login and form creation using React & CSS that proved user-friendly and simplified overall management.',
       '• Integrated a web scraping system using Beautiful Soup to verify legal information through the California Secretary of State website.'
