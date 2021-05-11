@@ -119,9 +119,7 @@ function App() {
 
 export default App;
 
-// squigly hint for light/dark mode
 // on hover animations for cards (zoom in or responsive to mouse)
-// change global font and color
 // button redesign
 // color card info background
 // proper links, pictures, card information

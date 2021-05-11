@@ -46,7 +46,7 @@ const cardData = [
     stack: 'React, Express, Redux, PostgreSQL, ',
     full_stack: 'React, Node, Express, Redux, PostgreSQL, Bootstrap',
     github_url: 'https://github.com/martinjwkim/react-jobly',
-    demo_url: 'https://google.com/',
+    demo_url: 'https://martinjwkim-jobly.herokuapp.com',
     cover: '/jobly.jpeg',
     img_1: '/generic-background.png',
     img_2: '/generic-background.png',
@@ -84,8 +84,6 @@ const cardData = [
     github_url: 'https://github.com/martinjwkim/cryptoticker',
     cover: '/crypto-ticker.png',
     img_1: '/generic-background.png',
-    img_2: '/generic-background.png',
-    img_3: '/generic-background.png',
     flipped: true,
   },
 ];
