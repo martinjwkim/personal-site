@@ -118,8 +118,3 @@ function App() {
 }
 
 export default App;
-
-// on hover animations for cards (zoom in or responsive to mouse)
-// button redesign
-// color card info background
-// proper links, pictures, card information
