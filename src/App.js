@@ -7,7 +7,7 @@ import Contact from './Contact/Contact';
 import NavBar from './NavBar/NavBar';
 import Footer from './Footer'
 import theme from './theme';
-import $ from 'jquery'
+// import $ from 'jquery'
 import './CustomStyles.css';
 import useWindowDimensions from './useWindowDimensions'
 
