@@ -1,10 +1,9 @@
 import React from 'react';
-import { Box } from 'grommet';
+import { Box, Heading } from 'grommet';
 import Socials from './Socials'
 import Body from './Body'
-import keyboard from '../images/keyboard.png'
-import coffee from '../images/coffee.png'
-import plant from '../images/plant.png'
+// import Arrows from './Arrows'
+import Images from './Images'
 
 const Home = ({ darkMode, setDarkMode, setAnimationType, animationType }) => {
 
@@ -26,14 +25,17 @@ const Home = ({ darkMode, setDarkMode, setAnimationType, animationType }) => {
 
   return (
     <Box {...props.main}>
-      <img src={keyboard} alt='keyboard' className='keyboard' />
-      <img src={plant} alt='plant' className='plant' />
-      <img src={coffee} alt='coffee' className='coffee' />
+      <Images />
+      {/* <Arrows /> */}
       <Box direction='row' justify='between' align='center'>
         <Box width='xxsmall'></Box>
         <Body animationType={animationType} setAnimationType={setAnimationType} />
-        <Socials direction='column' color='#005BEA' />
+        <Socials direction='column' color='#005BEA' selector='socials-end'/>
       </Box>
+      <div className='socials-start'>
+          <Heading level={4}>
+          </Heading>
+      </div>
     </Box>
   )
 }

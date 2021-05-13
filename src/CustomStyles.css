@@ -184,9 +184,14 @@
 .coffee{
   z-Index: -1;
   position: absolute;
-  transform: translate(50%, 50%) scale(0.5, 0.5);
-  top: 12%;
-  left: 50%;
+  transform: scale(0.5, 0.5);
+  top: 30%;
+  left: 60%;
+}
+
+.coffee-transform{
+  position: relative;
+  transform: translate(50%, 50%);
 }
 
 .plant{
@@ -212,6 +217,10 @@
   transform: translate(-49.7%, -51%);
   height: 540px;
   width: 540px;
+}
+
+.frame-transform{
+  position: relative;
 }
 
 .Footer {
@@ -253,4 +262,10 @@
 
 .ProfilePic {
   border-radius: 100%;
+}
+
+.socials-start {
+  position: absolute;
+  left: 50%;
+  bottom: 10%;
 }

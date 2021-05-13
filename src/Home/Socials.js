@@ -4,7 +4,7 @@ import { Github, Twitter, Linkedin, Instagram, Facebook } from 'grommet-icons'
 import { v4 as uuidv4 } from 'uuid';
 import Icon from './Icon'
 
-function Socials({ direction, color }) {
+function Socials({ direction, color, selector }) {
 
   const props = {
     main: {
@@ -13,6 +13,7 @@ function Socials({ direction, color }) {
       justify: 'center',
       align: 'center',
       gap: 'medium',
+      className: selector,
     },
   }
 

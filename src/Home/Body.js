@@ -11,8 +11,8 @@ function Body({ size, setAnimationType, animationType }) {
   const props = {
     main: {
       animation: "fadeIn",
-      align: 'center',
       pad: 'small',
+      justify: 'between',
     },
     heading: {
       textAlign: 'center',
@@ -31,8 +31,10 @@ function Body({ size, setAnimationType, animationType }) {
 
   return (
     <Box {...props.main}>
-      <Heading {...props.heading}>MARTIN KIM</Heading>
-      <TypedComponent />
+      <Box align='center'>
+        <Heading {...props.heading}>MARTIN KIM</Heading>
+        <TypedComponent />
+      </Box>
       {/* <Button {...props.button} /> */}
     </Box>
   );
