@@ -4,9 +4,8 @@ const cardData = [
     subtitle: 'LEGAL SERVICE PLATFORM',
     description: [
       `Clever Counsel is a full-stack application that I, as part of a team of 6, built from the ground up, to assist Bet Tzedek Legal Services as a centralized platform for case intake and wage claim management in conjunction with the California Labor Commissioner's office. 
-      I personally integrated a web scraping system using Beautiful Soup to verify legal information through the California Secretary of State website. 
-      I also assisted in building a scalable API that connected the database to the multi-layered front-end user interfaces for both account management and intake submissions.
-      Most recently, I am implementing a serverless crawler using AWS Lambda that performs Selenium related tasks in headless Chrome.`,
+      I integrated a web scraping system using Beautiful Soup to verify legal information through the California Secretary of State website and assisted in building a scalable API that connected the database to the multi-layered front-end user interfaces for both account management and intake submissions.
+      `,
     ],
     stack: 'React, Node, Python',
     full_stack: 'React, Node, Python, Flask, MySQL, CSS, Selenium, Beautiful Soup, AWS Lambda, Formik',

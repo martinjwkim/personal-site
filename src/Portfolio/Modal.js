@@ -39,6 +39,11 @@ const Modal = ({ setShowModal, data, size }) => {
     },
     carousel: {
       overflow: 'visible',
+      animation: {
+        type: 'fadeIn',
+        duration: 1000,
+        delay: 300,
+      }
     },
     info: {
       data,

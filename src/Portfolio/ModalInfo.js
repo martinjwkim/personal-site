@@ -10,7 +10,7 @@ const ModalInfo = ({data, setShowModal, size}) => {
   const props = {
     main: {
       align: 'start',
-      pad: 'medium',
+      pad: {left: 'medium', right:'medium', bottom: 'none', top: 'small'},
     },
     description: {
       fill: true,
