@@ -1,6 +1,7 @@
 import React from 'react';
 import { Box } from 'grommet';
 import { Github, Twitter, Linkedin, Instagram, Facebook } from 'grommet-icons'
+import { v4 as uuidv4 } from 'uuid';
 import Icon from './Icon'
 
 function Socials({ direction, color }) {
@@ -32,7 +33,7 @@ function Socials({ direction, color }) {
       icon: <Instagram />,
       url: 'https://www.instagram.com/martinhadadreem/'
     }].map(({ icon, url }) =>
-      <Icon icon={icon} color={color} href={url} />
+      <Icon icon={icon} color={color} href={url} key={uuidv4()}/>
     )
   )
 
