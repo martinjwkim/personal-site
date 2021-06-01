@@ -48,7 +48,7 @@ function ContactForm() {
           <Collapsible open={showAlert}>
             <Box direction='row' justify='between' background=''>
               <Box width='15px'></Box>
-              <Paragraph margin='xsmall' size='small' alignSelf='center'>Your message was successfully sent. Thank you!</Paragraph>
+              <Paragraph margin='xsmall' size='small' alignSelf='center'>Function is currently unavailable. Please send me an email directly at martinjwkim@gmail.com!</Paragraph>
               <Box justify='center' align='end' onClick={()=>setShowAlert(false)}>
                 <Close size='small'/>
               </Box>
