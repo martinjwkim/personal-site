@@ -10,15 +10,14 @@ function ContactForm() {
   const [showAlert, setShowAlert] = useState(false);
 
   const handleSubmit = ({ value }) => {
-    setValue(INITIAL_STATE);
     send(
-      "service_xel9o3t",
-      "template_akhp5gn",
+      "service_41wb7xu",
+      "template_ari587m",
       value,
-      "user_cHIzPPVIJdUrtigN34Nmc"
+      "user_G353kzNgGKOWJNm2F79Uc"
     ).then(() => {
-      setValue(INITIAL_STATE);
       setShowAlert(true)
+      setValue(INITIAL_STATE);
     }).catch((error) => {
       console.log(error.text)
     });

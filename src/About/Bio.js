@@ -68,6 +68,7 @@ const Bio = ({ size }) => {
       size: size === 'xsmall' ? 'small' : size,
       id: 'StyledButton',
       href: "/martinjwkim-resume.pdf",
+      target: "_blank"
     },
   }
 
