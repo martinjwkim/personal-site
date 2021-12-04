@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Box, Button, Collapsible, Form, Paragraph, TextInput, TextArea } from 'grommet';
 import { Close } from 'grommet-icons'
+import { send } from "emailjs-com";
 
 function ContactForm() {
 
@@ -10,7 +11,21 @@ function ContactForm() {
 
   const handleSubmit = ({ value }) => {
     setValue(INITIAL_STATE);
-    setShowAlert(true);
+    send(
+      "service_xel9o3t",
+      "template_akhp5gn",
+      value,
+      "user_cHIzPPVIJdUrtigN34Nmc"
+    ).then(() => {
+      setValue(INITIAL_STATE);
+      setShowAlert(true)
+    }).catch((error) => {
+      console.log(error.text)
+    });
+
+    setTimeout(() => {
+      setShowAlert(false);
+    }, [5000]);
   };
 
   const handleChange = (data) => {
@@ -48,7 +63,7 @@ function ContactForm() {
           <Collapsible open={showAlert}>
             <Box direction='row' justify='between' background=''>
               <Box width='15px'></Box>
-              <Paragraph margin='xsmall' size='small' alignSelf='center'>Function is currently unavailable. Please send me an email directly at martinjwkim@gmail.com!</Paragraph>
+              <Paragraph margin='xsmall' size='small' alignSelf='center'>Thank you. Your message has been sent!</Paragraph>
               <Box justify='center' align='end' onClick={()=>setShowAlert(false)}>
                 <Close size='small'/>
               </Box>

@@ -57,7 +57,7 @@ const Modal = ({ setShowModal, data, size }) => {
       <Box {...props.main} >
         <Box {...props.carousel} >
           <Carousel fill>
-            {[data.img_1, data.img_2, data.img_3].map(img => <Image src={img} {...props.image} />)}
+            {[...data.imgs].map(img => <Image src={img} {...props.image} />)}
           </Carousel>
         </Box>
         <Box {...props.line}></Box>

@@ -88,9 +88,9 @@ const Bio = ({ size }) => {
     {
       name: 'three',
       icon: <Notes />,
-      paragraph: `With a little under two years of experience, I have most recently worked with a small team at a local law firm
-        to build out a scalable back-end API service with an elaborate web user interface, but have also contributed to several
-        open-source applications as well as projects of my own.`
+      paragraph: `With a little under two years of experience, I have most recently worked with a data intelligence start-up to help develop 
+        the front-end and automate functionalities of their website, as well as with a small team at a local law firm
+        to build out a scalable back-end API service with an elaborate web user interface.`
     }
   ];
 

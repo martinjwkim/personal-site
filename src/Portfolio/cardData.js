@@ -1,5 +1,21 @@
 const cardData = [
   {
+    title: 'RAINFALL',
+    subtitle: 'DATA INTELLIGENCE PLATFORM',
+    description: [
+      `
+      Rainfall is a decentralzied platform that unlocks the financial value in the digital life of every connected individual by levering edge-based AI and privacy-preserving blockchain technology.
+      I built and improved numerous sections on the front-end of the company's website, including the entirety of the investor's page where interested entities are able to submit investment preferences, which is then automatically stored on a spreadsheet and confirmed by the investor through an HTML email.
+      `,
+    ],
+    stack: 'React, Node',
+    full_stack: 'React, Node, CSS, HTML',
+    demo_url: 'https://rainfall.one',
+    cover: '/rainfall.jpg',
+    imgs: ['/rainfall-1.png','/rainfall-2.png','/rainfall-7.png','/rainfall-8.png','/rainfall-3.png','/rainfall-4.png','/rainfall-6.png','/rainfall-5.png'],
+    flipped: false,
+  },
+  {
     title: 'CLEVER COUNSEL',
     subtitle: 'LEGAL SERVICE PLATFORM',
     description: [
@@ -9,10 +25,8 @@ const cardData = [
     ],
     stack: 'React, Node, Python',
     full_stack: 'React, Node, Python, Flask, MySQL, CSS, Selenium, Beautiful Soup, AWS Lambda, Formik',
-    cover: '/clever-counsel.jpg',
-    img_1: '/clevercounsel-1.png',
-    img_2: '/clevercounsel-2.png',
-    img_3: '/clevercounsel-3.png',
+    cover: '/bet-tzedek.jpg',
+    imgs: ['/clevercounsel-1.png','/clevercounsel-2.png','/clevercounsel-3.png'],
     flipped: true,
   },
   {
@@ -29,9 +43,7 @@ const cardData = [
     github_url: 'https://github.com/rithmschool/numbers_api',
     demo_url: 'https://numbersapi.com/',
     cover: '/numbers-api.jpg',
-    img_1: '/numbersapi-1.png',
-    img_2: '/numbersapi-2.png',
-    img_3: '/numbersapi-3.png',
+    imgs: ['/numbersapi-1.png','/numbersapi-2.png','/numbersapi-3.png'],
     flipped: false,
   },
   {
@@ -47,9 +59,7 @@ const cardData = [
     github_url: 'https://github.com/martinjwkim/react-jobly',
     demo_url: 'https://martinjwkim-jobly.herokuapp.com',
     cover: '/jobly.jpeg',
-    img_1: '/generic-background.png',
-    img_2: '/generic-background.png',
-    img_3: '/generic-background.png',
+    imgs: ['/generic-background.png'],
     flipped: true,
   },
   {
@@ -64,10 +74,7 @@ const cardData = [
     github_url: 'https://github.com/martinjwkim/warbler',
     demo_url: 'https://martinjwkim-warbler.herokuapp.com',
     cover: '/warbler.jpeg',
-    img_1: '/warbler-1.png',
-    img_2: '/warbler-4.png',
-    img_3: '/warbler-3.png',
-    img_4: '/warbler-2.png',
+    imgs: ['/warbler-1.png','/warbler-4.png','/warbler-3.png','/warbler-2.png'],
     flipped: false,
   },
   {
@@ -82,7 +89,7 @@ const cardData = [
     full_stack: 'Python, Docker',
     github_url: 'https://github.com/martinjwkim/cryptoticker',
     cover: '/crypto-ticker.png',
-    img_1: '/generic-background.png',
+    imgs: ['/generic-background.png'],
     flipped: true,
   },
 ];
