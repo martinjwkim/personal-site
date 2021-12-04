@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import { Box, Text } from 'grommet';
 import Typed from 'typed.js';
 
-function TypedComponent() {
+function TypedComponent({size}) {
 
   const typedRef = useRef(null);
 
@@ -28,7 +28,7 @@ function TypedComponent() {
 
   return (
     <Box {...props.main}>
-      <Text ref={typedRef} size='xlarge'></Text>
+      <Text ref={typedRef} size='large'></Text>
     </Box>
   );
 }

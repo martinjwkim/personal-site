@@ -5,7 +5,7 @@ import Body from './Body'
 // import Arrows from './Arrows'
 import Images from './Images'
 
-const Home = ({ darkMode, setDarkMode, setAnimationType, animationType }) => {
+const Home = ({ darkMode, setDarkMode, setAnimationType, size, animationType }) => {
 
   const props = {
     main: {
@@ -29,7 +29,7 @@ const Home = ({ darkMode, setDarkMode, setAnimationType, animationType }) => {
       {/* <Arrows /> */}
       <Box direction='row' justify='between' align='center'>
         <Box width='xxsmall'></Box>
-        <Body animationType={animationType} setAnimationType={setAnimationType} />
+        <Body animationType={animationType} size={size} setAnimationType={setAnimationType} />
         <Socials direction='column' color='#005BEA' selector='socials-end'/>
       </Box>
       <div className='socials-start'>

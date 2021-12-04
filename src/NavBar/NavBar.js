@@ -31,7 +31,8 @@ function NavBar({ size, handleNav }) {
     main: {
       background: '#003060',
       direction: 'row',
-      margin: 'medium'
+      margin: 'medium',
+      align: 'center',
     },
     icon: {
       iconType,

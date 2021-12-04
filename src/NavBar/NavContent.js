@@ -14,11 +14,12 @@ function NavContent({ openNav, size, handleNav }) {
       justify: 'center',
       pad: 'small',
       gap: 'small',
-      direction: size === 'small' ? 'column' : 'row',
+      direction: 'row'
     },
     button: {
       plain: true,
       focusIndicator: false,
+      style: {fontSize: size==='small' ?'14px': '18px'},
     }
   }
 

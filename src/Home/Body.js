@@ -33,7 +33,7 @@ function Body({ size, setAnimationType, animationType }) {
     <Box {...props.main}>
       <Box align='center'>
         <Heading {...props.heading}>MARTIN KIM</Heading>
-        <TypedComponent />
+        <TypedComponent size={size}/>
       </Box>
       {/* <Button {...props.button} /> */}
     </Box>
