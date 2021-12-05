@@ -4,7 +4,7 @@ const cardData = [
     subtitle: 'DATA INTELLIGENCE PLATFORM',
     description: [
       `
-      Rainfall is a decentralzied platform that unlocks the financial value in the digital life of every connected individual by levering edge-based AI and privacy-preserving blockchain technology.
+      Rainfall is a decentralized platform that unlocks the financial value in the digital life of every connected individual by leveraging edge-based AI and privacy-preserving blockchain technology.
       I built and improved numerous sections on the front-end of the company's website, including the entirety of the investor's page where interested entities are able to submit investment preferences, which is then automatically stored on a spreadsheet and confirmed by the investor through an HTML email.
       `,
     ],

@@ -89,7 +89,8 @@ const Bio = ({ size }) => {
     {
       name: 'three',
       icon: <Notes />,
-      paragraph: `With a little under three years of experience, I have most recently worked with a data intelligence start-up to develop the front-end portion and automate functionalities of their website, as well as with a small team at a non-profit law firm to build out a scalable back-end API service with an elaborate web user interface.`
+      paragraph: `With a little under three years of experience, I have most recently worked with Rainfall, a decentralized data intelligence platform leveraging edge-based AI and privacy-preserving blockchain technology, by developing and maintaining the front-end of the website to automate functionalities.
+      Previously, I worked with a small team at a non-profit law firm to build out a scalable back-end API service with an elaborate web user interface to assist in their mission of addressing the justice gap for low-income individuals with their fight against wage theft.`
     }
   ];
 
